@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: foreign 0.8-86\n"
+"Project-Id-Version: foreign 0.8-87\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-28 20:09+0000\n"
+"POT-Creation-Date: 2024-09-15 19:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,16 +143,16 @@ msgstr ""
 msgid "value |%d| found in logical field"
 msgstr ""
 
-#: Rdbfwrite.c:50 SASxport.c:510 SASxport.c:607
+#: Rdbfwrite.c:56 SASxport.c:510 SASxport.c:607
 msgid "first argument must be a file name"
 msgstr ""
 
-#: Rdbfwrite.c:53
+#: Rdbfwrite.c:59
 msgid "unable to open file"
 msgstr ""
 
-#: Rdbfwrite.c:97 Rdbfwrite.c:135 stataread.c:304 stataread.c:325
-#: stataread.c:816 stataread.c:846
+#: Rdbfwrite.c:103 Rdbfwrite.c:141 stataread.c:305 stataread.c:326
+#: stataread.c:817 stataread.c:847
 msgid "unknown data type"
 msgstr ""
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "problem accessing SAS XPORT file"
 msgstr ""
 
-#: SASxport.c:513 SASxport.c:610 spss.c:670 stataread.c:592
+#: SASxport.c:513 SASxport.c:610 spss.c:670 stataread.c:593
 #, c-format
 msgid "unable to open file: '%s'"
 msgstr ""
@@ -359,7 +359,7 @@ msgstr ""
 msgid "%s: Bad format specifier byte %d"
 msgstr ""
 
-#: pfm-read.c:649 sfm-read.c:1157 sfm-read.c:1167
+#: pfm-read.c:649 sfm-read.c:1158 sfm-read.c:1168
 #, c-format
 msgid "%s: Bad format specifier byte (%d)"
 msgstr ""
@@ -591,187 +591,187 @@ msgstr ""
 msgid "%s: Number of elements per case (%d) is not between 1 and %ld"
 msgstr ""
 
-#: sfm-read.c:809
+#: sfm-read.c:810
 #, c-format
 msgid ""
 "%s: Index of weighting variable (%d) is not between 0 and number of elements "
 "per case (%d)"
 msgstr ""
 
-#: sfm-read.c:814
+#: sfm-read.c:815
 #, c-format
 msgid "%s: Number of cases in file (%d) is not between -1 and %d"
 msgstr ""
 
-#: sfm-read.c:819
+#: sfm-read.c:820
 #, c-format
 msgid "%s: Compression bias (%g) is not the usual value of 100"
 msgstr ""
 
-#: sfm-read.c:921
+#: sfm-read.c:922
 #, c-format
 msgid "%s: position %d: Bad record type (%d); the expected value was 2"
 msgstr ""
 
-#: sfm-read.c:930
+#: sfm-read.c:931
 #, c-format
 msgid ""
 "%s: position %d: String variable does not have proper number of continuation "
 "records"
 msgstr ""
 
-#: sfm-read.c:938
+#: sfm-read.c:939
 #, c-format
 msgid "%s: position %d: Superfluous long string continuation record"
 msgstr ""
 
-#: sfm-read.c:943
+#: sfm-read.c:944
 #, c-format
 msgid "%s: position %d: Bad variable type code %d"
 msgstr ""
 
-#: sfm-read.c:946
+#: sfm-read.c:947
 #, c-format
 msgid "%s: position %d: Variable label indicator field is not 0 or 1"
 msgstr ""
 
-#: sfm-read.c:950
+#: sfm-read.c:951
 #, c-format
 msgid ""
 "%s: position %d: Missing value indicator field is not -3, -2, 0, 1, 2, or 3"
 msgstr ""
 
-#: sfm-read.c:972
+#: sfm-read.c:973
 #, c-format
 msgid ""
 "%s: position %d: Variable name begins with octothorpe ('#').  Scratch "
 "variables should not appear in system files"
 msgstr ""
 
-#: sfm-read.c:994
+#: sfm-read.c:995
 #, c-format
 msgid ""
 "%s: position %d: character `\\%03o' (%c) is not valid in a variable name"
 msgstr ""
 
-#: sfm-read.c:1036
+#: sfm-read.c:1037
 #, c-format
 msgid "%s: Variable %s indicates variable label of invalid length %d"
 msgstr ""
 
-#: sfm-read.c:1052
+#: sfm-read.c:1053
 #, c-format
 msgid "%s: Long string variable %s may not have missing values"
 msgstr ""
 
-#: sfm-read.c:1075
+#: sfm-read.c:1076
 #, c-format
 msgid "%s: String variable %s may not have missing values specified as a range"
 msgstr ""
 
-#: sfm-read.c:1118
+#: sfm-read.c:1119
 #, c-format
 msgid "%s: Long string continuation records omitted at end of dictionary"
 msgstr ""
 
-#: sfm-read.c:1121
+#: sfm-read.c:1122
 #, c-format
 msgid ""
 "%s: System file header indicates %d variable positions but %d were read from "
 "file"
 msgstr ""
 
-#: sfm-read.c:1130
+#: sfm-read.c:1131
 #, c-format
 msgid "%s: Duplicate variable name `%s' within system file"
 msgstr ""
 
-#: sfm-read.c:1170
+#: sfm-read.c:1171
 #, c-format
 msgid "%s: %s variable %s has %s format specifier %s"
 msgstr ""
 
-#: sfm-read.c:1249
+#: sfm-read.c:1250
 #, c-format
 msgid ""
 "%s: Variable index record (type 4) does not immediately follow value label "
 "record (type 3) as it ought"
 msgstr ""
 
-#: sfm-read.c:1258
+#: sfm-read.c:1259
 #, c-format
 msgid ""
 "%s: Number of variables associated with a value label (%d) is not between 1 "
 "and the number of variables (%d)"
 msgstr ""
 
-#: sfm-read.c:1275
+#: sfm-read.c:1276
 #, c-format
 msgid ""
 "%s: Variable index associated with value label (%d) is not between 1 and the "
 "number of values (%d)"
 msgstr ""
 
-#: sfm-read.c:1281
+#: sfm-read.c:1282
 #, c-format
 msgid ""
 "%s: Variable index associated with value label (%d) refers to a continuation "
 "of a string variable, not to an actual variable"
 msgstr ""
 
-#: sfm-read.c:1284
+#: sfm-read.c:1285
 #, c-format
 msgid "%s: Value labels are not allowed on long string variables (%s)"
 msgstr ""
 
-#: sfm-read.c:1293
+#: sfm-read.c:1294
 #, c-format
 msgid ""
 "%s: Variables associated with value label are not all of identical type.  "
 "Variable %s has %s type, but variable %s has %s type"
 msgstr ""
 
-#: sfm-read.c:1335
+#: sfm-read.c:1336
 #, c-format
 msgid "%s: File contains duplicate label for value %g for variable %s"
 msgstr ""
 
-#: sfm-read.c:1338
+#: sfm-read.c:1339
 #, c-format
 msgid "%s: File contains duplicate label for value `%.*s' for variable %s"
 msgstr ""
 
-#: sfm-read.c:1378 sfm-read.c:1656
+#: sfm-read.c:1379 sfm-read.c:1657
 #, c-format
 msgid "%s: Reading system file: %s"
 msgstr ""
 
-#: sfm-read.c:1380 sfm-read.c:1564 sfm-read.c:1605
+#: sfm-read.c:1381 sfm-read.c:1565 sfm-read.c:1606
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr ""
 
-#: sfm-read.c:1397
+#: sfm-read.c:1398
 #, c-format
 msgid "%s: System file contains multiple type 6 (document) records"
 msgstr ""
 
-#: sfm-read.c:1407
+#: sfm-read.c:1408
 #, c-format
 msgid "%s: Number of document lines (%d) must be greater than 0"
 msgstr ""
 
-#: sfm-read.c:1518
+#: sfm-read.c:1519
 #, c-format
 msgid "%s: Error reading file: %s"
 msgstr ""
 
-#: sfm-read.c:1556
+#: sfm-read.c:1557
 #, c-format
 msgid "%s: Compressed data is corrupted.  Data ends partway through a case"
 msgstr ""
 
-#: sfm-read.c:1658
+#: sfm-read.c:1659
 #, c-format
 msgid "%s: Partial record at end of system file"
 msgstr ""
@@ -790,59 +790,59 @@ msgstr ""
 msgid "file '%s' is not in any supported SPSS format"
 msgstr ""
 
-#: stataread.c:95 stataread.c:105 stataread.c:113 stataread.c:140
-#: stataread.c:153 stataread.c:163 stataread.c:520
+#: stataread.c:96 stataread.c:106 stataread.c:114 stataread.c:141
+#: stataread.c:154 stataread.c:164 stataread.c:521
 msgid "a binary read error occurred"
 msgstr ""
 
-#: stataread.c:241
+#: stataread.c:242
 msgid "not a Stata version 5-12 .dta file"
 msgstr ""
 
-#: stataread.c:439
+#: stataread.c:440
 msgid ""
 "something strange in the file\n"
 " (Type 0 characteristic of nonzero length)"
 msgstr ""
 
-#: stataread.c:584
+#: stataread.c:585
 msgid "can not yet read Stata .dta on this platform"
 msgstr ""
 
-#: stataread.c:588 stataread.c:1044
+#: stataread.c:589 stataread.c:1045
 msgid "first argument must be a file name\n"
 msgstr ""
 
-#: stataread.c:606 stataread.c:613 stataread.c:619 stataread.c:634
-#: stataread.c:636 stataread.c:644 stataread.c:652
+#: stataread.c:607 stataread.c:614 stataread.c:620 stataread.c:635
+#: stataread.c:637 stataread.c:645 stataread.c:653
 msgid "a binary write error occurred"
 msgstr ""
 
-#: stataread.c:722
+#: stataread.c:723
 msgid "this should happen: overrun"
 msgstr ""
 
-#: stataread.c:724
+#: stataread.c:725
 msgid "this should happen: underrun"
 msgstr ""
 
-#: stataread.c:983
+#: stataread.c:984
 msgid "this should not happen."
 msgstr ""
 
-#: stataread.c:1040
+#: stataread.c:1041
 msgid "cannot yet read write .dta on this platform"
 msgstr ""
 
-#: stataread.c:1048
+#: stataread.c:1049
 msgid "data to be saved must be in a data frame"
 msgstr ""
 
-#: stataread.c:1051
+#: stataread.c:1052
 #, c-format
 msgid "unable to open file for writing: '%s'"
 msgstr ""
 
-#: stataread.c:1056
+#: stataread.c:1057
 msgid "can only write version 6-10 formats"
 msgstr ""

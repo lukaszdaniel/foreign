@@ -30,14 +30,7 @@
 #include <R.h>
 #include <Rinternals.h>
 
-#ifdef ENABLE_NLS
-#include <libintl.h>
-#define _(String) dgettext ("foreign", String)
-#define gettext_noop(String) (String)
-#else
-#define _(String) (String)
-#define gettext_noop(String) (String)
-#endif
+#include "localization.h"
 
 #define CN_TYPE_BIG     1
 #define CN_TYPE_LITTLE  2

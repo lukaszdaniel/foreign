@@ -44,6 +44,7 @@
 #include <stdlib.h> /* for abs */
 #include <math.h>
 #include "foreign.h"
+#include "localization.h"
 #include "swap_bytes.h"
 
 /* versions */

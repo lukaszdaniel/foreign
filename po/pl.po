@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreign 0.8-60\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-28 20:09+0000\n"
+"POT-Creation-Date: 2024-09-15 19:05+0200\n"
 "PO-Revision-Date: 2014-03-24 17:30+0100\n"
 "Last-Translator: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language-Team: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
@@ -10,8 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: iso-8859-1\n"
 "X-Generator: Poedit 1.5.4\n"
 
@@ -243,13 +242,13 @@ msgstr "znaleziono wartość |%d| w polu logicznym"
 # error(_("first argument must be a file name"))
 # foreign/src/SASxport.c: 604
 # error(_("first argument must be a file name"))
-#: Rdbfwrite.c:50 SASxport.c:510 SASxport.c:607
+#: Rdbfwrite.c:56 SASxport.c:510 SASxport.c:607
 msgid "first argument must be a file name"
 msgstr "pierwszy argument musi być nazwą pliku"
 
 # foreign/src/Rdbfwrite.c: 51
 # error(_("unable to open file"))
-#: Rdbfwrite.c:53
+#: Rdbfwrite.c:59
 msgid "unable to open file"
 msgstr "nie można otworzyć pliku"
 
@@ -265,8 +264,8 @@ msgstr "nie można otworzyć pliku"
 # error(_("unknown data type"))
 # foreign/src/Rdbfwrite.c: 133
 # error(_("unknown data type"))
-#: Rdbfwrite.c:97 Rdbfwrite.c:135 stataread.c:304 stataread.c:325
-#: stataread.c:816 stataread.c:846
+#: Rdbfwrite.c:103 Rdbfwrite.c:141 stataread.c:305 stataread.c:326
+#: stataread.c:817 stataread.c:847
 msgid "unknown data type"
 msgstr "nieznany typ danych"
 
@@ -325,7 +324,7 @@ msgstr "problem z dostępem do pliku SAS XPORT"
 # error(_("unable to open file: '%s'"), strerror(errno))
 # foreign/src/SASxport.c: 607
 # error(_("unable to open file: '%s'"), strerror(errno))
-#: SASxport.c:513 SASxport.c:610 spss.c:670 stataread.c:592
+#: SASxport.c:513 SASxport.c:610 spss.c:670 stataread.c:593
 #, c-format
 msgid "unable to open file: '%s'"
 msgstr "nie można otworzyć pliku: '%s'"
@@ -363,48 +362,32 @@ msgstr "format %s nie może być użyty jako format wejściowy"
 # 	   str, spec->w, f->name, f->Imin_w, f->Imax_w)
 #: format.c:113
 #, c-format
-msgid ""
-"input format %s specifies a bad width %d.  Format %s requires a width "
-"between %d and %d"
-msgstr ""
-"format wejściowy %s określa niepoprawną szerokość %d.  Format %s wymaga "
-"szerokości pomiędzy %d a %d"
+msgid "input format %s specifies a bad width %d.  Format %s requires a width between %d and %d"
+msgstr "format wejściowy %s określa niepoprawną szerokość %d.  Format %s wymaga szerokości pomiędzy %d a %d"
 
 # foreign/src/format.c: 120
 # error(_("input format %s specifies an odd width %d, but format %s requires an even width between %d and %d"),
 # 	     str, spec->w, f->name, f->Imin_w, f->Imax_w)
 #: format.c:119
 #, c-format
-msgid ""
-"input format %s specifies an odd width %d, but format %s requires an even "
-"width between %d and %d"
-msgstr ""
-"format wejściowy %s określa nieparzystą szerokość %d, ale format %s wymaga "
-"parzystej szerokości pomiędzy %d a %d"
+msgid "input format %s specifies an odd width %d, but format %s requires an even width between %d and %d"
+msgstr "format wejściowy %s określa nieparzystą szerokość %d, ale format %s wymaga parzystej szerokości pomiędzy %d a %d"
 
 # foreign/src/format.c: 126
 # error(_("Input format %s specifies a bad number of implied decimal places %d. Input format %s allows up to 16 implied decimal places"),
 # 	     str, spec->d, f->name)
 #: format.c:125
 #, c-format
-msgid ""
-"Input format %s specifies a bad number of implied decimal places %d.  Input "
-"format %s allows up to 16 implied decimal places"
-msgstr ""
-"Format wejściowy %s określa błędną liczbę założonych miejsc dziesiętnych "
-"%d.  Format wejściowy %s pozwala na założenie do 16 miejsc dziesiętnych"
+msgid "Input format %s specifies a bad number of implied decimal places %d.  Input format %s allows up to 16 implied decimal places"
+msgstr "Format wejściowy %s określa błędną liczbę założonych miejsc dziesiętnych %d.  Format wejściowy %s pozwala na założenie do 16 miejsc dziesiętnych"
 
 # foreign/src/format.c: 145
 # error(_("output format %s specifies a bad width %d. Format %s requires a width between %d and %d"),
 # 	   str, spec->w, f->name, f->Omin_w, f->Omax_w)
 #: format.c:144
 #, c-format
-msgid ""
-"output format %s specifies a bad width %d.  Format %s requires a width "
-"between %d and %d"
-msgstr ""
-"format wyjściowy %s określa błędną szerokość %d.  Format %s wymaga "
-"szerokości pomiędzy %d a %d"
+msgid "output format %s specifies a bad width %d.  Format %s requires a width between %d and %d"
+msgstr "format wyjściowy %s określa błędną szerokość %d.  Format %s wymaga szerokości pomiędzy %d a %d"
 
 # foreign/src/format.c: 154
 # error(_("output format %s requires minimum width %d to allow %d decimal places. Try %s%d.%d instead of %s"),
@@ -412,37 +395,24 @@ msgstr ""
 # 	   f->Omin_w + 1 + spec->d, spec->d, str)
 #: format.c:153
 #, c-format
-msgid ""
-"output format %s requires minimum width %d to allow %d decimal places.  Try "
-"%s%d.%d instead of %s"
-msgstr ""
-"format wyjściowy %s wymaga minimalnej szerokości %d aby dopuścić %d miejsc "
-"dziesiętnych.  Spróbuj %s%d.%d zamiast %s"
+msgid "output format %s requires minimum width %d to allow %d decimal places.  Try %s%d.%d instead of %s"
+msgstr "format wyjściowy %s wymaga minimalnej szerokości %d aby dopuścić %d miejsc dziesiętnych.  Spróbuj %s%d.%d zamiast %s"
 
 # foreign/src/format.c: 161
 # error(_("output format %s specifies an odd width %d, but output format %s requires an even width between %d and %d"),
 # 	     str, spec->w, f->name, f->Omin_w, f->Omax_w)
 #: format.c:160
 #, c-format
-msgid ""
-"output format %s specifies an odd width %d, but output format %s requires an "
-"even width between %d and %d"
-msgstr ""
-"format wyjściowy %s określa nieparzystą szerokość %d, ale format wyjściowy "
-"%s wymaga parzystej szerokości pomiędzy %d and %d"
+msgid "output format %s specifies an odd width %d, but output format %s requires an even width between %d and %d"
+msgstr "format wyjściowy %s określa nieparzystą szerokość %d, ale format wyjściowy %s wymaga parzystej szerokości pomiędzy %d and %d"
 
 # foreign/src/format.c: 167
 # error(_("Output format %s specifies a bad number of implied decimal places %d. Output format %s allows a number of implied decimal places between 1 and 16"),
 # 	  str, spec->d, f->name)
 #: format.c:166
 #, c-format
-msgid ""
-"Output format %s specifies a bad number of implied decimal places %d.  "
-"Output format %s allows a number of implied decimal places between 1 and 16"
-msgstr ""
-"Format wyjściowy %s określa błędną liczbę założonych miejsc dziesiętnych "
-"%d.  Format wyjściowy %s pozwala na założenie miejsc dziesiętnych pomiędzy 1 "
-"a 16"
+msgid "Output format %s specifies a bad number of implied decimal places %d.  Output format %s allows a number of implied decimal places between 1 and 16"
+msgstr "Format wyjściowy %s określa błędną liczbę założonych miejsc dziesiętnych %d.  Format wyjściowy %s pozwala na założenie miejsc dziesiętnych pomiędzy 1 a 16"
 
 # foreign/src/format.c: 182
 # error(_("cannot display a string variable of width %d with format specifier %s"),
@@ -450,9 +420,7 @@ msgstr ""
 #: format.c:181
 #, c-format
 msgid "cannot display a string variable of width %d with format specifier %s"
-msgstr ""
-"nie można wyświetlić zmiennej tekstowej o szerokości %d ze znacznikiem "
-"formatu %s"
+msgstr "nie można wyświetlić zmiennej tekstowej o szerokości %d ze znacznikiem formatu %s"
 
 # foreign/src/minitab.c: 91
 # error(_("non-numeric data types are not yet implemented"))
@@ -522,19 +490,15 @@ msgstr "Błędne zakończenie linii"
 #: pfm-read.c:227
 #, c-format
 msgid "cannot read file %s as portable file: already opened for %s"
-msgstr ""
-"nie można odczytać pliku %s jako pliku przenośnego: plik został już otwarty "
-"do %s"
+msgstr "nie można odczytać pliku %s jako pliku przenośnego: plik został już otwarty do %s"
 
 # foreign/src/pfm-read.c: 243
 # error(_("an error occurred while opening \"%s\" for reading as a portable file: %s"),
 # 	    h->fn, strerror (errno))
 #: pfm-read.c:243
 #, c-format
-msgid ""
-"an error occurred while opening \"%s\" for reading as a portable file: %s"
-msgstr ""
-"nastąpił błąd podczas otwierania '%s' do odczytu jako plik przenośny: %s"
+msgid "an error occurred while opening \"%s\" for reading as a portable file: %s"
+msgstr "nastąpił błąd podczas otwierania '%s' do odczytu jako plik przenośny: %s"
 
 # foreign/src/pfm-read.c: 275
 # (_("Data record expected"))
@@ -627,7 +591,7 @@ msgstr "%s: Niepoprawny bajt określający format %d"
 # foreign/src/sfm-read.c: 1103
 # (_("%s: Bad format specifier byte (%d)"),
 # 	   h->fn, (s >> 16) & 0xff)
-#: pfm-read.c:649 sfm-read.c:1157 sfm-read.c:1167
+#: pfm-read.c:649 sfm-read.c:1158 sfm-read.c:1168
 #, c-format
 msgid "%s: Bad format specifier byte (%d)"
 msgstr "%s: Niepoprawny bajt określający format (%d)"
@@ -747,12 +711,8 @@ msgstr "Nieznana zmienna %s podczas przetwarzania etykiet wartości"
 # 	       v[0]->name, v[i]->name)
 #: pfm-read.c:935
 #, c-format
-msgid ""
-"Cannot assign value labels to %s and %s, which have different variable types "
-"or widths"
-msgstr ""
-"Nie można przypisać etykiet wartości do %s oraz %s, które mają różne type "
-"lub szerokości zmiennych"
+msgid "Cannot assign value labels to %s and %s, which have different variable types or widths"
+msgstr "Nie można przypisać etykiet wartości do %s oraz %s, które mają różne type lub szerokości zmiennych"
 
 # foreign/src/pfm-read.c: 988
 # (_("Duplicate label for value %g for variable %s"),
@@ -797,18 +757,14 @@ msgstr "nie można odczytać pliku %s jako pliku systemowego: już otwarty dla %
 #: sfm-read.c:314
 #, c-format
 msgid "An error occurred while opening '%s' for reading as a system file: %s"
-msgstr ""
-"Wystąpił błąd podczas otwierania '%s' do odczytu jako plik systemowy: %s"
+msgstr "Wystąpił błąd podczas otwierania '%s' do odczytu jako plik systemowy: %s"
 
 # foreign/src/sfm-read.c: 342
 # (_("%s: Weighting variable may not be a continuation of a long string variable"), h->fn)
 #: sfm-read.c:345
 #, c-format
-msgid ""
-"%s: Weighting variable may not be a continuation of a long string variable"
-msgstr ""
-"%s: Zmienna ważona nie może być kontynuacją zmiennej o długim łańcuchu "
-"tekstowym"
+msgid "%s: Weighting variable may not be a continuation of a long string variable"
+msgstr "%s: Zmienna ważona nie może być kontynuacją zmiennej o długim łańcuchu tekstowym"
 
 # foreign/src/sfm-read.c: 344
 # (_("%s: Weighting variable may not be a string variable"),
@@ -823,32 +779,22 @@ msgstr "%s: Zmienna ważona nie może być zmienną tekstową"
 # 		 h->fn)
 #: sfm-read.c:372
 #, c-format
-msgid ""
-"%s: Orphaned variable index record (type 4).  Type 4 records must always "
-"immediately follow type 3 records"
-msgstr ""
-"%s: Osierocony rekord (typ 4) indeksu zmiennej. Rekordy typu 4 muszą zawsze "
-"następować po rekordzach typu 3"
+msgid "%s: Orphaned variable index record (type 4).  Type 4 records must always immediately follow type 3 records"
+msgstr "%s: Osierocony rekord (typ 4) indeksu zmiennej. Rekordy typu 4 muszą zawsze następować po rekordzach typu 3"
 
 #: sfm-read.c:452
 #, c-format
-msgid ""
-"%s: Very long string record(s) found (record type 7, subtype %d), each will "
-"be imported in consecutive separate variables"
+msgid "%s: Very long string record(s) found (record type 7, subtype %d), each will be imported in consecutive separate variables"
 msgstr ""
 
 #: sfm-read.c:477
 #, c-format
-msgid ""
-"%s: Long string value labels record found (record type 7, subtype %d), but "
-"ignored"
+msgid "%s: Long string value labels record found (record type 7, subtype %d), but ignored"
 msgstr ""
 
 #: sfm-read.c:482
 #, c-format
-msgid ""
-"%s: Long string missing values record found (record type 7, subtype %d), but "
-"ignored"
+msgid "%s: Long string missing values record found (record type 7, subtype %d), but ignored"
 msgstr ""
 
 # foreign/src/sfm-read.c: 442
@@ -856,8 +802,7 @@ msgstr ""
 #: sfm-read.c:491
 #, c-format
 msgid "%s: Unrecognized record type 7, subtype %d encountered in system file"
-msgstr ""
-"%s: Nierozpoznany typ 7 rekordu, podtyp %d napotkany w pliku systemowym"
+msgstr "%s: Nierozpoznany typ 7 rekordu, podtyp %d napotkany w pliku systemowym"
 
 # foreign/src/sfm-read.c: 465
 # (_("%s: Unrecognized record type %d"), h->fn, rec_type)
@@ -877,24 +822,15 @@ msgstr "błąd podczas odczytywania nagłówka pliku systemowego"
 # 	h->fn, size, count, sizeof (R_int32))
 #: sfm-read.c:554
 #, fuzzy, c-format
-msgid ""
-"%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected "
-"size %ld, count 8"
-msgstr ""
-"%s: Niepoprawne pole rozmiaru (%d) lub zliczenia (%d) na rekordzie tpyu 7, "
-"podtyp 3.\tOczekiwano rozmiaru %d oraz 8 zliczeń"
+msgid "%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected size %ld, count 8"
+msgstr "%s: Niepoprawne pole rozmiaru (%d) lub zliczenia (%d) na rekordzie tpyu 7, podtyp 3.\tOczekiwano rozmiaru %d oraz 8 zliczeń"
 
 # foreign/src/sfm-read.c: 518
 # (_("%s: Floating-point representation in system file is not IEEE-754. read.spss cannot convert between floating-point formats"), h->fn)
 #: sfm-read.c:567
 #, c-format
-msgid ""
-"%s: Floating-point representation in system file is not IEEE-754.  read.spss "
-"cannot convert between floating-point formats"
-msgstr ""
-"%s: Reprezentacja zmiennoprzecinkowa w pliku systemowym nie jest w "
-"standardzie IEEE-754. read.spss nie może wykonywać konwersji pomiędzy "
-"formatami zmiennoprzecinkowymi"
+msgid "%s: Floating-point representation in system file is not IEEE-754.  read.spss cannot convert between floating-point formats"
+msgstr "%s: Reprezentacja zmiennoprzecinkowa w pliku systemowym nie jest w standardzie IEEE-754. read.spss nie może wykonywać konwersji pomiędzy formatami zmiennoprzecinkowymi"
 
 # foreign/src/sfm-read.c: 537
 # (_("%s: File-indicated endianness (%s) does not match endianness intuited from file header (%s)"),
@@ -903,12 +839,8 @@ msgstr ""
 # 					  : "unknown"))
 #: sfm-read.c:586
 #, c-format
-msgid ""
-"%s: File-indicated endianness (%s) does not match endianness intuited from "
-"file header (%s)"
-msgstr ""
-"%s: Wskazana przez plik kolejność bajtów (%s) nie zgadza się z kolejnością "
-"bajtów wywnioskowanych z nagłówka pliku (%s)"
+msgid "%s: File-indicated endianness (%s) does not match endianness intuited from file header (%s)"
+msgstr "%s: Wskazana przez plik kolejność bajtów (%s) nie zgadza się z kolejnością bajtów wywnioskowanych z nagłówka pliku (%s)"
 
 # foreign/src/sfm-read.c: 549
 # (_("%s: File-indicated character representation code (%s) is not ASCII"), h->fn,
@@ -916,8 +848,7 @@ msgstr ""
 #: sfm-read.c:598
 #, c-format
 msgid "%s: File-indicated character representation code (%s) is not ASCII"
-msgstr ""
-"%s: Wskazany przez plik kod reprezentacji znaków (%s) nie jest kodem ASCII"
+msgstr "%s: Wskazany przez plik kod reprezentacji znaków (%s) nie jest kodem ASCII"
 
 # foreign/src/sfm-read.c: 554
 # warning(_("%s: File-indicated character representation code (%d) is unknown"), h->fn, data[7])
@@ -931,12 +862,8 @@ msgstr "%s: Wskazany przez plik kod reprezentacji znaków (%d) jest nieznany"
 # 	   h->fn, size, count, sizeof (R_flt64))
 #: sfm-read.c:621
 #, fuzzy, c-format
-msgid ""
-"%s: Bad size (%d) or count (%u) field on record type 7, subtype 4.\tExpected "
-"size %lu, count 8"
-msgstr ""
-"%s: Niepoprawne pole rozmiaru (%d) lub zliczenia (%d) na rekordzie tpyu 7, "
-"podtyp 4.\tOczekiwano rozmiaru %d oraz 8 zliczeń"
+msgid "%s: Bad size (%d) or count (%u) field on record type 7, subtype 4.\tExpected size %lu, count 8"
+msgstr "%s: Niepoprawne pole rozmiaru (%d) lub zliczenia (%d) na rekordzie tpyu 7, podtyp 4.\tOczekiwano rozmiaru %d oraz 8 zliczeń"
 
 # foreign/src/sfm-read.c: 586
 # warning(_("%s: File-indicated value is different from internal value for at least one of the three system values. SYSMIS: indicated %g, expected %g; HIGHEST: %g, %g; LOWEST: %g, %g"),
@@ -945,38 +872,24 @@ msgstr ""
 # 	  (double) data[2], (double) second_lowest_double_val())
 #: sfm-read.c:635
 #, c-format
-msgid ""
-"%s: File-indicated value is different from internal value for at least one "
-"of the three system values.  SYSMIS: indicated %g, expected %g; HIGHEST: %g, "
-"%g; LOWEST: %g, %g"
-msgstr ""
-"%s: Wskazana przez plik wartość jest różna od wartości wewnętrznej dla "
-"przynajmniej jeden z trzech wartości systemowych.  SYSMIS: wskazał %g, "
-"oczekiwano %g; NAJWYŻSZA: %g, %g; NAJNIŻSZA: %g, %g"
+msgid "%s: File-indicated value is different from internal value for at least one of the three system values.  SYSMIS: indicated %g, expected %g; HIGHEST: %g, %g; LOWEST: %g, %g"
+msgstr "%s: Wskazana przez plik wartość jest różna od wartości wewnętrznej dla przynajmniej jeden z trzech wartości systemowych.  SYSMIS: wskazał %g, oczekiwano %g; NAJWYŻSZA: %g, %g; NAJNIŻSZA: %g, %g"
 
 # foreign/src/sfm-read.c: 690
 # (_("%s: Bad magic. Proper system files begin with the four characters `$FL2'. This file will not be read"),
 # 	   h->fn)
 #: sfm-read.c:745
 #, c-format
-msgid ""
-"%s: Bad magic.  Proper system files begin with the four characters `$FL2'. "
-"This file will not be read"
-msgstr ""
-"%s: Niepoprawna liczba magiczna.  Poprawne pliki systemowe rozpoczynają się "
-"czterema znakami'$FL2'. Ten plik nie będzie odczytywany"
+msgid "%s: Bad magic.  Proper system files begin with the four characters `$FL2'. This file will not be read"
+msgstr "%s: Niepoprawna liczba magiczna.  Poprawne pliki systemowe rozpoczynają się czterema znakami'$FL2'. Ten plik nie będzie odczytywany"
 
 # foreign/src/sfm-read.c: 732
 # (_("%s: File layout code has unexpected value %d. Value should be 2 or 3, in big-endian or little-endian format"),
 # 	       h->fn, hdr.layout_code)
 #: sfm-read.c:787
 #, c-format
-msgid ""
-"%s: File layout code has unexpected value %d.  Value should be 2 or 3, in "
-"big-endian or little-endian format"
-msgstr ""
-"%s: Kod układu pliku ma nieoczekiwaną wartość %d.  Wartość powinna wynosić 2 "
-"lub 3, w formacie grubokońcowości lub cienkokońcowości"
+msgid "%s: File layout code has unexpected value %d.  Value should be 2 or 3, in big-endian or little-endian format"
+msgstr "%s: Kod układu pliku ma nieoczekiwaną wartość %d.  Wartość powinna wynosić 2 lub 3, w formacie grubokońcowości lub cienkokońcowości"
 
 # foreign/src/sfm-read.c: 747
 # (_("%s: Number of elements per case (%d) is not between 1 and %d"),
@@ -989,19 +902,15 @@ msgstr "%s: Liczba elementów na przypadek (%d) nie jest pomiędzy 1 a %d"
 # foreign/src/sfm-read.c: 754
 # (_("%s: Index of weighting variable (%d) is not between 0 and number of elements per case (%d)"),
 # 	   h->fn, hdr.weight_index, ext->case_size)
-#: sfm-read.c:809
+#: sfm-read.c:810
 #, c-format
-msgid ""
-"%s: Index of weighting variable (%d) is not between 0 and number of elements "
-"per case (%d)"
-msgstr ""
-"%s: Indeks zmiennej ważącej (%d) nie jest pomiędzy 0 a liczbą elementów na "
-"przypadek (%d)"
+msgid "%s: Index of weighting variable (%d) is not between 0 and number of elements per case (%d)"
+msgstr "%s: Indeks zmiennej ważącej (%d) nie jest pomiędzy 0 a liczbą elementów na przypadek (%d)"
 
 # foreign/src/sfm-read.c: 759
 # (_("%s: Number of cases in file (%d) is not between -1 and %d"),
 # 	   h->fn, ext->ncases, INT_MAX / 2)
-#: sfm-read.c:814
+#: sfm-read.c:815
 #, c-format
 msgid "%s: Number of cases in file (%d) is not between -1 and %d"
 msgstr "%s: Liczba przypadków w pliku (%d) nie jest pomiędzy -1 a %d"
@@ -1009,7 +918,7 @@ msgstr "%s: Liczba przypadków w pliku (%d) nie jest pomiędzy -1 a %d"
 # foreign/src/sfm-read.c: 764
 # warning(_("%s: Compression bias (%g) is not the usual value of 100"),
 # 	    h->fn, ext->bias)
-#: sfm-read.c:819
+#: sfm-read.c:820
 #, c-format
 msgid "%s: Compression bias (%g) is not the usual value of 100"
 msgstr "%s: Obciążenie kompresji (%g) nie jest typową wartością 100"
@@ -1017,7 +926,7 @@ msgstr "%s: Obciążenie kompresji (%g) nie jest typową wartością 100"
 # foreign/src/sfm-read.c: 866
 # (_("%s: position %d: Bad record type (%d); the expected value was 2"),
 # 	       h->fn, i, sv.rec_type)
-#: sfm-read.c:921
+#: sfm-read.c:922
 #, c-format
 msgid "%s: position %d: Bad record type (%d); the expected value was 2"
 msgstr "%s: pozycja %d: Niepoprawny typ (%d) rekordu; oczekiwano wartości 2"
@@ -1025,19 +934,15 @@ msgstr "%s: pozycja %d: Niepoprawny typ (%d) rekordu; oczekiwano wartości 2"
 # foreign/src/sfm-read.c: 875
 # (_("%s: position %d: String variable does not have proper number of continuation records"),
 # 		   h->fn, i)
-#: sfm-read.c:930
+#: sfm-read.c:931
 #, c-format
-msgid ""
-"%s: position %d: String variable does not have proper number of continuation "
-"records"
-msgstr ""
-"%s: pozycja %d: Zmienna tekstowa nie ma poprawnej liczby kontynuujących "
-"rekordów"
+msgid "%s: position %d: String variable does not have proper number of continuation records"
+msgstr "%s: pozycja %d: Zmienna tekstowa nie ma poprawnej liczby kontynuujących rekordów"
 
 # foreign/src/sfm-read.c: 883
 # (_("%s: position %d: Superfluous long string continuation record"),
 # 	       h->fn, i)
-#: sfm-read.c:938
+#: sfm-read.c:939
 #, c-format
 msgid "%s: position %d: Superfluous long string continuation record"
 msgstr "%s: pozycja %d: Zbędny długotekstowy rekord kontynuacyjny"
@@ -1045,7 +950,7 @@ msgstr "%s: pozycja %d: Zbędny długotekstowy rekord kontynuacyjny"
 # foreign/src/sfm-read.c: 888
 # (_("%s: position %d: Bad variable type code %d"),
 # 	       h->fn, i, sv.type)
-#: sfm-read.c:943
+#: sfm-read.c:944
 #, c-format
 msgid "%s: position %d: Bad variable type code %d"
 msgstr "%s: pozycja %d: Niepoprawny kod %d typu zmiennej"
@@ -1053,55 +958,45 @@ msgstr "%s: pozycja %d: Niepoprawny kod %d typu zmiennej"
 # foreign/src/sfm-read.c: 891
 # (_("%s: position %d: Variable label indicator field is not 0 or 1"),
 # 	       h->fn, i)
-#: sfm-read.c:946
+#: sfm-read.c:947
 #, c-format
 msgid "%s: position %d: Variable label indicator field is not 0 or 1"
-msgstr ""
-"%s: pozycja %d: Pole wskazujące etykietę zmiennej nie ma wartości 0 lub 1"
+msgstr "%s: pozycja %d: Pole wskazujące etykietę zmiennej nie ma wartości 0 lub 1"
 
 # foreign/src/sfm-read.c: 895
 # (_("%s: position %d: Missing value indicator field is not -3, -2, 0, 1, 2, or 3"), h->fn, i)
-#: sfm-read.c:950
+#: sfm-read.c:951
 #, c-format
-msgid ""
-"%s: position %d: Missing value indicator field is not -3, -2, 0, 1, 2, or 3"
-msgstr ""
-"%s: pozycja %d: Pole wskazujące brakujące wartości nie ma wartości -3, -2, "
-"0, 1, 2, lub 3"
+msgid "%s: position %d: Missing value indicator field is not -3, -2, 0, 1, 2, or 3"
+msgstr "%s: pozycja %d: Pole wskazujące brakujące wartości nie ma wartości -3, -2, 0, 1, 2, lub 3"
 
 # foreign/src/sfm-read.c: 915
 # warning(_("%s: position %d: Variable name begins with octothorpe ('#'). Scratch variables should not appear in system files"),
 # 		  h->fn, i)
-#: sfm-read.c:972
+#: sfm-read.c:973
 #, c-format
-msgid ""
-"%s: position %d: Variable name begins with octothorpe ('#').  Scratch "
-"variables should not appear in system files"
-msgstr ""
-"%s: pozycja %d: Nazwa zmiennej rozpoczyna się znakiem hash ('#').  Usunięte "
-"zmienne nie powinny pojawiać się w plikach systemowych"
+msgid "%s: position %d: Variable name begins with octothorpe ('#').  Scratch variables should not appear in system files"
+msgstr "%s: pozycja %d: Nazwa zmiennej rozpoczyna się znakiem hash ('#').  Usunięte zmienne nie powinny pojawiać się w plikach systemowych"
 
 # foreign/src/sfm-read.c: 936
 # (_("%s: position %d: character `\\%03o' (%c) is not valid in a variable name"),
 # 		   h->fn, j, c, c)
-#: sfm-read.c:994
+#: sfm-read.c:995
 #, c-format
-msgid ""
-"%s: position %d: character `\\%03o' (%c) is not valid in a variable name"
+msgid "%s: position %d: character `\\%03o' (%c) is not valid in a variable name"
 msgstr "%s: pozycja %d: znak '\\%03o' (%c) nie jest poprawny w nazwie zmiennej"
 
 # foreign/src/sfm-read.c: 978
 # (_("%s: Variable %s indicates variable label of invalid length %d"),
 # 		   h->fn, vv->name, len)
-#: sfm-read.c:1036
+#: sfm-read.c:1037
 #, c-format
 msgid "%s: Variable %s indicates variable label of invalid length %d"
-msgstr ""
-"%s: Zmienna %s wskazuje na etykietę zmiennej o niepoprawnej długości %d"
+msgstr "%s: Zmienna %s wskazuje na etykietę zmiennej o niepoprawnej długości %d"
 
 # foreign/src/sfm-read.c: 994
 # (_("%s: Long string variable %s may not have missing values"), h->fn, vv->name)
-#: sfm-read.c:1052
+#: sfm-read.c:1053
 #, c-format
 msgid "%s: Long string variable %s may not have missing values"
 msgstr "%s: Długotekstowa zmienna %s nie może mieć wartości brakujących"
@@ -1109,16 +1004,15 @@ msgstr "%s: Długotekstowa zmienna %s nie może mieć wartości brakujących"
 # foreign/src/sfm-read.c: 1017
 # (_("%s: String variable %s may not have missing values specified as a range"),
 # 		       h->fn, vv->name)
-#: sfm-read.c:1075
+#: sfm-read.c:1076
 #, c-format
 msgid "%s: String variable %s may not have missing values specified as a range"
-msgstr ""
-"%s: Tekstowa zmienna %s nie może wartości brakujących określonych jako zakres"
+msgstr "%s: Tekstowa zmienna %s nie może wartości brakujących określonych jako zakres"
 
 # foreign/src/sfm-read.c: 1054
 # (_("%s: Long string continuation records omitted at end of dictionary"),
 # 	   h->fn)
-#: sfm-read.c:1118
+#: sfm-read.c:1119
 #, c-format
 msgid "%s: Long string continuation records omitted at end of dictionary"
 msgstr "%s: Długotekstowe rekordy kontynuacyjne pominięte na końcu słownika"
@@ -1126,19 +1020,15 @@ msgstr "%s: Długotekstowe rekordy kontynuacyjne pominięte na końcu słownika"
 # foreign/src/sfm-read.c: 1057
 # (_("%s: System file header indicates %d variable positions but %d were read from file"),
 # 	   h->fn, ext->case_size, next_value)
-#: sfm-read.c:1121
+#: sfm-read.c:1122
 #, c-format
-msgid ""
-"%s: System file header indicates %d variable positions but %d were read from "
-"file"
-msgstr ""
-"%s: Nagłówek pliku systemowego wskazuje na %d pozycje zmiennych, ale %d "
-"zostało odczytanych z pliku"
+msgid "%s: System file header indicates %d variable positions but %d were read from file"
+msgstr "%s: Nagłówek pliku systemowego wskazuje na %d pozycje zmiennych, ale %d zostało odczytanych z pliku"
 
 # foreign/src/sfm-read.c: 1066
 # (_("%s: Duplicate variable name `%s' within system file"),
 # 	     h->fn, dict->var[i]->name)
-#: sfm-read.c:1130
+#: sfm-read.c:1131
 #, c-format
 msgid "%s: Duplicate variable name `%s' within system file"
 msgstr "%s: Powtórzona nazwa '%s' zmiennej wewnątrz pliku systemowego"
@@ -1146,82 +1036,61 @@ msgstr "%s: Powtórzona nazwa '%s' zmiennej wewnątrz pliku systemowego"
 # foreign/src/sfm-read.c: 1108
 # (_("%s: String variable %s has string format specifier %s"),
 #            h->fn, vv->name, formats[v->type].name)
-#: sfm-read.c:1170
+#: sfm-read.c:1171
 #, c-format
 msgid "%s: %s variable %s has %s format specifier %s"
 msgstr "%s: Zmienna %s %s posiada określający format %s %s"
 
 # foreign/src/sfm-read.c: 1197
 # (_("%s: Variable index record (type 4) does not immediately follow value label record (type 3) as it ought"), h->fn)
-#: sfm-read.c:1249
+#: sfm-read.c:1250
 #, c-format
-msgid ""
-"%s: Variable index record (type 4) does not immediately follow value label "
-"record (type 3) as it ought"
-msgstr ""
-"%s: Indeks rekordu (typ 4) zmiennej nie następuje od razu po indeksie "
-"rekordu (typ 3) zmiennej jak powinien"
+msgid "%s: Variable index record (type 4) does not immediately follow value label record (type 3) as it ought"
+msgstr "%s: Indeks rekordu (typ 4) zmiennej nie następuje od razu po indeksie rekordu (typ 3) zmiennej jak powinien"
 
 # foreign/src/sfm-read.c: 1206
 # (_("%s: Number of variables associated with a value label (%d) is not between 1 and the number of variables (%d)"),
 # 	   h->fn, n_vars, ext->dict->nvar)
-#: sfm-read.c:1258
+#: sfm-read.c:1259
 #, c-format
-msgid ""
-"%s: Number of variables associated with a value label (%d) is not between 1 "
-"and the number of variables (%d)"
-msgstr ""
-"%s: Liczba zmiennych powiązanych z wartością etykiety (%d) nie jest pomiędzy "
-"1 a liczbą zmiennych (%d)"
+msgid "%s: Number of variables associated with a value label (%d) is not between 1 and the number of variables (%d)"
+msgstr "%s: Liczba zmiennych powiązanych z wartością etykiety (%d) nie jest pomiędzy 1 a liczbą zmiennych (%d)"
 
 # foreign/src/sfm-read.c: 1223
 # (_("%s: Variable index associated with value label (%d) is not between 1 and the number of values (%d)"),
 # 	       h->fn, var_index, ext->case_size)
-#: sfm-read.c:1275
+#: sfm-read.c:1276
 #, c-format
-msgid ""
-"%s: Variable index associated with value label (%d) is not between 1 and the "
-"number of values (%d)"
-msgstr ""
-"%s: Indeks zmiennej powiązany z wartością etykiety (%d) nie jest pomiędzy 1 "
-"a liczbą wartości (%d)"
+msgid "%s: Variable index associated with value label (%d) is not between 1 and the number of values (%d)"
+msgstr "%s: Indeks zmiennej powiązany z wartością etykiety (%d) nie jest pomiędzy 1 a liczbą wartości (%d)"
 
 # foreign/src/sfm-read.c: 1229
 # (_("%s: Variable index associated with value label (%d) refers to a continuation of a string variable, not to an actual variable"),
 # 	       h->fn, var_index)
-#: sfm-read.c:1281
+#: sfm-read.c:1282
 #, c-format
-msgid ""
-"%s: Variable index associated with value label (%d) refers to a continuation "
-"of a string variable, not to an actual variable"
-msgstr ""
-"%s: Indeks zmiennej powiązany z wartością etykiety (%d) odnosi się do "
-"kontynuacji zmiennej tekstowej, nie do aktualnej zmiennej"
+msgid "%s: Variable index associated with value label (%d) refers to a continuation of a string variable, not to an actual variable"
+msgstr "%s: Indeks zmiennej powiązany z wartością etykiety (%d) odnosi się do kontynuacji zmiennej tekstowej, nie do aktualnej zmiennej"
 
 # foreign/src/sfm-read.c: 1232
 # (_("%s: Value labels are not allowed on long string variables (%s)"), h->fn, v->name)
-#: sfm-read.c:1284
+#: sfm-read.c:1285
 #, c-format
 msgid "%s: Value labels are not allowed on long string variables (%s)"
-msgstr ""
-"%s: Etykiety wartości nie sa dozwolone dla długotekstowych zmiennych (%s)"
+msgstr "%s: Etykiety wartości nie sa dozwolone dla długotekstowych zmiennych (%s)"
 
 # foreign/src/sfm-read.c: 1242
 # (_("%s: Variables associated with value label are not all of identical type. Variable %s has string type, but variable %s has numeric type"), h->fn,
 # 	     var[0]->name, var[i]->name)
-#: sfm-read.c:1293
+#: sfm-read.c:1294
 #, c-format
-msgid ""
-"%s: Variables associated with value label are not all of identical type.  "
-"Variable %s has %s type, but variable %s has %s type"
-msgstr ""
-"%s: Zmienne powiązane z etykietami wartości nie mają identycznego typu.  "
-"Zmienna %s posiada typ %s, ale zmienna %s posiada typ %s"
+msgid "%s: Variables associated with value label are not all of identical type.  Variable %s has %s type, but variable %s has %s type"
+msgstr "%s: Zmienne powiązane z etykietami wartości nie mają identycznego typu.  Zmienna %s posiada typ %s, ale zmienna %s posiada typ %s"
 
 # foreign/src/sfm-read.c: 1287
 # warning(_("%s: File contains duplicate label for value %g for variable %s"),
 # 		    h->fn, cooked_label[j]->v.f, v->name)
-#: sfm-read.c:1335
+#: sfm-read.c:1336
 #, c-format
 msgid "%s: File contains duplicate label for value %g for variable %s"
 msgstr "%s: Plik zawiera powtorzone etykiety dla wartości %g zmiennej %s"
@@ -1230,7 +1099,7 @@ msgstr "%s: Plik zawiera powtorzone etykiety dla wartości %g zmiennej %s"
 # warning(_("%s: File contains duplicate label for value `%.*s' for variable %s"),
 # 		      h->fn, v->width,
 # 		 cooked_label[j]->v.s, v->name)
-#: sfm-read.c:1338
+#: sfm-read.c:1339
 #, c-format
 msgid "%s: File contains duplicate label for value `%.*s' for variable %s"
 msgstr "%s: Plik zawiera powtórzone etykiety dla wartości '%.*s' zmiennej %s"
@@ -1239,7 +1108,7 @@ msgstr "%s: Plik zawiera powtórzone etykiety dla wartości '%.*s' zmiennej %s"
 # error(_("%s: Reading system file: %s"), h->fn, strerror (errno))
 # foreign/src/sfm-read.c: 1608
 # error(_("%s: Reading system file: %s"), h->fn, strerror (errno))
-#: sfm-read.c:1378 sfm-read.c:1656
+#: sfm-read.c:1379 sfm-read.c:1657
 #, c-format
 msgid "%s: Reading system file: %s"
 msgstr "%s: Czytanie pliku systemowego: %s"
@@ -1250,7 +1119,7 @@ msgstr "%s: Czytanie pliku systemowego: %s"
 # (_("%s: Unexpected end of file"), h->fn)
 # foreign/src/sfm-read.c: 1557
 # (_("%s: Unexpected end of file"), h->fn)
-#: sfm-read.c:1380 sfm-read.c:1564 sfm-read.c:1605
+#: sfm-read.c:1381 sfm-read.c:1565 sfm-read.c:1606
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s: Nieoczekiwany koniec pliku"
@@ -1258,7 +1127,7 @@ msgstr "%s: Nieoczekiwany koniec pliku"
 # foreign/src/sfm-read.c: 1349
 # (_("%s: System file contains multiple type 6 (document) records"),
 # 	   h->fn)
-#: sfm-read.c:1397
+#: sfm-read.c:1398
 #, c-format
 msgid "%s: System file contains multiple type 6 (document) records"
 msgstr "%s: Plik systemowy zawiera wielokrotne rekordy typu 6 (dokument)"
@@ -1266,29 +1135,28 @@ msgstr "%s: Plik systemowy zawiera wielokrotne rekordy typu 6 (dokument)"
 # foreign/src/sfm-read.c: 1359
 # (_("%s: Number of document lines (%d) must be greater than 0"),
 # 	   h->fn, dict->n_documents)
-#: sfm-read.c:1407
+#: sfm-read.c:1408
 #, c-format
 msgid "%s: Number of document lines (%d) must be greater than 0"
 msgstr "%s: Liczba linii (%d) dokumentu musi byc większa niż 0"
 
 # foreign/src/sfm-read.c: 1470
 # error(_("%s: Error reading file: %s"), h->fn, strerror (errno))
-#: sfm-read.c:1518
+#: sfm-read.c:1519
 #, c-format
 msgid "%s: Error reading file: %s"
 msgstr "%s: Błąd podczas czytania pliku: %s"
 
 # foreign/src/sfm-read.c: 1508
 # (_("%s: Compressed data is corrupted.  Data ends partway through a case"), h->fn)
-#: sfm-read.c:1556
+#: sfm-read.c:1557
 #, c-format
 msgid "%s: Compressed data is corrupted.  Data ends partway through a case"
-msgstr ""
-"%s: Skompresowane dane są uszkodzone.  Dane kończą się częściowo na przypadku"
+msgstr "%s: Skompresowane dane są uszkodzone.  Dane kończą się częściowo na przypadku"
 
 # foreign/src/sfm-read.c: 1610
 # error(_("%s: Partial record at end of system file"), h->fn)
-#: sfm-read.c:1658
+#: sfm-read.c:1659
 #, c-format
 msgid "%s: Partial record at end of system file"
 msgstr "%s: Częściowy rekord na końcu pliku systemowego"
@@ -1330,20 +1198,20 @@ msgstr "plik '%s' nie jest w żadnym wspieranym formacie SPSS"
 # error(_("a binary read error occurred"))
 # foreign/src/stataread.c: 507
 # warning(_("a binary read error occurred"))
-#: stataread.c:95 stataread.c:105 stataread.c:113 stataread.c:140
-#: stataread.c:153 stataread.c:163 stataread.c:520
+#: stataread.c:96 stataread.c:106 stataread.c:114 stataread.c:141
+#: stataread.c:154 stataread.c:164 stataread.c:521
 msgid "a binary read error occurred"
 msgstr "wystąpił błąd odczytu binarnego"
 
 # foreign/src/stataread.c: 229
 # error(_("not a Stata version 5-12 .dta file"))
-#: stataread.c:241
+#: stataread.c:242
 msgid "not a Stata version 5-12 .dta file"
 msgstr "to nie jest plik .dta Stata wersja 5-12"
 
 # foreign/src/stataread.c: 427
 # error(_("something strange in the file\n (Type 0 characteristic of nonzero length)"))
-#: stataread.c:439
+#: stataread.c:440
 msgid ""
 "something strange in the file\n"
 " (Type 0 characteristic of nonzero length)"
@@ -1353,11 +1221,11 @@ msgstr ""
 
 # foreign/src/stataread.c: 575
 # error(_("can not yet read Stata .dta on this platform"))
-#: stataread.c:584
+#: stataread.c:585
 msgid "can not yet read Stata .dta on this platform"
 msgstr "nie można na chwilę obecną odczytać pliku .dta Stata na tej platformie"
 
-#: stataread.c:588 stataread.c:1044
+#: stataread.c:589 stataread.c:1045
 msgid "first argument must be a file name\n"
 msgstr "pierwszy argument musi być nazwą pliku\n"
 
@@ -1375,51 +1243,51 @@ msgstr "pierwszy argument musi być nazwą pliku\n"
 # error(_("a binary write error occurred"))
 # foreign/src/stataread.c: 643
 # error(_("a binary write error occurred"))
-#: stataread.c:606 stataread.c:613 stataread.c:619 stataread.c:634
-#: stataread.c:636 stataread.c:644 stataread.c:652
+#: stataread.c:607 stataread.c:614 stataread.c:620 stataread.c:635
+#: stataread.c:637 stataread.c:645 stataread.c:653
 msgid "a binary write error occurred"
 msgstr "nastąpił błąd zapisu danych binarnych"
 
 # foreign/src/stataread.c: 712
 # error(_("this should happen: overrun"))
-#: stataread.c:722
+#: stataread.c:723
 msgid "this should happen: overrun"
 msgstr "to nie powinno się zdarzyć: przeskakiwanie"
 
 # foreign/src/stataread.c: 714
 # error(_("this should happen: underrun"))
-#: stataread.c:724
+#: stataread.c:725
 msgid "this should happen: underrun"
 msgstr "to nie powinno się zdarzyć: przepuszczanie"
 
 # foreign/src/stataread.c: 965
 # error(_("this should not happen."))
-#: stataread.c:983
+#: stataread.c:984
 msgid "this should not happen."
 msgstr "to nie powinno się zdarzyć."
 
 # foreign/src/stataread.c: 1022
 # error(_("cannot yet read write .dta on this platform"))
-#: stataread.c:1040
+#: stataread.c:1041
 msgid "cannot yet read write .dta on this platform"
 msgstr "nie można na chwilę obecną zapisać pliku .dta Stata na tej platformie"
 
 # foreign/src/stataread.c: 1030
 # error(_("data to be saved must be in a data frame"))
-#: stataread.c:1048
+#: stataread.c:1049
 msgid "data to be saved must be in a data frame"
 msgstr "zapisywane dane muszą być w formacie ramki danych"
 
 # foreign/src/stataread.c: 1033
 # error(_("unable to open file for writing: '%s'"), strerror(errno))
-#: stataread.c:1051
+#: stataread.c:1052
 #, c-format
 msgid "unable to open file for writing: '%s'"
 msgstr "nie można otworzyć pliku do zapisu: '%s'"
 
 # foreign/src/stataread.c: 1038
 # error(_("can only write version 6-10 formats"))
-#: stataread.c:1056
+#: stataread.c:1057
 msgid "can only write version 6-10 formats"
 msgstr "można zapisywać formaty w wersji 6-10"
 
