@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: foreign 0.8-60\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-15 19:05+0200\n"
-"PO-Revision-Date: 2014-03-24 17:30+0100\n"
+"PO-Revision-Date: 2024-09-17 17:45+0200\n"
 "Last-Translator: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language-Team: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language: pl_PL\n"
@@ -11,8 +11,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Poedit-SourceCharset: iso-8859-1\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.4.2\n"
 
 # foreign/src/R_systat.c: 132
 # sprintf(msg, _("not a rectangular data file (%s mtype is %d)"),
@@ -553,9 +553,9 @@ msgstr "Nierozpoznany kod wersji %d"
 # foreign/src/pfm-read.c: 552
 # (_("Bad date string length %d"), strlen (date))
 #: pfm-read.c:552
-#, fuzzy, c-format
+#, c-format
 msgid "Bad date string length %lu"
-msgstr "Niepoprawna długość %d łańcucha daty "
+msgstr "Niepoprawna długość %lu tekstu daty"
 
 # foreign/src/pfm-read.c: 559
 # (_("Bad character in date"))
@@ -566,9 +566,9 @@ msgstr "Niepoprawny znak w dacie"
 # foreign/src/pfm-read.c: 579
 # (_("Bad time string length %d"), strlen (time))
 #: pfm-read.c:579
-#, fuzzy, c-format
+#, c-format
 msgid "Bad time string length %lu"
-msgstr "Niepoprawna długość %d łańcucha czasu"
+msgstr "Niepoprawna długość %lu tekstu daty"
 
 # foreign/src/pfm-read.c: 586
 # (_("Bad character in time"))
@@ -634,9 +634,9 @@ msgstr "Niepoprawna szerokość %d zmiennej"
 # (_("position %d: Variable name has %u characters"),
 # 	       i, strlen ((char *) name))
 #: pfm-read.c:754
-#, fuzzy, c-format
+#, c-format
 msgid "position %d: Variable name has %lu characters"
-msgstr "pozycja %d: Nazwa zmiennej ma %u znaków"
+msgstr "pozycja %d: Nazwa zmiennej ma %lu znak(i)(ów)"
 
 # foreign/src/pfm-read.c: 767
 # (_("position %d: Variable name begins with invalid character"),
@@ -652,7 +652,7 @@ msgstr "pozycja %d: Nazwa zmiennej rozpoczyna się niepoprawnym znakiem"
 #: pfm-read.c:762
 #, c-format
 msgid "position %d: Variable name begins with lowercase letter %c"
-msgstr "pozycja %d: Nazwa zmiennej rozpoczyna się  małą literą %c"
+msgstr "pozycja %d: Nazwa zmiennej rozpoczyna się małą literą %c"
 
 # foreign/src/pfm-read.c: 783
 # warning(_("position %d: Variable name character %d is lowercase letter %c"),
@@ -660,7 +660,7 @@ msgstr "pozycja %d: Nazwa zmiennej rozpoczyna się  małą literą %c"
 #: pfm-read.c:774
 #, c-format
 msgid "position %d: Variable name character %d is lowercase letter %c"
-msgstr "pozycja %d: Znak %d nazwy zmiennej  jest małą literą %c"
+msgstr "pozycja %d: Znak %d nazwy zmiennej jest małą literą %c"
 
 # foreign/src/pfm-read.c: 792
 # (_("position %d: character `\\%03o' is not valid in a variable name"),
@@ -785,17 +785,17 @@ msgstr "%s: Osierocony rekord (typ 4) indeksu zmiennej. Rekordy typu 4 muszą za
 #: sfm-read.c:452
 #, c-format
 msgid "%s: Very long string record(s) found (record type 7, subtype %d), each will be imported in consecutive separate variables"
-msgstr ""
+msgstr "%s: Znaleziono bardzo długie teksty (typ rekordu 7, podtyp %d), każdy tekst będzie zaimportowany w kolejnych oddzielnych zmiennych"
 
 #: sfm-read.c:477
 #, c-format
 msgid "%s: Long string value labels record found (record type 7, subtype %d), but ignored"
-msgstr ""
+msgstr "%s: Znaleziono wpis z długą nazwą (typ rekordu 7, podtyp %d), ale zignorowano"
 
 #: sfm-read.c:482
 #, c-format
 msgid "%s: Long string missing values record found (record type 7, subtype %d), but ignored"
-msgstr ""
+msgstr "%s: Znaleziono wpis z brakującym tekstem (typ rekordu 7, podtyp %d), ale zignorowano"
 
 # foreign/src/sfm-read.c: 442
 # warning(_("%s: Unrecognized record type 7, subtype %d encountered in system file"), h->fn, data.subtype)
@@ -821,9 +821,9 @@ msgstr "błąd podczas odczytywania nagłówka pliku systemowego"
 # (_("%s: Bad size (%d) or count (%d) field on record type 7, subtype 3. Expected size %d, count 8"),
 # 	h->fn, size, count, sizeof (R_int32))
 #: sfm-read.c:554
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected size %ld, count 8"
-msgstr "%s: Niepoprawne pole rozmiaru (%d) lub zliczenia (%d) na rekordzie tpyu 7, podtyp 3.\tOczekiwano rozmiaru %d oraz 8 zliczeń"
+msgstr "%s: Niepoprawne pole rozmiaru (%d) lub zliczenia (%u) na rekordzie typu 7, podtyp 3. Oczekiwano rozmiaru %ld oraz 8 zliczeń"
 
 # foreign/src/sfm-read.c: 518
 # (_("%s: Floating-point representation in system file is not IEEE-754. read.spss cannot convert between floating-point formats"), h->fn)
@@ -861,9 +861,9 @@ msgstr "%s: Wskazany przez plik kod reprezentacji znaków (%d) jest nieznany"
 # (_("%s: Bad size (%d) or count (%d) field on record type 7, subtype 4. Expected size %d, count 8"),
 # 	   h->fn, size, count, sizeof (R_flt64))
 #: sfm-read.c:621
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Bad size (%d) or count (%u) field on record type 7, subtype 4.\tExpected size %lu, count 8"
-msgstr "%s: Niepoprawne pole rozmiaru (%d) lub zliczenia (%d) na rekordzie tpyu 7, podtyp 4.\tOczekiwano rozmiaru %d oraz 8 zliczeń"
+msgstr "%s: Niepoprawne pole rozmiaru (%d) lub zliczenia (%u) na rekordzie typu 7, podtyp 4. Oczekiwano rozmiaru %lu oraz 8 zliczeń"
 
 # foreign/src/sfm-read.c: 586
 # warning(_("%s: File-indicated value is different from internal value for at least one of the three system values. SYSMIS: indicated %g, expected %g; HIGHEST: %g, %g; LOWEST: %g, %g"),
@@ -895,9 +895,9 @@ msgstr "%s: Kod układu pliku ma nieoczekiwaną wartość %d.  Wartość powinna
 # (_("%s: Number of elements per case (%d) is not between 1 and %d"),
 # 	   h->fn, hdr.case_size, INT_MAX / sizeof (union value) / 2)
 #: sfm-read.c:802
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Number of elements per case (%d) is not between 1 and %ld"
-msgstr "%s: Liczba elementów na przypadek (%d) nie jest pomiędzy 1 a %d"
+msgstr "%s: Liczba elementów na przypadek (%d) nie jest pomiędzy 1 a %ld"
 
 # foreign/src/sfm-read.c: 754
 # (_("%s: Index of weighting variable (%d) is not between 0 and number of elements per case (%d)"),
