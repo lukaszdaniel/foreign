@@ -333,21 +333,21 @@ List of 20
 > x.nodat <- read.spss(file=sav, to.data.frame = FALSE, reencode="UTF-8")
 re-encoding from UTF-8
 Warning messages:
-1: In read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8") :
+1: In 'read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8")':
   testdata.sav: Very long string record(s) found (record type 7, subtype 14), each will be imported in consecutive separate variables
-2: In read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8") :
+2: In 'read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8")':
   Undeclared level(s) -1 added in variable: factor_numeric
-3: In read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8") :
+3: In 'read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8")':
   Duplicated levels in factor factor_n_duplicated: A
-4: In read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8") :
+4: In 'read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8")':
   Undeclared level(s) 2, 3, 4 added in variable: factor_n_undeclared
-5: In read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8") :
+5: In 'read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8")':
   Undeclared level(s) 0, 3 added in variable: factor_n_undeclared2
-6: In read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8") :
+6: In 'read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8")':
   Undeclared level(s) .. added in variable: factor_s_duplicated
-7: In read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8") :
+7: In 'read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8")':
   Duplicated levels in factor factor_s_duplicated: A
-8: In read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8") :
+8: In 'read.spss(file = sav, to.data.frame = FALSE, reencode = "UTF-8")':
   Undeclared level(s) perhaps added in variable: factor_s_undeclared
 > str(x.nodat)
 List of 17
@@ -444,19 +444,19 @@ List of 17
 +                     stringsAsFactors=TRUE)
 re-encoding from UTF-8
 Warning messages:
-1: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8",  :
+1: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8", ':
   testdata.sav: Very long string record(s) found (record type 7, subtype 14), each will be imported in consecutive separate variables
-2: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8",  :
+2: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8", ':
   Duplicated levels in factor factor_n_duplicated: A
-3: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8",  :
+3: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8", ':
   Undeclared level(s) 2, 3, 4 added in variable: factor_n_undeclared
-4: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8",  :
+4: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8", ':
   Undeclared level(s) 0, 3 added in variable: factor_n_undeclared2
-5: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8",  :
+5: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8", ':
   Undeclared level(s) .. added in variable: factor_s_duplicated
-6: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8",  :
+6: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8", ':
   Duplicated levels in factor factor_s_duplicated: A
-7: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8",  :
+7: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8", ':
   Undeclared level(s) perhaps added in variable: factor_s_undeclared
 > str(x.sort)
 'data.frame':	5 obs. of  17 variables:
@@ -484,27 +484,27 @@ Warning messages:
 +     add.undeclared.levels = "append", reencode="UTF-8")
 re-encoding from UTF-8
 Warning messages:
-1: In read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append",  :
+1: In 'read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append", ':
   testdata.sav: Very long string record(s) found (record type 7, subtype 14), each will be imported in consecutive separate variables
-2: In read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append",  :
+2: In 'read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append", ':
   Duplicated levels in factor factor_n_duplicated: A
-3: In read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append",  :
+3: In 'read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append", ':
   Undeclared level(s) 2, 3, 4 added in variable: factor_n_undeclared
-4: In read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append",  :
+4: In 'read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append", ':
   Undeclared level(s) 0, 3 added in variable: factor_n_undeclared2
-5: In read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append",  :
+5: In 'read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append", ':
   Undeclared level(s) .. added in variable: factor_s_duplicated
-6: In read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append",  :
+6: In 'read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append", ':
   Duplicated levels in factor factor_s_duplicated: A
-7: In read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append",  :
+7: In 'read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "append", ':
   Undeclared level(s) perhaps added in variable: factor_s_undeclared
 > x.no <- read.spss(file=sav, to.data.frame = TRUE, 
 +     add.undeclared.levels = "no", reencode="UTF-8")
 re-encoding from UTF-8
 Warning messages:
-1: In read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "no",  :
+1: In 'read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "no", ':
   testdata.sav: Very long string record(s) found (record type 7, subtype 14), each will be imported in consecutive separate variables
-2: In read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "no",  :
+2: In 'read.spss(file = sav, to.data.frame = TRUE, add.undeclared.levels = "no", ':
   Duplicated levels in factor factor_n_duplicated: A
 > 
 > levels(x.sort$factor_n_undeclared)
@@ -524,38 +524,38 @@ Warning messages:
 > x.append <- read.spss(file=sav, to.data.frame=TRUE, reencode="UTF-8")
 re-encoding from UTF-8
 Warning messages:
-1: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8") :
+1: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8")':
   testdata.sav: Very long string record(s) found (record type 7, subtype 14), each will be imported in consecutive separate variables
-2: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8") :
+2: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8")':
   Duplicated levels in factor factor_n_duplicated: A
-3: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8") :
+3: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8")':
   Undeclared level(s) 2, 3, 4 added in variable: factor_n_undeclared
-4: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8") :
+4: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8")':
   Undeclared level(s) 0, 3 added in variable: factor_n_undeclared2
-5: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8") :
+5: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8")':
   Undeclared level(s) .. added in variable: factor_s_duplicated
-6: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8") :
+6: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8")':
   Duplicated levels in factor factor_s_duplicated: A
-7: In read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8") :
+7: In 'read.spss(file = sav, to.data.frame = TRUE, reencode = "UTF-8")':
   Undeclared level(s) perhaps added in variable: factor_s_undeclared
 > ## duplicated.value.labels = "condense"
 > x.condense <- read.spss(file=sav, to.data.frame=TRUE, 
 +     duplicated.value.labels = "condense", reencode="UTF-8")
 re-encoding from UTF-8
 Warning messages:
-1: In read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense",  :
+1: In 'read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense", ':
   testdata.sav: Very long string record(s) found (record type 7, subtype 14), each will be imported in consecutive separate variables
-2: In read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense",  :
+2: In 'read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense", ':
   Duplicated levels in factor factor_n_duplicated: A
-3: In read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense",  :
+3: In 'read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense", ':
   Undeclared level(s) 2, 3, 4 added in variable: factor_n_undeclared
-4: In read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense",  :
+4: In 'read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense", ':
   Undeclared level(s) 0, 3 added in variable: factor_n_undeclared2
-5: In read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense",  :
+5: In 'read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense", ':
   Undeclared level(s) .. added in variable: factor_s_duplicated
-6: In read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense",  :
+6: In 'read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense", ':
   Duplicated levels in factor factor_s_duplicated: A
-7: In read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense",  :
+7: In 'read.spss(file = sav, to.data.frame = TRUE, duplicated.value.labels = "condense", ':
   Undeclared level(s) perhaps added in variable: factor_s_undeclared
 > 
 > levels(x.append$factor_n_duplicated)
@@ -575,19 +575,19 @@ Warning messages:
 > x <- read.spss(file=sav, to.data.frame=TRUE, stringsAsFactors=FALSE, reencode="UTF-8")
 re-encoding from UTF-8
 Warning messages:
-1: In read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE,  :
+1: In 'read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE, ':
   testdata.sav: Very long string record(s) found (record type 7, subtype 14), each will be imported in consecutive separate variables
-2: In read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE,  :
+2: In 'read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE, ':
   Duplicated levels in factor factor_n_duplicated: A
-3: In read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE,  :
+3: In 'read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE, ':
   Undeclared level(s) 2, 3, 4 added in variable: factor_n_undeclared
-4: In read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE,  :
+4: In 'read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE, ':
   Undeclared level(s) 0, 3 added in variable: factor_n_undeclared2
-5: In read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE,  :
+5: In 'read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE, ':
   Undeclared level(s) .. added in variable: factor_s_duplicated
-6: In read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE,  :
+6: In 'read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE, ':
   Duplicated levels in factor factor_s_duplicated: A
-7: In read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE,  :
+7: In 'read.spss(file = sav, to.data.frame = TRUE, stringsAsFactors = FALSE, ':
   Undeclared level(s) perhaps added in variable: factor_s_undeclared
 > 
 > cat.long.string <- function(x, w=70) cat(paste(strwrap(x, width=w), "\n"))

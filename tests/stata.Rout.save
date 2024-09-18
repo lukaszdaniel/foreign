@@ -18,7 +18,7 @@ Type 'q()' to quit R.
 > library(foreign)
 > pc5 <- read.dta("pc5.dta")
 Warning message:
-In read.dta("pc5.dta") : cannot read factor labels from Stata 5 files
+In 'read.dta("pc5.dta")': cannot read factor labels from Stata 5 files
 > summary(pc5)
       age             alb           alkphos         ascites      
  Min.   :26.28   Min.   :1.960   Min.   :   -9   Min.   :-9.000  
