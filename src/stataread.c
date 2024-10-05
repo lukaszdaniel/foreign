@@ -408,7 +408,7 @@ SEXP R_LoadStataData(FILE *fp)
 	    charlen = (InIntegerBinary(fp, 1, swapends));
 	else
 	    charlen = (InShortIntBinary(fp, 1, swapends));
-	
+
 	if((charlen > 66)) {
 	    labeltable = lengthgets(labeltable, j+1);
 	    UNPROTECT(1);
@@ -464,7 +464,7 @@ SEXP R_LoadStataData(FILE *fp)
 		default:
 		    charlen = INTEGER(types)[j] - STATA_STRINGOFFSET;
 		    if(charlen > 244) {
-			warning("invalid character string length -- truncating to 244 bytes");
+			warning(_("invalid character string length -- truncating to 244 bytes"));
 			charlen = 244;
 		    }
 		    InStringBinary(fp, charlen, stringbuffer);
@@ -496,7 +496,7 @@ SEXP R_LoadStataData(FILE *fp)
 		default:
 		    charlen = INTEGER(types)[j]-STATA_SE_STRINGOFFSET;
 		    if(charlen > 244) {
-			warning("invalid character string length -- truncating to 244 bytes");
+			warning(_("invalid character string length -- truncating to 244 bytes"));
 			charlen = 244;
 		    }
 		    InStringBinary(fp, charlen, stringbuffer);
@@ -808,7 +808,7 @@ void R_SaveStataData(FILE *fp, SEXP df, int version, SEXP leveltable)
 		    if (k > charlen) charlen = k;
 		}
 		if(charlen > 244)
-		    warning("character strings of >244 bytes in column %d will be truncated", i+1);
+		    warning(_("character strings of >244 bytes in column %d will be truncated"), i+1);
 		charlen =  (charlen < 244) ? charlen : 244;
 		OutByteBinary((unsigned char)(charlen+STATA_STRINGOFFSET), fp);
 		INTEGER(types)[i] = charlen;
@@ -838,7 +838,7 @@ void R_SaveStataData(FILE *fp, SEXP df, int version, SEXP leveltable)
 		    if (k > charlen) charlen = k;
 		}
 		if(charlen > 244)
-		    warning("character strings of >244 bytes in column %d will be truncated", i+1);
+		    warning(_("character strings of >244 bytes in column %d will be truncated"), i+1);
 		charlen =  (charlen < 244) ? charlen : 244;
 		OutByteBinary((unsigned char)(charlen+STATA_SE_STRINGOFFSET), fp);
 		INTEGER(types)[i] = charlen;
@@ -975,7 +975,7 @@ void R_SaveStataData(FILE *fp, SEXP df, int version, SEXP leveltable)
 		/* Up to 244 bytes should be written, zero-padded */
 		k = length(STRING_ELT(VECTOR_ELT(df, j), i));
 		if (k == 0)
-		    error("empty string is not valid in Stata's documented format");
+		    error(_("empty string is not valid in Stata's documented format"));
 		if(k > 244) k = 244;
 		OutStringBinary(CHAR(STRING_ELT(VECTOR_ELT(df, j), i)), fp, k);
 		for(l = INTEGER(types)[j]-k; l > 0; l--) OutByteBinary(0, fp);

@@ -30,6 +30,7 @@
 #include <Rinternals.h>
 #include <R_ext/Visibility.h>
 #include "foreign.h"
+#include "localization.h"
 
 Rboolean attribute_hidden validString(SEXP x)
 {

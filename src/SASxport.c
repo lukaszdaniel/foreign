@@ -29,6 +29,7 @@
 #include <Rinternals.h>
 #include "foreign.h"
 #include "SASxport.h"
+#include "localization.h"
 
 #define HEADER_BEG "HEADER RECORD*******"
 #define HEADER_TYPE_LIBRARY "LIBRARY "

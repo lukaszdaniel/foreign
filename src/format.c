@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include "foreign.h"
 #include "format.h"
+#include "localization.h"
 
 #define DEFFMT(LABEL, NAME, N_ARGS, IMIN_W, IMAX_W, OMIN_W, OMAX_W, CAT, \
 	       OUTPUT, SPSS_FMT) \

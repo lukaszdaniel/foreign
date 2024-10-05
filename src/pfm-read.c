@@ -33,6 +33,7 @@
 #include "format.h"
 #include "pfm.h"
 #include "var.h"
+#include "localization.h"
 
 #if !PSPP && !__GCC__
 #define inline
@@ -98,7 +99,7 @@ static void pfm_close (struct file_handle * h);
 static struct fh_ext_class pfm_r_class =
 {
   5,
-  "reading as a portable file",
+  N_("reading as a portable file"),
   pfm_close,
 };
 #endif
@@ -295,7 +296,7 @@ pfm_read_dictionary (struct file_handle *h, struct pfm_read_info *inf)
   error(_("error reading portable-file dictionary"));
   return NULL;
 }
-
+
 /* Read a floating point value and return its value, or
    NA_REAL on error. */
 static double
@@ -468,7 +469,7 @@ read_string (struct file_handle *h)
  lossage:
   return NULL;
 }
-
+
 /* Reads the 464-byte file header. */
 static int
 read_header (struct file_handle *h)
@@ -981,7 +982,7 @@ read_value_label (struct file_handle *h)
 	    lose ((_("Duplicate label for value %g for variable %s"),
 		   vl->v.f, var->name));
 	  else
-	    lose ((_("Duplicate label for value `%.*s' for variable %s"),
+	    lose ((_("Duplicate label for value '%.*s' for variable %s"),
 		   var->width, vl->v.s, var->name));
 
 	  free_value_label (old);

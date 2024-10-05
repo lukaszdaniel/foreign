@@ -98,6 +98,7 @@ static size_t getshort(short *sh, FILE *fp);
 #include <R.h>
 #include <Rinternals.h>
 #include <Rconfig.h>
+#include "localization.h"
 
 static void swapb(void *result, int size)
 {

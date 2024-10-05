@@ -26,6 +26,7 @@
 #include "file-handle.h"
 #include "var.h"
 #include "foreign.h"
+#include "localization.h"
 /* (headers) */
 
 #undef DEBUGGING
@@ -46,7 +47,7 @@ static void init_file_handle (struct file_handle * handle);
 /* (declarations) */
 /* (functions) */
 
-
+
 /* File handle functions. */
 
 /* Sets up some fields in H; caller should fill in

@@ -28,6 +28,7 @@
 #include <R.h>
 #include <Rinternals.h>
 #include "foreign.h"
+#include "localization.h"
 
 #define MTP_BUF_SIZE 85
 #define MTB_INITIAL_ENTRIES 10

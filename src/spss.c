@@ -27,6 +27,7 @@
 #include "sfm.h"
 #include "avl.h"
 #include "var.h"
+#include "localization.h"
 
 #if !PSPP && !__GCC__
 #define inline
@@ -462,7 +463,7 @@ read_SPSS_PORT(const char *filename)
 	setAttrib(ans, install("missings"), miss_labels);
     }
     UNPROTECT(1);
-   
+
     free_dictionary(dict);
     setAttrib(ans, R_NamesSymbol, ans_names);
     UNPROTECT(2);

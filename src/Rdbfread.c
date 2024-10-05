@@ -28,6 +28,7 @@
 #include <R.h>
 #include <Rinternals.h>
 #include "foreign.h"
+#include "localization.h"
 
 SEXP Rdbfread(SEXP dbfnm)
 {

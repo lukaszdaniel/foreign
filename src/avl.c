@@ -26,6 +26,7 @@
 #include <stdlib.h>
 #include <R.h>
 #include "avl.h"
+#include "localization.h"
 
 #if !PSPP && !__GCC__
 #define inline
@@ -53,7 +54,7 @@ R_avl_create (MAYBE_POOL avl_comparison_func cmp, void *param)
 {
   avl_tree *tree;
 
-  if (!(cmp != NULL)) error("assert failed : cmp != NULL");
+  if (!(cmp != NULL)) error(_("assert failed : cmp != NULL"));
 #if PSPP
   if (pool)
     tree = pool_alloc (pool, sizeof *tree);
@@ -84,7 +85,7 @@ R_avl_create (MAYBE_POOL avl_comparison_func cmp, void *param)
 void
 R_avl_destroy (avl_tree *tree, avl_node_func free_func)
 {
-  if (!(tree != NULL)) error("assert failed : tree != NULL");
+  if (!(tree != NULL)) error(_("assert failed : tree != NULL"));
 
 #if PSPP
   if (free_func || tree->pool == NULL)
@@ -152,7 +153,7 @@ R_avl_free (avl_tree *tree)
 int
 R_avl_count (const avl_tree *tree)
 {
-  if (!(tree != NULL)) error("assert failed : tree != NULL");
+  if (!(tree != NULL)) error(_("assert failed : tree != NULL"));
   return tree->count;
 }
 
@@ -203,7 +204,7 @@ R_avl_copy (MAYBE_POOL const avl_tree *tree, avl_copy_func copy)
   avl_node **qp = qa;		/* Stack QA: stack pointer. */
   avl_node *q;
 
-  if (!(tree != NULL)) error("assert failed : tree != NULL");
+  if (!(tree != NULL)) error(_("assert failed : tree != NULL"));
 #if PSPP
   new_tree = R_avl_create (pool, tree->cmp, tree->param);
 #else
@@ -241,7 +242,7 @@ R_avl_copy (MAYBE_POOL const avl_tree *tree, avl_copy_func copy)
 	  /* PT4. */
 	  if (pp == pa)
 	    {
-	      if (!(qp == qa)) error("assert failed : qp == qa");
+	      if (!(qp == qa)) error(_("assert failed : qp == qa"));
 	      return new_tree;
 	    }
 
@@ -278,7 +279,7 @@ void
 R_avl_walk (const avl_tree *tree, avl_node_func walk_func, void *param)
 {
   /* Uses Knuth's algorithm 2.3.1T (inorder traversal). */
-  if (!(tree && walk_func)) error("assert failed : tree && walk_func");
+  if (!(tree && walk_func)) error(_("assert failed : tree && walk_func"));
 
   {
     /* T1. */
@@ -315,7 +316,7 @@ R_avl_walk (const avl_tree *tree, avl_node_func walk_func, void *param)
 void *
 R_avl_traverse (const avl_tree *tree, avl_traverser *trav)
 {
-  if (!(tree && trav)) error("assert failed : tree && trav");
+  if (!(tree && trav)) error(_("assert failed : tree && trav"));
 
   /* Uses Knuth's algorithm 2.3.1T (inorder traversal). */
   if (trav->init == 0)
@@ -371,14 +372,14 @@ avl_probe (avl_tree *tree, void *item)
   avl_node *t;
   avl_node *s, *p, *q, *r;
 
-  if (!(tree != NULL)) error("assert failed : tree != NULL");
+  if (!(tree != NULL)) error(_("assert failed : tree != NULL"));
   t = &tree->root;
   s = p = t->link[0];
 
   if (s == NULL)
     {
       tree->count++;
-      if (!(tree->count == 1)) error("assert failed : tree->count == 1");
+      if (!(tree->count == 1)) error(_("assert failed : tree->count == 1"));
       q = t->link[0] = new_node (tree->pool);
       q->data = item;
       q->link[0] = q->link[1] = NULL;
@@ -452,7 +453,7 @@ avl_probe (avl_tree *tree, void *item)
 	  return &q->data;
 	}
 
-      if (!(s->bal == -1)) error("assert failed : s->bal == -1");
+      if (!(s->bal == -1)) error(_("assert failed : s->bal == -1"));
       if (r->bal == -1)
 	{
 	  /* A8. */
@@ -464,7 +465,7 @@ avl_probe (avl_tree *tree, void *item)
       else
 	{
 	  /* A9. */
-	  if (!(r->bal == +1)) error("assert failed : r->bal == +1");
+	  if (!(r->bal == +1)) error(_("assert failed : r->bal == +1"));
 	  p = r->link[1];
 	  r->link[1] = p->link[0];
 	  p->link[0] = r;
@@ -476,7 +477,7 @@ avl_probe (avl_tree *tree, void *item)
 	    s->bal = r->bal = 0;
 	  else
 	    {
-	      if (!(p->bal == +1)) error("assert failed : p->bal == +1");
+	      if (!(p->bal == +1)) error(_("assert failed : p->bal == +1"));
 	      s->bal = 0, r->bal = -1;
 	    }
 	  p->bal = 0;
@@ -496,7 +497,7 @@ avl_probe (avl_tree *tree, void *item)
 	  return &q->data;
 	}
 
-      if (!(s->bal == +1)) error("assert failed : s->bal == +1");
+      if (!(s->bal == +1)) error(_("assert failed : s->bal == +1"));
       if (r->bal == +1)
 	{
 	  /* A8. */
@@ -508,7 +509,7 @@ avl_probe (avl_tree *tree, void *item)
       else
 	{
 	  /* A9. */
-	  if (!(r->bal == -1)) error("assert failed : r->bal == -1");
+	  if (!(r->bal == -1)) error(_("assert failed : r->bal == -1"));
 	  p = r->link[0];
 	  r->link[0] = p->link[1];
 	  p->link[1] = r;
@@ -520,7 +521,7 @@ avl_probe (avl_tree *tree, void *item)
 	    s->bal = r->bal = 0;
 	  else
 	    {
-	      if (!(p->bal == -1)) error("assert failed : p->bal == -1");
+	      if (!(p->bal == -1)) error(_("assert failed : p->bal == -1"));
 	      s->bal = 0, r->bal = 1;
 	    }
 	  p->bal = 0;
@@ -542,7 +543,7 @@ R_avl_find (const avl_tree *tree, const void *item)
 {
   const avl_node *p;
 
-  if (!(tree != NULL)) error("assert failed : tree != NULL");
+  if (!(tree != NULL)) error(_("assert failed : tree != NULL"));
   for (p = tree->root.link[0]; p; )
     {
       int diff = tree->cmp (item, p->data, tree->param);
@@ -580,7 +581,7 @@ R_avl_delete (avl_tree *tree, const void *item)
   avl_node **q;
   avl_node *p;
 
-  if (!(tree != NULL)) error("assert failed : tree != NULL");
+  if (!(tree != NULL)) error(_("assert failed : tree != NULL"));
 
   a[0] = 0;
   pa[0] = &tree->root;
@@ -669,7 +670,7 @@ R_avl_delete (avl_tree *tree, const void *item)
 #endif
     Free (p);
 
-  if (!(k > 0)) error("assert failed : k > 0");
+  if (!(k > 0)) error(_("assert failed : k > 0"));
   /* D10. */
   while (--k)
     {
@@ -689,10 +690,10 @@ R_avl_delete (avl_tree *tree, const void *item)
 	      break;
 	    }
 
-	  if (!(s->bal == +1)) error("assert failed : s->bal == +1");
+	  if (!(s->bal == +1)) error(_("assert failed : s->bal == +1"));
 	  r = s->link[1];
 
-	  if (!(r != NULL)) error("assert failed : r != NULL");
+	  if (!(r != NULL)) error(_("assert failed : r != NULL"));
 	  if (r->bal == 0)
 	    {
 	      /* D11. */
@@ -713,7 +714,7 @@ R_avl_delete (avl_tree *tree, const void *item)
 	  else
 	    {
 	      /* D13. */
-	      if (!(r->bal == -1)) error("assert failed : r->bal == -1");
+	      if (!(r->bal == -1)) error(_("assert failed : r->bal == -1"));
 	      p = r->link[0];
 	      r->link[0] = p->link[1];
 	      p->link[1] = r;
@@ -725,7 +726,7 @@ R_avl_delete (avl_tree *tree, const void *item)
 		s->bal = r->bal = 0;
 	      else
 		{
-		  if (!(p->bal == -1)) error("assert failed : p->bal == -1");
+		  if (!(p->bal == -1)) error(_("assert failed : p->bal == -1"));
 		  s->bal = 0, r->bal = +1;
 		}
 	      p->bal = 0;
@@ -782,7 +783,7 @@ R_avl_delete (avl_tree *tree, const void *item)
 		s->bal = r->bal = 0;
 	      else
 		{
-		  if (!(p->bal == 1)) error("assert failed : p->bal == 1");
+		  if (!(p->bal == 1)) error(_("assert failed : p->bal == 1"));
 		  s->bal = 0, r->bal = -1;
 		}
 	      p->bal = 0;
@@ -802,7 +803,7 @@ R_avl_insert (avl_tree *tree, void *item)
 {
   void **p;
 
-  if (!(tree != NULL)) error("assert failed : tree != NULL");
+  if (!(tree != NULL)) error(_("assert failed : tree != NULL"));
 
   p = avl_probe (tree, item);
   return (*p == item) ? NULL : *p;
@@ -817,7 +818,7 @@ R_avl_replace (avl_tree *tree, void *item)
 {
   void **p;
 
-  if (!(tree != NULL)) error("assert failed : tree != NULL");
+  if (!(tree != NULL)) error(_("assert failed : tree != NULL"));
 
   p = avl_probe (tree, item);
   if (*p == item)

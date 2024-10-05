@@ -32,6 +32,7 @@
 #include "sfm.h"
 #include "sfmP.h"
 #include "var.h"
+#include "localization.h"
 #include <R.h>
 
 /* Clamps A to be between B and C. */
@@ -134,7 +135,7 @@ static void sfm_close (struct file_handle * h);
 static struct fh_ext_class sfm_r_class =
 {
   3,
-  "reading as a system file",
+  N_("reading as a system file"),
   sfm_close,
 };
 #endif
@@ -142,7 +143,7 @@ static struct fh_ext_class sfm_r_class =
 #if GLOBAL_DEBUGGING
 void dump_dictionary (struct dictionary * dict);
 #endif
-
+
 /* Utilities. */
 
 #include "swap_bytes.h"
@@ -162,7 +163,7 @@ sfm_close (struct file_handle * h)
   struct sfm_fhuser_ext *ext = h->ext;
 
   ext->opened--;
-  if (!(ext->opened == 0)) error("assert failed : ext->opened == 0");
+  if (!(ext->opened == 0)) error(_("assert failed : ext->opened == 0"));
   R_Free (ext->buf);
   if (EOF == fclose (ext->file))
     error(_("%s: Closing system file: %s"), h->fn, strerror (errno));
@@ -179,7 +180,7 @@ sfm_maybe_close (struct file_handle *h)
   else
     ext->opened--;
 }
-
+
 /* Dictionary reader. */
 
 static void *bufread (struct file_handle * handle, void *buf, size_t nbytes,
@@ -221,7 +222,7 @@ static int read_documents (struct file_handle * h);
 void
 free_value_label (struct value_label * v)
 {
-  if (!(v->ref_count >= 1)) error("assert failed : v->ref_count >= 1");
+  if (!(v->ref_count >= 1)) error(_("assert failed : v->ref_count >= 1"));
   if (--v->ref_count == 0)
     {
       R_Free (v->s);
@@ -406,11 +407,11 @@ sfm_read_dictionary (struct file_handle * h, struct sfm_read_info * inf)
 
 	    switch (data.subtype)
 	      {
-			  
+
 		/* subtypes as specified by PSPP documentation at
 			  https://www.gnu.org/software/pspp/pspp-dev/html_node/System-File-Format.html#System-File-Format
 		*/
-			  
+
 	      case 3: /* Machine integer information */
 		  if (!read_machine_int32_info (h, data.size, data.count,
 						&(inf->encoding)))
@@ -460,7 +461,7 @@ sfm_read_dictionary (struct file_handle * h, struct sfm_read_info * inf)
 	      case 17: /* Data File Attributes Record */
 		skip = 1;
 		break;
-		  
+
 	      case 18: /* Variable Attributes Records */
 		skip = 1;
 		break;
@@ -468,7 +469,7 @@ sfm_read_dictionary (struct file_handle * h, struct sfm_read_info * inf)
 	      case 19: /* bninary multiple-response sets */
 		skip = 1;
 		break;
-		  
+
 	      case 20: /* another codepage information */
 		skip = 1;
 		break;
@@ -482,11 +483,11 @@ sfm_read_dictionary (struct file_handle * h, struct sfm_read_info * inf)
 		warning(_("%s: Long string missing values record found (record type 7, subtype %d), but ignored"), h->fn, data.subtype);
 		skip = 1;
 		break;
-		  
+
 	      case 24: /* XML that describes how data in the file should be displayed on-screen */
 		skip = 1;
 		break;
-						  
+
 	      default:
 		warning(_("%s: Unrecognized record type 7, subtype %d encountered in system file"), h->fn, data.subtype);
 		skip = 1;
@@ -519,7 +520,7 @@ break_out_of_loop:
   /* Come here on successful completion. */
 
 #if DEBUGGING
-  warning ("Read system-file dictionary successfully");
+  warning(_("Read system-file dictionary successfully"));
   dump_dictionary (ext->dict);
 #endif
   R_Free (var_by_index);
@@ -658,8 +659,7 @@ read_long_var_names (struct file_handle * h, struct dictionary * dict
   char * endp;
   char * val;
   if ((1 != size)||(0 == count)) {
-    warning("%s: strange record info seen, size=%lu, count=%u"
-      ", ignoring long variable names"
+    warning(_("%s: strange record info seen, size=%lu, count=%u, ignoring long variable names")
       , h->fn, size, count);
     return 0;
   }
@@ -686,8 +686,7 @@ read_long_var_names (struct file_handle * h, struct dictionary * dict
         }
       }
       if (lp >= end) {
-        warning("%s: long variable name mapping '%s' to '%s'"
-        "for variable which does not exist"
+        warning(_("%s: long variable name mapping '%s' to '%s' for variable which does not exist")
         , h->fn, p, val);
       }
     }
@@ -742,7 +741,7 @@ read_header (struct file_handle * h, struct sfm_read_info * inf)
   assertive_bufread(h, &hdr.file_label, 64, 0);
   assertive_bufread(h, &hdr.padding, 3, 0);
   if (0 != strncmp ("$FL2", hdr.rec_type, 4))
-    lose ((_("%s: Bad magic.  Proper system files begin with the four characters `$FL2'. This file will not be read"),
+    lose ((_("%s: Bad magic. Proper system files begin with the four characters `$FL2'. This file will not be read"),
 	   h->fn));
 
   /* Check eye-catcher string. */
@@ -1485,7 +1484,7 @@ dump_dictionary (struct dictionary * dict)
 	  printf ("high+1");
 	  break;
 	default:
-          if (!(0)) warning("assert failed : 0");
+          if (!(0)) warning(_("assert failed : 0"));
 	}
       for (j = 0; j < n; j++)
 	if (v->type == NUMERIC)
@@ -1499,7 +1498,7 @@ dump_dictionary (struct dictionary * dict)
     }
 }
 #endif
-
+
 /* Data reader. */
 
 /* Reads compressed data into H->BUF and sets other pointers
@@ -1639,7 +1638,7 @@ sfm_read_case (struct file_handle * h, union value * perm, struct dictionary * d
 
   /* Make sure the caller remembered to finish polishing the
      dictionary returned by sfm_read_dictionary(). */
-  if (!(dict->nval > 0)) error("assert failed : dict->nval > 0");
+  if (!(dict->nval > 0)) error(_("assert failed : dict->nval > 0"));
 
   /* The first concern is to obtain a full case relative to the data
      file.  (Cases in the data file have no particular relationship to
@@ -1695,7 +1694,7 @@ lossage:
 static struct fh_ext_class sfm_r_class =
 {
   3,
-  "reading as a system file",
+  N_("reading as a system file"),
   sfm_close,
 };
 #endif
