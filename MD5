@@ -14,7 +14,7 @@ efd25b6076bba3a05fcc2af925e92a80 *inst/COPYRIGHTS
 46e22eae53d3ab8456a97675f435cb61 *inst/files/testdata.sav
 3335f0e1dd6812968776cc757a22ea78 *inst/files/Iris.syd
 739845e11f7e69826b04ca22a7d45568 *inst/files/sids.dbf
-7152c966159331de7a530b44def3a662 *ChangeLog
+3f48ecf37fbb2fd293a6d2356d557708 *ChangeLog
 c74a01a94fd57a14ed1b5ed6c959f13c *src/swap_bytes.h
 e489c53b60a8ebda2054c3b7670b3c69 *src/sfm-read.c
 57d2ead77446dcc448a46d6dda1a002a *src/sfm.h
@@ -42,7 +42,7 @@ ebcdf2857b396887f0ea3be29826f97f *src/SASxport.h
 44769559c6f1b317f0a4c0d4e23da143 *src/pspp-format-def.h
 94bf22966f857c5a2f3691ca2bc76ca5 *src/dbfopen.c
 7170823cb63ff57d1656d137fcbd9a88 *src/shapefil.h
-341f7fa929e38d0b5122c65465d128aa *DESCRIPTION
+336c2467d9a30a98ec30d016238b66a9 *DESCRIPTION
 87a4728de4cc9fa5f10e1956bebf0436 *man/read.S.Rd
 146b4ae1fc1dee5b33cd2f1958b7b72c *man/read.systat.Rd
 19e382a4607b51df5325a4ccbcf45478 *man/write.dta.Rd
@@ -90,7 +90,7 @@ fd75debed7f0899ba5020e2a7312658b *tests/mval_bug.sav
 4529f9257032e61890138da9cd4ae4b5 *tests/sample100.por
 859e5cbbd74fd94775c2c7f111ae2d71 *tests/ex1-51.mtp
 dcd72019693bf0962a8a18fdbb5bca21 *tests/MLLabelsWithNotesChar.dta
-d9ebff4042010117916598a3d8b0745b *tests/keep/codefile.sps
+0a20eafa6d4eabcf4450d366eb7de49d *tests/keep/codefile.sps
 85becb8dd1c037ccdd4072bcfbf5e6d9 *tests/keep/datafile.dat
 13a320abbc41adb84ab273a105b88904 *tests/pbc.sav
 8faa47e7d4da52cbb2b3d0b411ec8bdd *tests/tsdumpdata
@@ -127,7 +127,7 @@ f7d40d0f31f7c6ee49c01e8b2b8588b7 *R/writeForeignSAS.R
 fe9264456fd8aa175971d74b69e4d48a *R/arff.R
 89dd9b2f65c59b73891a7b8c9b9b7752 *R/spss.R
 fa87d427ceeef77e124a5a688fa34bc1 *R/read.epiinfo.R
-09282ecf93e305abef7dca5be7155250 *R/octave.R
+cc70d1eba865bb091c031e4be66fd26d *R/octave.R
 64f1e4df457b9941596cc871eaa9f3f1 *R/read.dta.R
 b7e7d712506f5c522860a934f332cd43 *R/minitab.R
 f1301fddaba605563a68c718aab7b2b4 *R/xport.R
@@ -136,7 +136,7 @@ f1301fddaba605563a68c718aab7b2b4 *R/xport.R
 a6c68bd0f84690aab0887b99db7077e0 *R/R_systat.R
 ea95d085c2d57992edec696c52bc43c9 *R/Sread.R
 1086e6cc7c1c3bbb16f5681d88801b7d *R/read.ssd.R
-6dbcb06c926835e544ab99088dc27b82 *R/writeForeignCode.R
+ec0510889288505bfff18929aa5adebb *R/writeForeignCode.R
 df8beedd08558bbbd5016bada48b1e80 *.gitignore
 f87d40597e85fd95afb45eb64c651832 *COPYRIGHTS
 ed8178a14789e97ce12174176eed1908 *NAMESPACE
