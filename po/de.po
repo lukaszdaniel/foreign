@@ -1,14 +1,14 @@
 # Translation of src/library/Recommended/foreign/po/foreign.pot to German
-# Copyright (C) 2005-2012 The R Foundation
+# Copyright (C) 2005-2025 The R Foundation
 # This file is distributed under the same license as the foreign package.
 # Copyright (C) of this file 2009-2012 Chris Leick <c.leick@vollbio.de>.
-#
+# Copyright (C) of this file 2013-2025 Detlef Steuer <steuer@hsu-hh.de>
 msgid ""
 msgstr ""
-"Project-Id-Version: R 4.0.0 / foreign 0.8-77\n"
+"Project-Id-Version: R 4.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-05 20:29+0200\n"
-"PO-Revision-Date: 2020-04-01 14:54+0200\n"
+"POT-Creation-Date: 2023-11-28 20:09+0000\n"
+"PO-Revision-Date: 2025-03-13 18:06+0100\n"
 "Last-Translator: Detlef Steuer <steuer@hsu-hh.de>\n"
 "Language-Team: r-core@r-project.org\n"
 "Language: de\n"
@@ -407,19 +407,19 @@ msgstr "SPSSPORT-Signatur fehlt"
 msgid "Unrecognized version code %d"
 msgstr "Nicht erkannter Versionskode %d"
 
-#: pfm-read.c:553
-#, fuzzy, c-format
+#: pfm-read.c:552
+#, c-format
 msgid "Bad date string length %lu"
-msgstr "Falsche Datums-Zeichenkettenlänge %d"
+msgstr "Falsche Datums-Zeichenkettenlänge %lu"
 
 #: pfm-read.c:560
 msgid "Bad character in date"
 msgstr "Falsches Zeichen im Datum"
 
-#: pfm-read.c:580
-#, fuzzy, c-format
+#: pfm-read.c:579
+#, c-format
 msgid "Bad time string length %lu"
-msgstr "Falsche Zeit-Zeichenkettenlänge %d"
+msgstr "Falsche Zeit-Zeichenkettenlänge %lu"
 
 #: pfm-read.c:587
 msgid "Bad character in time"
@@ -458,10 +458,10 @@ msgstr "Variablendatensatz erwartet"
 msgid "Invalid variable width %d"
 msgstr "ungültige Variablenbreite %d"
 
-#: pfm-read.c:755
-#, fuzzy, c-format
+#: pfm-read.c:754
+#, c-format
 msgid "position %d: Variable name has %lu characters"
-msgstr "Position %d: Variablenname hat %u Zeichen"
+msgstr "Position %d: Variablenname hat %lu Zeichen"
 
 #: pfm-read.c:759
 #, c-format
@@ -609,10 +609,14 @@ msgstr ""
 msgid "error reading system-file header"
 msgstr "Fehler beim Lesen des Systemdatei-Headers"
 
-#: sfm-read.c:555
-#, fuzzy, c-format
-msgid "%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected size %ld, count 8"
-msgstr "%s: Falsches Größen-(%d)- oder Anzahl-(%d)-Feld auf Datensatztyp 7, Untertyp 3.\tErwartete Größe %d, Anzahl 8"
+#: sfm-read.c:554
+#, c-format
+msgid ""
+"%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected "
+"size %ld, count 8"
+msgstr ""
+"%s: Falsches Größen-(%d)- oder Anzahl-(%u)-Feld auf Datensatztyp 7, Untertyp "
+"3.\tErwartete Größe %ld, Anzahl 8"
 
 # http://de.wikipedia.org/wiki/IEEE_754
 #: sfm-read.c:568
@@ -635,10 +639,14 @@ msgstr "%s: Durch Datei angegebener Zeichendarstellungskode (%s) ist nicht ASCII
 msgid "%s: File-indicated character representation code (%d) is unknown"
 msgstr "%s: Durch Datei angegebener Zeichendarstellungskode (%d) ist unbekannt"
 
-#: sfm-read.c:622
-#, fuzzy, c-format
-msgid "%s: Bad size (%d) or count (%u) field on record type 7, subtype 4.\tExpected size %lu, count 8"
-msgstr "%s: Falsches Größen-(%d)- oder Anzahl-(%d)-Feld auf Datensatztyp 7, Untertyp 4.\tErwartete Größe %d, Anzahl 8"
+#: sfm-read.c:621
+#, c-format
+msgid ""
+"%s: Bad size (%d) or count (%u) field on record type 7, subtype 4.\tExpected "
+"size %lu, count 8"
+msgstr ""
+"%s: Falsches Größen-(%d)- oder Anzahl-(%u)-Feld auf Datensatztyp 7, Untertyp "
+"4.\tErwartete Größe %lu, Anzahl 8"
 
 #: sfm-read.c:636
 #, c-format
@@ -655,20 +663,10 @@ msgstr ""
 msgid "%s: long variable name mapping '%s' to '%s' for variable which does not exist"
 msgstr ""
 
-#: sfm-read.c:744
-#, fuzzy, c-format
-msgid "%s: Bad magic. Proper system files begin with the four characters `$FL2'. This file will not be read"
-msgstr "%s: Falsche 'magic'. Ordnungsgemäße Systemdateien beginnen mit den vier Zeichen '$FL2'. Diese Datei wird nicht gelesen"
-
-#: sfm-read.c:786
+#: sfm-read.c:802
 #, c-format
-msgid "%s: File layout code has unexpected value %d.  Value should be 2 or 3, in big-endian or little-endian format"
-msgstr "%s: Dateilayoutkode hat unerwarteten Wert %d. Der Wert sollte 2 oder 3 sein, entweder im Big-endian- oder im Little-endian-Format."
-
-#: sfm-read.c:801
-#, fuzzy, c-format
 msgid "%s: Number of elements per case (%d) is not between 1 and %ld"
-msgstr "%s: Anzahl der Elemente pro Fall (%d) ist nicht zwischen 1 und %d"
+msgstr "%s: Anzahl der Elemente pro Fall (%d) ist nicht zwischen 1 und %ld"
 
 #: sfm-read.c:809
 #, c-format

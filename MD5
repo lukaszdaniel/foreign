@@ -14,7 +14,7 @@ efd25b6076bba3a05fcc2af925e92a80 *inst/COPYRIGHTS
 46e22eae53d3ab8456a97675f435cb61 *inst/files/testdata.sav
 3335f0e1dd6812968776cc757a22ea78 *inst/files/Iris.syd
 739845e11f7e69826b04ca22a7d45568 *inst/files/sids.dbf
-3f48ecf37fbb2fd293a6d2356d557708 *ChangeLog
+87c4d577f58934bc2aed5ffc7d536728 *ChangeLog
 c74a01a94fd57a14ed1b5ed6c959f13c *src/swap_bytes.h
 e489c53b60a8ebda2054c3b7670b3c69 *src/sfm-read.c
 57d2ead77446dcc448a46d6dda1a002a *src/sfm.h
@@ -42,7 +42,7 @@ ebcdf2857b396887f0ea3be29826f97f *src/SASxport.h
 44769559c6f1b317f0a4c0d4e23da143 *src/pspp-format-def.h
 94bf22966f857c5a2f3691ca2bc76ca5 *src/dbfopen.c
 7170823cb63ff57d1656d137fcbd9a88 *src/shapefil.h
-336c2467d9a30a98ec30d016238b66a9 *DESCRIPTION
+71577ae9b4a06f18b3639b15387e6294 *DESCRIPTION
 87a4728de4cc9fa5f10e1956bebf0436 *man/read.S.Rd
 146b4ae1fc1dee5b33cd2f1958b7b72c *man/read.systat.Rd
 19e382a4607b51df5325a4ccbcf45478 *man/write.dta.Rd
@@ -65,7 +65,7 @@ e0cf52e5a67a11a725e01fc108617f15 *man/read.arff.Rd
 d3c1fe7fba4ac4890fede6da3c62bbea *tests/mySobj
 a5ef9e1cb5d8ea4deb3ac9ba7894ecae *tests/writeForeignSPSS.Rout.save
 7528d02f1dc494b8518dde030e27f2cd *tests/stata8mac.dta
-b110719cb24b095250ac79988ef655a5 *tests/spss.R
+c7779b234248880aad09adc6d875d7d4 *tests/spss.R
 df55518b3226fdb30ce963921c5b3dd8 *tests/xxx12.dta
 99617ad6332e0039aa49106add84cc32 *tests/compressed.dta
 69b3a054515380a080c20ab564bbc1b1 *tests/stata.Rout.save
@@ -110,11 +110,11 @@ f09e2ae8f13f085e70344d2d7d4698b5 *tests/testEmpty.Rout.save
 427133ae0b29d7f966dded7fd96cf534 *tests/pc5.dta
 88b9ff595f67f5cd20037a875c0e57bc *tests/S3.Rout.save
 21329582e511fbaf58110d5237422ec9 *tests/sun6.dta
-2f8dc44f894c9c5293f6e6a932d2754d *tests/spss.Rout.save
+a27872b0a93d86b82960f027e3d6ec43 *tests/spss.Rout.save
 c82c97b941d8c3dfbf780a18479c3c59 *tests/download.R
 a3ee1176251b594b3d33435335bbc674 *tests/stata7se.dta
 e0c5e3fa11475dabd1767ad1b90b16a6 *po/foreign.pot
-961b8282386cb842729fb26a6dc8847c *po/de.po
+316126f51a05e43086da8d1dc76a5550 *po/de.po
 42c1583a0be5bbbd60a6a4ec9a02ace2 *po/R-pl.po
 e83b6d1985c6cd46236f725eb5532f39 *po/R-de.po
 55ed2106d56a32eae13b4399953af769 *po/it.po
