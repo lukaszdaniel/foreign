@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 4.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-28 20:09+0000\n"
+"POT-Creation-Date: 2025-05-18 13:37+0200\n"
 "PO-Revision-Date: 2025-03-13 18:06+0100\n"
 "Last-Translator: Detlef Steuer <steuer@hsu-hh.de>\n"
 "Language-Team: r-core@r-project.org\n"
@@ -407,7 +407,7 @@ msgstr "SPSSPORT-Signatur fehlt"
 msgid "Unrecognized version code %d"
 msgstr "Nicht erkannter Versionskode %d"
 
-#: pfm-read.c:552
+#: pfm-read.c:553
 #, c-format
 msgid "Bad date string length %lu"
 msgstr "Falsche Datums-Zeichenkettenlänge %lu"
@@ -416,7 +416,7 @@ msgstr "Falsche Datums-Zeichenkettenlänge %lu"
 msgid "Bad character in date"
 msgstr "Falsches Zeichen im Datum"
 
-#: pfm-read.c:579
+#: pfm-read.c:580
 #, c-format
 msgid "Bad time string length %lu"
 msgstr "Falsche Zeit-Zeichenkettenlänge %lu"
@@ -458,7 +458,7 @@ msgstr "Variablendatensatz erwartet"
 msgid "Invalid variable width %d"
 msgstr "ungültige Variablenbreite %d"
 
-#: pfm-read.c:754
+#: pfm-read.c:755
 #, c-format
 msgid "position %d: Variable name has %lu characters"
 msgstr "Position %d: Variablenname hat %lu Zeichen"
@@ -609,14 +609,10 @@ msgstr ""
 msgid "error reading system-file header"
 msgstr "Fehler beim Lesen des Systemdatei-Headers"
 
-#: sfm-read.c:554
+#: sfm-read.c:555
 #, c-format
-msgid ""
-"%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected "
-"size %ld, count 8"
-msgstr ""
-"%s: Falsches Größen-(%d)- oder Anzahl-(%u)-Feld auf Datensatztyp 7, Untertyp "
-"3.\tErwartete Größe %ld, Anzahl 8"
+msgid "%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected size %ld, count 8"
+msgstr "%s: Falsches Größen-(%d)- oder Anzahl-(%u)-Feld auf Datensatztyp 7, Untertyp 3.\tErwartete Größe %ld, Anzahl 8"
 
 # http://de.wikipedia.org/wiki/IEEE_754
 #: sfm-read.c:568
@@ -639,14 +635,10 @@ msgstr "%s: Durch Datei angegebener Zeichendarstellungskode (%s) ist nicht ASCII
 msgid "%s: File-indicated character representation code (%d) is unknown"
 msgstr "%s: Durch Datei angegebener Zeichendarstellungskode (%d) ist unbekannt"
 
-#: sfm-read.c:621
+#: sfm-read.c:622
 #, c-format
-msgid ""
-"%s: Bad size (%d) or count (%u) field on record type 7, subtype 4.\tExpected "
-"size %lu, count 8"
-msgstr ""
-"%s: Falsches Größen-(%d)- oder Anzahl-(%u)-Feld auf Datensatztyp 7, Untertyp "
-"4.\tErwartete Größe %lu, Anzahl 8"
+msgid "%s: Bad size (%d) or count (%u) field on record type 7, subtype 4.\tExpected size %lu, count 8"
+msgstr "%s: Falsches Größen-(%d)- oder Anzahl-(%u)-Feld auf Datensatztyp 7, Untertyp 4.\tErwartete Größe %lu, Anzahl 8"
 
 #: sfm-read.c:636
 #, c-format
@@ -663,7 +655,17 @@ msgstr ""
 msgid "%s: long variable name mapping '%s' to '%s' for variable which does not exist"
 msgstr ""
 
-#: sfm-read.c:802
+#: sfm-read.c:744
+#, c-format
+msgid "%s: Bad magic. Proper system files begin with the four characters `$FL2'. This file will not be read"
+msgstr ""
+
+#: sfm-read.c:786
+#, c-format
+msgid "%s: File layout code has unexpected value %d.  Value should be 2 or 3, in big-endian or little-endian format"
+msgstr ""
+
+#: sfm-read.c:801
 #, c-format
 msgid "%s: Number of elements per case (%d) is not between 1 and %ld"
 msgstr "%s: Anzahl der Elemente pro Fall (%d) ist nicht zwischen 1 und %ld"
