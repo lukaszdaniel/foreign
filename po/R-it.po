@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R-foreign 0.8-70\n"
 "Report-Msgid-Bugs-To: bugs.r-project.org\n"
-"POT-Creation-Date: 2024-09-15 19:05\n"
+"POT-Creation-Date: 2025-06-05 16:21\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
 "Language-Team: Italian https://github.com/dmedri/R-italian-lang\n"
@@ -39,7 +39,6 @@ msgstr ","
 msgid ":"
 msgstr ":"
 
-#. R/arff.R: stop("Argument 'file' must be a character string or connection.")
 #. R/arff.R: stop("Argument 'file' must be a character string or connection.")
 #: R/arff.R:0
 msgid "Argument 'file' must be a character string or connection."

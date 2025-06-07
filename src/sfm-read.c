@@ -157,13 +157,12 @@ void dump_dictionary (struct dictionary * dict);
 #define bswap_flt64(x) reverse_double(*x)
 
 /* Closes a system file after we're done with it. */
-static void
-sfm_close (struct file_handle * h)
+static void sfm_close (struct file_handle * h)
 {
   struct sfm_fhuser_ext *ext = h->ext;
 
   ext->opened--;
-  if (!(ext->opened == 0)) error(_("assert failed : ext->opened == 0"));
+  if (!(ext->opened == 0)) error(_("assert failed : %s"), "ext->opened == 0");
   R_Free (ext->buf);
   if (EOF == fclose (ext->file))
     error(_("%s: Closing system file: %s"), h->fn, strerror (errno));
@@ -219,10 +218,9 @@ static int read_documents (struct file_handle * h);
 
 /* Decrements the reference count for value label V.  Destroys the
    value label if the reference count reaches zero. */
-void
-free_value_label (struct value_label * v)
+void free_value_label (struct value_label * v)
 {
-  if (!(v->ref_count >= 1)) error(_("assert failed : v->ref_count >= 1"));
+  if (!(v->ref_count >= 1)) error(_("assert failed : %s"), "v->ref_count >= 1");
   if (--v->ref_count == 0)
     {
       R_Free (v->s);
@@ -232,15 +230,13 @@ free_value_label (struct value_label * v)
 
 /* R_Frees value label P.  PARAM is ignored.  Used as a callback with
    R_avl_destroy(). */
-void
-free_val_lab (void *p, void *param)
+void free_val_lab (void *p, void *param)
 {
   free_value_label ((struct value_label *) p);
 }
 
 /* Destroys dictionary D. */
-void
-free_dictionary (struct dictionary * d)
+void free_dictionary (struct dictionary * d)
 {
   int i;
 
@@ -278,8 +274,7 @@ free_dictionary (struct dictionary * d)
 /* Reads the dictionary from file with handle H, and returns it in a
    dictionary structure.  This dictionary may be modified in order to
    rename, reorder, and delete variables, etc.	*/
-struct dictionary *
-sfm_read_dictionary (struct file_handle * h, struct sfm_read_info * inf)
+struct dictionary *sfm_read_dictionary (struct file_handle * h, struct sfm_read_info * inf)
 {
   /* The file handle extension record. */
   struct sfm_fhuser_ext *ext;
@@ -495,7 +490,7 @@ sfm_read_dictionary (struct file_handle * h, struct sfm_read_info * inf)
 
 	    if (skip)
 	      {
-		void *x = bufread (h, NULL, data.size * data.count, 0);
+		void *x = bufread(h, NULL, data.size * data.count, 0);
 		if (x == NULL)
 		  goto lossage;
 		R_Free (x);
@@ -529,11 +524,11 @@ break_out_of_loop:
 lossage:
   /* Come here on unsuccessful completion. */
 
-  R_Free (var_by_index);
-  fclose (ext->file);
+  R_Free(var_by_index);
+  fclose(ext->file);
   if (ext && ext->dict)
-    free_dictionary (ext->dict);
-  R_Free (ext);
+    free_dictionary(ext->dict);
+  R_Free(ext);
   h->class = NULL;
   h->ext = NULL;
   error(_("error reading system-file header"));
@@ -541,8 +536,7 @@ lossage:
 }
 
 /* Read record type 7, subtype 3. */
-static int
-read_machine_int32_info (struct file_handle * h, int size, int count, int *encoding)
+static int read_machine_int32_info(struct file_handle * h, int size, int count, int *encoding)
 {
   struct sfm_fhuser_ext *ext = h->ext;
 
@@ -568,7 +562,7 @@ read_machine_int32_info (struct file_handle * h, int size, int count, int *encod
 	lose ((_("%s: Floating-point representation in system file is not IEEE-754.  read.spss cannot convert between floating-point formats"), h->fn));
       break;
     default:
-      if (!(0)) error("assert failed : 0");
+      if (!(0)) error(_("assert failed : %s"), "0");
     }
 
   /* PORTME: Check recorded file endianness against intuited file
@@ -581,7 +575,7 @@ read_machine_int32_info (struct file_handle * h, int size, int count, int *encod
       else if (file_endian == LITTLE)
 	file_endian = BIG;
       else
-	if (!(0)) error("assert failed : 0");
+	if (!(0)) error(_("assert failed : %s"), "0");
     }
   if ((file_endian == BIG) ^ (data[6] == 1))
     lose ((_("%s: File-indicated endianness (%s) does not match endianness intuited from file header (%s)"),
@@ -609,8 +603,7 @@ lossage:
 }
 
 /* Read record type 7, subtype 4. */
-static int
-read_machine_flt64_info (struct file_handle * h, int size, int count)
+static int read_machine_flt64_info(struct file_handle * h, int size, int count)
 {
   struct sfm_fhuser_ext *ext = h->ext;
 
@@ -648,8 +641,7 @@ lossage:
 /* Read record type 7, subtype 13.
  * long variable names
  */
-static int
-read_long_var_names (struct file_handle * h, struct dictionary * dict
+static int read_long_var_names(struct file_handle * h, struct dictionary * dict
 		, unsigned long size, unsigned int count)
 {
   char * data;
@@ -664,7 +656,7 @@ read_long_var_names (struct file_handle * h, struct dictionary * dict
     return 0;
   }
   size *= count;
-  data = R_Calloc (size +1, char);
+  data = R_Calloc(size +1, char);
   bufread(h, data, size, 0);
   /* parse */
   end = &dict->var[dict->nvar];
@@ -698,8 +690,7 @@ read_long_var_names (struct file_handle * h, struct dictionary * dict
   return 1;
 }
 
-static int
-read_header (struct file_handle * h, struct sfm_read_info * inf)
+static int read_header(struct file_handle * h, struct sfm_read_info * inf)
 {
   struct sfm_fhuser_ext *ext = h->ext;	/* File extension strcut. */
   struct sysfile_header hdr;		/* Disk buffer. */
@@ -709,7 +700,7 @@ read_header (struct file_handle * h, struct sfm_read_info * inf)
   int i;
 
   /* Create the dictionary. */
-  dict = ext->dict = R_Calloc (1, struct dictionary);
+  dict = ext->dict = R_Calloc(1, struct dictionary);
   dict->var = NULL;
   dict->var_by_name = NULL;
   dict->nvar = 0;
@@ -740,12 +731,12 @@ read_header (struct file_handle * h, struct sfm_read_info * inf)
   assertive_bufread(h, &hdr.creation_time, 8, 0);
   assertive_bufread(h, &hdr.file_label, 64, 0);
   assertive_bufread(h, &hdr.padding, 3, 0);
-  if (0 != strncmp ("$FL2", hdr.rec_type, 4))
+  if (0 != strncmp("$FL2", hdr.rec_type, 4))
     lose ((_("%s: Bad magic. Proper system files begin with the four characters `$FL2'. This file will not be read"),
 	   h->fn));
 
   /* Check eye-catcher string. */
-  memcpy (prod_name, hdr.prod_name, sizeof hdr.prod_name);
+  memcpy(prod_name, hdr.prod_name, sizeof hdr.prod_name);
   for (i = 0; i < 60; i++)
     if (!isprint ((unsigned char) prod_name[i]))
       prod_name[i] = ' ';
@@ -768,7 +759,7 @@ read_header (struct file_handle * h, struct sfm_read_info * inf)
     int i;
 
     for (i = 0; i < N_PREFIXES; i++)
-      if (!strncmp (prefix[i], hdr.prod_name, strlen (prefix[i])))
+      if (!strncmp(prefix[i], hdr.prod_name, strlen (prefix[i])))
 	{
 	    skip_amt = (int) strlen (prefix[i]);
 	  break;
@@ -830,7 +821,7 @@ read_header (struct file_handle * h, struct sfm_read_info * inf)
 	  && hdr.file_label[i] != 0)
 	{
 	  dict->label = R_Calloc (i + 2, char);
-	  memcpy (dict->label, hdr.file_label, i + 1);
+	  memcpy(dict->label, hdr.file_label, i + 1);
 	  dict->label[i + 1] = 0;
 	  break;
 	}
@@ -840,10 +831,10 @@ read_header (struct file_handle * h, struct sfm_read_info * inf)
     {
       char *cp;
 
-      memcpy (inf->creation_date, hdr.creation_date, 9);
+      memcpy(inf->creation_date, hdr.creation_date, 9);
       inf->creation_date[9] = 0;
 
-      memcpy (inf->creation_time, hdr.creation_time, 8);
+      memcpy(inf->creation_time, hdr.creation_time, 8);
       inf->creation_time[8] = 0;
 
       if (!ext->reverse_endian)
@@ -867,10 +858,9 @@ lossage:
   return 0;
 }
 
-int
-cmp_variable (const void *a, const void *b, void *foo)
+int cmp_variable(const void *a, const void *b, void *foo)
 {
-  return strcmp (((struct variable *) a)->name, ((struct variable *) b)->name);
+  return strcmp(((struct variable *) a)->name, ((struct variable *) b)->name);
 }
 
 /* Reads most of the dictionary from file H; also fills in the
@@ -882,8 +872,7 @@ cmp_variable (const void *a, const void *b, void *foo)
    will probably modify the dictionary before reading it in from the
    file.  Also, the get.* elements are set to appropriate values to
    allow the file to be read.  */
-static int
-read_variables (struct file_handle * h, struct variable *** var_by_index)
+static int read_variables(struct file_handle * h, struct variable *** var_by_index)
 {
   int i;
 
@@ -1149,8 +1138,7 @@ lossage:
 
 /* Translates the format spec from sysfile format to internal
    format. */
-static int
-parse_format_spec (struct file_handle *h, R_int32 s, struct fmt_spec *v, struct variable *vv)
+static int parse_format_spec(struct file_handle *h, R_int32 s, struct fmt_spec *v, struct variable *vv)
 {
   if ((size_t) ((s >> 16) & 0xff)
       >= sizeof translate_fmt / sizeof *translate_fmt)
@@ -1180,8 +1168,7 @@ lossage:
 
 /* Reads value labels from sysfile H and inserts them into the
    associated dictionary. */
-int
-read_value_labels (struct file_handle * h, struct variable ** var_by_index)
+int read_value_labels(struct file_handle * h, struct variable ** var_by_index)
 {
   struct sfm_fhuser_ext *ext = h->ext;	/* File extension record. */
 
@@ -1365,8 +1352,7 @@ lossage:
    non-NULL, uses that as the buffer; otherwise allocates at least
    MINALLOC bytes.  Returns a pointer to the buffer on success, NULL
    on failure. */
-static void *
-bufread (struct file_handle * h, void *buf, size_t nbytes, size_t minalloc)
+static void *bufread(struct file_handle * h, void *buf, size_t nbytes, size_t minalloc)
 {
   struct sfm_fhuser_ext *ext = h->ext;
 
@@ -1386,8 +1372,7 @@ bufread (struct file_handle * h, void *buf, size_t nbytes, size_t minalloc)
 /* Reads a document record, type 6, from system file H, and sets up
    the documents and n_documents fields in the associated
    dictionary. */
-static int
-read_documents (struct file_handle * h)
+static int read_documents(struct file_handle * h)
 {
   struct sfm_fhuser_ext *ext = h->ext;
   struct dictionary *dict = ext->dict;
@@ -1420,8 +1405,7 @@ lossage:
 #define DEBUGGING 1
 #include "debug-print.h"
 /* Displays dictionary DICT on stdout. */
-void
-dump_dictionary (struct dictionary * dict)
+void dump_dictionary(struct dictionary * dict)
 {
   int i;
 
@@ -1484,7 +1468,7 @@ dump_dictionary (struct dictionary * dict)
 	  printf ("high+1");
 	  break;
 	default:
-          if (!(0)) warning(_("assert failed : 0"));
+          if (!(0)) warning(_("assert failed : %s"), "0");
 	}
       for (j = 0; j < n; j++)
 	if (v->type == NUMERIC)
@@ -1504,8 +1488,7 @@ dump_dictionary (struct dictionary * dict)
 /* Reads compressed data into H->BUF and sets other pointers
    appropriately.  Returns nonzero only if both no errors occur and
    data was read. */
-static size_t
-buffer_input (struct file_handle * h)
+static size_t buffer_input(struct file_handle * h)
 {
   struct sfm_fhuser_ext *ext = h->ext;
   size_t amt;
@@ -1531,8 +1514,7 @@ buffer_input (struct file_handle * h)
    one instruction byte, which are output together in an octet; each
    byte gives a value for that byte or indicates that the value can be
    found following the instructions. */
-static int
-read_compressed_data (struct file_handle * h, R_flt64 * temp)
+static int read_compressed_data(struct file_handle * h, R_flt64 * temp)
 {
   struct sfm_fhuser_ext *ext = h->ext;
 
@@ -1626,8 +1608,7 @@ lossage:
    according to the instructions given in associated dictionary DICT,
    which must have the get.* elements appropriately set.  Returns
    nonzero only if successful.	*/
-int
-sfm_read_case (struct file_handle * h, union value * perm, struct dictionary * dict)
+int sfm_read_case(struct file_handle * h, union value * perm, struct dictionary * dict)
 {
   struct sfm_fhuser_ext *ext = h->ext;
 
@@ -1638,7 +1619,7 @@ sfm_read_case (struct file_handle * h, union value * perm, struct dictionary * d
 
   /* Make sure the caller remembered to finish polishing the
      dictionary returned by sfm_read_dictionary(). */
-  if (!(dict->nval > 0)) error(_("assert failed : dict->nval > 0"));
+  if (!(dict->nval > 0)) error(_("assert failed : %s"), "dict->nval > 0");
 
   /* The first concern is to obtain a full case relative to the data
      file.  (Cases in the data file have no particular relationship to

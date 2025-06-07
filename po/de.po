@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R 4.5.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-18 13:37+0200\n"
+"POT-Creation-Date: 2025-06-05 17:39+0200\n"
 "PO-Revision-Date: 2025-03-13 18:06+0100\n"
 "Last-Translator: Detlef Steuer <steuer@hsu-hh.de>\n"
 "Language-Team: r-core@r-project.org\n"
@@ -191,65 +191,13 @@ msgstr "Problem beim Lesen der SAS-XPORT-Datei '%s'"
 msgid "problem reading SAS transport file"
 msgstr "Problem beim Lesen der SAS-Transportdatei"
 
-#: avl.c:57
-msgid "assert failed : cmp != NULL"
-msgstr ""
-
-#: avl.c:88 avl.c:156 avl.c:207 avl.c:375 avl.c:546 avl.c:584 avl.c:806
-#: avl.c:821
-msgid "assert failed : tree != NULL"
-msgstr ""
-
-#: avl.c:245
-msgid "assert failed : qp == qa"
-msgstr ""
-
-#: avl.c:282
-msgid "assert failed : tree && walk_func"
-msgstr ""
-
-#: avl.c:319
-msgid "assert failed : tree && trav"
-msgstr ""
-
-#: avl.c:382
-msgid "assert failed : tree->count == 1"
-msgstr ""
-
-#: avl.c:456
-msgid "assert failed : s->bal == -1"
-msgstr ""
-
-#: avl.c:468
-msgid "assert failed : r->bal == +1"
-msgstr ""
-
-#: avl.c:480
-msgid "assert failed : p->bal == +1"
-msgstr ""
-
-#: avl.c:500 avl.c:693
-msgid "assert failed : s->bal == +1"
-msgstr ""
-
-#: avl.c:512 avl.c:717
-msgid "assert failed : r->bal == -1"
-msgstr ""
-
-#: avl.c:524 avl.c:729
-msgid "assert failed : p->bal == -1"
-msgstr ""
-
-#: avl.c:673
-msgid "assert failed : k > 0"
-msgstr ""
-
-#: avl.c:696
-msgid "assert failed : r != NULL"
-msgstr ""
-
-#: avl.c:786
-msgid "assert failed : p->bal == 1"
+#: avl.c:56 avl.c:86 avl.c:152 avl.c:200 avl.c:238 avl.c:274 avl.c:310
+#: avl.c:365 avl.c:372 avl.c:446 avl.c:458 avl.c:470 avl.c:490 avl.c:502
+#: avl.c:514 avl.c:535 avl.c:572 avl.c:661 avl.c:681 avl.c:684 avl.c:705
+#: avl.c:717 avl.c:726 avl.c:740 avl.c:774 avl.c:793 avl.c:807 sfm-read.c:165
+#: sfm-read.c:223 sfm-read.c:565 sfm-read.c:578 sfm-read.c:1471 sfm-read.c:1622
+#, c-format
+msgid "assert failed : %s"
 msgstr ""
 
 #: dbfopen.c:281 dbfopen.c:283 dbfopen.c:294 dbfopen.c:318 dbfopen.c:348
@@ -430,7 +378,7 @@ msgstr "Falsches Zeichen in Zeit"
 msgid "%s: Bad format specifier byte %d"
 msgstr "%s: Falsches Formatkennzeichner-Byte %d"
 
-#: pfm-read.c:650 sfm-read.c:1157 sfm-read.c:1167
+#: pfm-read.c:650 sfm-read.c:1145 sfm-read.c:1155
 #, c-format
 msgid "%s: Bad format specifier byte (%d)"
 msgstr "%s: Falsches Formatkennzeichner-Byte (%d)"
@@ -529,317 +477,301 @@ msgstr "Doppelte Beschriftung für Wert '%.*s' der Variable %s"
 msgid "End of file midway through case"
 msgstr "Ende der Datei mitten im Fall"
 
-#: sfm-read.c:138 sfm-read.c:1697
+#: sfm-read.c:138 sfm-read.c:1678
 #, fuzzy
 msgid "reading as a system file"
 msgstr "%s: Systemdatei wird gelesen: %s"
 
-#: sfm-read.c:166
-msgid "assert failed : ext->opened == 0"
-msgstr ""
-
-#: sfm-read.c:169
+#: sfm-read.c:168
 #, c-format
 msgid "%s: Closing system file: %s"
 msgstr "%s: Systemdatei wird geschlossen: %s"
 
-#: sfm-read.c:225
-msgid "assert failed : v->ref_count >= 1"
-msgstr ""
-
-#: sfm-read.c:300
+#: sfm-read.c:295
 #, c-format
 msgid "cannot read file %s as system file: already opened for %s"
 msgstr "Datei %s kann nicht als Systemdatei gelesen werden: Bereits für %s geöffnet"
 
-#: sfm-read.c:315
+#: sfm-read.c:310
 #, c-format
 msgid "An error occurred while opening '%s' for reading as a system file: %s"
 msgstr "Beim Öffnen von '%s' zum Lesen als eine Systemdatei ist ein Fehler aufgetreten: %s"
 
-#: sfm-read.c:346
+#: sfm-read.c:341
 #, c-format
 msgid "%s: Weighting variable may not be a continuation of a long string variable"
 msgstr "%s: Gewichtungsvariable ist möglicherweise keine Fortsetzung einer langen Zeichenkettenvariable"
 
-#: sfm-read.c:348
+#: sfm-read.c:343
 #, c-format
 msgid "%s: Weighting variable may not be a string variable"
 msgstr "%s: Gewichtungsvariable ist möglicherweise keine Zeichenkettenvariable"
 
-#: sfm-read.c:373
+#: sfm-read.c:368
 #, c-format
 msgid "%s: Orphaned variable index record (type 4).  Type 4 records must always immediately follow type 3 records"
 msgstr "%s: Verwaister Variablenindex-Datensatz (Typ 4). Typ-4-Datensätze müssen immer unmittelbar auf Typ-3-Datensätze folgen"
 
-#: sfm-read.c:453
+#: sfm-read.c:448
 #, c-format
 msgid "%s: Very long string record(s) found (record type 7, subtype %d), each will be imported in consecutive separate variables"
 msgstr ""
 "%s: Sehr lange(e) Zeichenketteneinträge gefunden (record Typ 7, Subtyp %d), jeder\n"
 "wird in aufeinanderfolgende, einzelne Variablen importiert"
 
-#: sfm-read.c:478
+#: sfm-read.c:473
 #, c-format
 msgid "%s: Long string value labels record found (record type 7, subtype %d), but ignored"
 msgstr ""
 "%s: Langer Eintrag mit Zeichenkettenlabels gefunden (record Typ 7, Subtyp %d), aber\n"
 "ignoriert"
 
-#: sfm-read.c:483
+#: sfm-read.c:478
 #, c-format
 msgid "%s: Long string missing values record found (record type 7, subtype %d), but ignored"
 msgstr "%s: Langer Eintrag mit Zeichenkette für fehlenden Wert gefunden (record Typ 7, Subtyp %d), aber ignoriert"
 
-#: sfm-read.c:492
+#: sfm-read.c:487
 #, c-format
 msgid "%s: Unrecognized record type 7, subtype %d encountered in system file"
 msgstr "%s: Unerkannter Datensatztyp 7, Untertyp %d in Systemdatei vorgefunden"
 
-#: sfm-read.c:515
+#: sfm-read.c:510
 #, c-format
 msgid "%s: Unrecognized record type %d"
 msgstr "%s: Unerkannter Datensatztyp %d"
 
-#: sfm-read.c:523
+#: sfm-read.c:518
 msgid "Read system-file dictionary successfully"
 msgstr ""
 
-#: sfm-read.c:539
+#: sfm-read.c:534
 msgid "error reading system-file header"
 msgstr "Fehler beim Lesen des Systemdatei-Headers"
 
-#: sfm-read.c:555
+#: sfm-read.c:549
 #, c-format
 msgid "%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected size %ld, count 8"
 msgstr "%s: Falsches Größen-(%d)- oder Anzahl-(%u)-Feld auf Datensatztyp 7, Untertyp 3.\tErwartete Größe %ld, Anzahl 8"
 
 # http://de.wikipedia.org/wiki/IEEE_754
-#: sfm-read.c:568
+#: sfm-read.c:562
 #, c-format
 msgid "%s: Floating-point representation in system file is not IEEE-754.  read.spss cannot convert between floating-point formats"
 msgstr "%s: Gleitkommadarstellung in Systemdatei entspricht nicht IEEE-754. read.spss kann nicht zwischen Gleitkommaformaten konvertieren"
 
-#: sfm-read.c:587
+#: sfm-read.c:581
 #, c-format
 msgid "%s: File-indicated endianness (%s) does not match endianness intuited from file header (%s)"
 msgstr "%s: Durch Datei angegebene Byte-Reihenfolge (%s) entspricht nicht der vom Dateikopf vorgesehenen Byte-Reihenfolge (%s)"
 
-#: sfm-read.c:599
+#: sfm-read.c:593
 #, c-format
 msgid "%s: File-indicated character representation code (%s) is not ASCII"
 msgstr "%s: Durch Datei angegebener Zeichendarstellungskode (%s) ist nicht ASCII"
 
-#: sfm-read.c:604
+#: sfm-read.c:598
 #, c-format
 msgid "%s: File-indicated character representation code (%d) is unknown"
 msgstr "%s: Durch Datei angegebener Zeichendarstellungskode (%d) ist unbekannt"
 
-#: sfm-read.c:622
+#: sfm-read.c:615
 #, c-format
 msgid "%s: Bad size (%d) or count (%u) field on record type 7, subtype 4.\tExpected size %lu, count 8"
 msgstr "%s: Falsches Größen-(%d)- oder Anzahl-(%u)-Feld auf Datensatztyp 7, Untertyp 4.\tErwartete Größe %lu, Anzahl 8"
 
-#: sfm-read.c:636
+#: sfm-read.c:629
 #, c-format
 msgid "%s: File-indicated value is different from internal value for at least one of the three system values.  SYSMIS: indicated %g, expected %g; HIGHEST: %g, %g; LOWEST: %g, %g"
 msgstr "%s: Durch Datei angegebener Wert unterscheidet sich vom internen Wert für mindestens einen von drei Systemwerten. SYSMIS: Angegeben %g, erwartet %g; HIGHEST: %g, %g; LOWEST: %g, %g"
 
-#: sfm-read.c:662
+#: sfm-read.c:654
 #, c-format
 msgid "%s: strange record info seen, size=%lu, count=%u, ignoring long variable names"
 msgstr ""
 
-#: sfm-read.c:689
+#: sfm-read.c:681
 #, c-format
 msgid "%s: long variable name mapping '%s' to '%s' for variable which does not exist"
 msgstr ""
 
-#: sfm-read.c:744
+#: sfm-read.c:735
 #, c-format
 msgid "%s: Bad magic. Proper system files begin with the four characters `$FL2'. This file will not be read"
 msgstr ""
 
-#: sfm-read.c:786
+#: sfm-read.c:777
 #, c-format
 msgid "%s: File layout code has unexpected value %d.  Value should be 2 or 3, in big-endian or little-endian format"
 msgstr ""
 
-#: sfm-read.c:801
+#: sfm-read.c:792
 #, c-format
 msgid "%s: Number of elements per case (%d) is not between 1 and %ld"
 msgstr "%s: Anzahl der Elemente pro Fall (%d) ist nicht zwischen 1 und %ld"
 
-#: sfm-read.c:809
+#: sfm-read.c:800
 #, c-format
 msgid "%s: Index of weighting variable (%d) is not between 0 and number of elements per case (%d)"
 msgstr "%s: Index der Gewichtungsvariable (%d) liegt nicht zwischen 0 und der Anzahl der Elemente pro Fall (%d)"
 
-#: sfm-read.c:814
+#: sfm-read.c:805
 #, c-format
 msgid "%s: Number of cases in file (%d) is not between -1 and %d"
 msgstr "%s: Anzahl der Fälle in Datei (%d) ist nicht zwischen -1 und %d"
 
-#: sfm-read.c:819
+#: sfm-read.c:810
 #, c-format
 msgid "%s: Compression bias (%g) is not the usual value of 100"
 msgstr "%s: Kompressionsverzerrung (%g) hat nicht den üblichen Wert von 100"
 
-#: sfm-read.c:921
+#: sfm-read.c:910
 #, c-format
 msgid "%s: position %d: Bad record type (%d); the expected value was 2"
 msgstr "%s: Position %d: Falscher Datensatztyp (%d). Der erwartete Wert war 2"
 
-#: sfm-read.c:930
+#: sfm-read.c:919
 #, c-format
 msgid "%s: position %d: String variable does not have proper number of continuation records"
 msgstr "%s: Position %d: Zeichenkettenvariable hat keine angemessene Anzahl von Fortsetzungsdatensätzen"
 
-#: sfm-read.c:938
+#: sfm-read.c:927
 #, c-format
 msgid "%s: position %d: Superfluous long string continuation record"
 msgstr "%s: Position %d: Überflüssig langer Zeichenketten-Fortsetzungsdatensatz"
 
-#: sfm-read.c:943
+#: sfm-read.c:932
 #, c-format
 msgid "%s: position %d: Bad variable type code %d"
 msgstr "%s: Position %d: Falscher Variablentyp-Kode %d"
 
-#: sfm-read.c:946
+#: sfm-read.c:935
 #, c-format
 msgid "%s: position %d: Variable label indicator field is not 0 or 1"
 msgstr "%s: Position %d: Variablenbeschriftungs-Anzeigefeld ist nicht 0 oder 1"
 
-#: sfm-read.c:950
+#: sfm-read.c:939
 #, c-format
 msgid "%s: position %d: Missing value indicator field is not -3, -2, 0, 1, 2, or 3"
 msgstr "%s: Position %d: Anzeigefeld für fehlenden Wert ist nicht -3, -2, 0, 1, 2 oder 3"
 
-#: sfm-read.c:972
+#: sfm-read.c:961
 #, c-format
 msgid "%s: position %d: Variable name begins with octothorpe ('#').  Scratch variables should not appear in system files"
 msgstr "%s: Position %d: Variablenname beginnt mit Rautenzeichen ('#'). Scratch-Variablen sollten nicht in Systemdateien erscheinen"
 
-#: sfm-read.c:994
+#: sfm-read.c:983
 #, c-format
 msgid "%s: position %d: character `\\%03o' (%c) is not valid in a variable name"
 msgstr "%s: Position %d: Zeichen '\\%03o' (%c) ist in einem Variablenname nicht gültig"
 
-#: sfm-read.c:1036
+#: sfm-read.c:1025
 #, c-format
 msgid "%s: Variable %s indicates variable label of invalid length %d"
 msgstr "%s: Variable %s gibt Variablenbeschriftung von ungültiger Länge %d an"
 
-#: sfm-read.c:1052
+#: sfm-read.c:1041
 #, c-format
 msgid "%s: Long string variable %s may not have missing values"
 msgstr "%s: Lange Zeichenkettenvariable %s hat möglicherweise keine fehlenden Werte"
 
-#: sfm-read.c:1075
+#: sfm-read.c:1064
 #, c-format
 msgid "%s: String variable %s may not have missing values specified as a range"
 msgstr "%s: Zeichenkettenvariable %s hat möglicherweise keine fehlenden Werte, die als ein Bereich angegeben sind"
 
-#: sfm-read.c:1118
+#: sfm-read.c:1107
 #, c-format
 msgid "%s: Long string continuation records omitted at end of dictionary"
 msgstr "%s: Lange Zeichenkettenfortsetzungs-Datensätze am Ende des Wörterbuchs weggelassen"
 
-#: sfm-read.c:1121
+#: sfm-read.c:1110
 #, c-format
 msgid "%s: System file header indicates %d variable positions but %d were read from file"
 msgstr "%s: Systemdatei-Header gibt %d Variablenpositionen an, aber %d wurden aus der Datei gelesen"
 
-#: sfm-read.c:1130
+#: sfm-read.c:1119
 #, c-format
 msgid "%s: Duplicate variable name `%s' within system file"
 msgstr "%s: Doppelter Variablenname '%s' innerhalb Systemdatei"
 
-#: sfm-read.c:1170
+#: sfm-read.c:1158
 #, c-format
 msgid "%s: %s variable %s has %s format specifier %s"
 msgstr "%s: %s Variable %s hat %s Formatkennzeichner %s"
 
-#: sfm-read.c:1249
+#: sfm-read.c:1236
 #, c-format
 msgid "%s: Variable index record (type 4) does not immediately follow value label record (type 3) as it ought"
 msgstr "%s: Variablenindex-Datensatz (Typ 4) folgt nicht unmittelbar auf Wertbeschriftungs-Datensatz (Typ 3), wie er sollte"
 
-#: sfm-read.c:1258
+#: sfm-read.c:1245
 #, c-format
 msgid "%s: Number of variables associated with a value label (%d) is not between 1 and the number of variables (%d)"
 msgstr "%s: Zahl der mit einer Wertbeschriftung (%d) assoziierten Variablen liegt nicht zwischen 1 und der Anzahl der Variablen (%d)"
 
-#: sfm-read.c:1275
+#: sfm-read.c:1262
 #, c-format
 msgid "%s: Variable index associated with value label (%d) is not between 1 and the number of values (%d)"
 msgstr "%s: Mit einer Wertbeschriftung (%d) assoziierte Variable liegt nicht zwischen 1 und der Anzahl der Werte (%d)"
 
-#: sfm-read.c:1281
+#: sfm-read.c:1268
 #, c-format
 msgid "%s: Variable index associated with value label (%d) refers to a continuation of a string variable, not to an actual variable"
 msgstr "%s: Mit einer Wertbeschriftung (%d) assoziierter Variablenindex bezieht sich auf die Fortsetzung einer Zeichenkettenvariable, nicht auf eine aktuelle Variable"
 
-#: sfm-read.c:1284
+#: sfm-read.c:1271
 #, c-format
 msgid "%s: Value labels are not allowed on long string variables (%s)"
 msgstr "%s: Wertbeschriftungen sind nicht für lange Zeichenkettenvariablen (%s) erlaubt"
 
-#: sfm-read.c:1293
+#: sfm-read.c:1280
 #, c-format
 msgid "%s: Variables associated with value label are not all of identical type.  Variable %s has %s type, but variable %s has %s type"
 msgstr "%s: Nicht alle mit Wertbeschriftungen assoziierten Variablen sind vom gleichen Typ. Variable %s hat %s-Typ, aber Variable %s hat %s-Typ"
 
-#: sfm-read.c:1335
+#: sfm-read.c:1322
 #, c-format
 msgid "%s: File contains duplicate label for value %g for variable %s"
 msgstr "%s: Datei enthält doppelte Beschriftung für Wert %g der Variablen %s"
 
-#: sfm-read.c:1338
+#: sfm-read.c:1325
 #, c-format
 msgid "%s: File contains duplicate label for value `%.*s' for variable %s"
 msgstr "%s: Datei enthält doppelte Beschriftung für Wert '%.*s' der Variablen %s"
 
-#: sfm-read.c:1378 sfm-read.c:1656
+#: sfm-read.c:1364 sfm-read.c:1637
 #, c-format
 msgid "%s: Reading system file: %s"
 msgstr "%s: Systemdatei wird gelesen: %s"
 
-#: sfm-read.c:1380 sfm-read.c:1564 sfm-read.c:1605
+#: sfm-read.c:1366 sfm-read.c:1546 sfm-read.c:1587
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s: Unerwartetes Ende der Datei"
 
-#: sfm-read.c:1397
+#: sfm-read.c:1382
 #, c-format
 msgid "%s: System file contains multiple type 6 (document) records"
 msgstr "%s: Systemdatei enthält mehrere Typ-6-Datensätze (Dokument)"
 
-#: sfm-read.c:1407
+#: sfm-read.c:1392
 #, c-format
 msgid "%s: Number of document lines (%d) must be greater than 0"
 msgstr "%s: Anzahl der Dokumentzeilen (%d) muss größer als 0 sein"
 
-#: sfm-read.c:1487
-msgid "assert failed : 0"
-msgstr ""
-
-#: sfm-read.c:1518
+#: sfm-read.c:1501
 #, c-format
 msgid "%s: Error reading file: %s"
 msgstr "%s: Fehler beim Lesen der Datei: %s"
 
 # CHECKME
-#: sfm-read.c:1556
+#: sfm-read.c:1538
 #, c-format
 msgid "%s: Compressed data is corrupted.  Data ends partway through a case"
 msgstr "%s: Gepackte Daten sind beschädigt. Daten enden teilweise durch einen Fall"
 
-#: sfm-read.c:1641
-msgid "assert failed : dict->nval > 0"
-msgstr ""
-
-#: sfm-read.c:1658
+#: sfm-read.c:1639
 #, c-format
 msgid "%s: Partial record at end of system file"
 msgstr "%s: Unvollständiger Datensatz am Ende der Systemdatei"
