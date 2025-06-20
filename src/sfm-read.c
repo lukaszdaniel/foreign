@@ -546,7 +546,7 @@ static int read_machine_int32_info(struct file_handle * h, int size, int count, 
   int i;
 
   if (size != sizeof (R_int32) || count != 8)
-    lose ((_("%s: Bad size (%d or count (%u) field on record type 7, subtype 3.	Expected size %ld, count 8"),
+    lose ((_("%s: Bad size (%d) or count (%u) field on record type 7, subtype 3.	Expected size %ld, count 8"),
 	h->fn, size, count, (long)sizeof (R_int32)));
 
   assertive_bufread(h, data, sizeof data, 0);

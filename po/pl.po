@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: foreign 0.8-60\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-05 17:39+0200\n"
-"PO-Revision-Date: 2025-06-05 17:34+0200\n"
+"PO-Revision-Date: 2025-06-07 12:00+0200\n"
 "Last-Translator: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language-Team: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language: pl_PL\n"
@@ -198,24 +198,22 @@ msgid "assert failed : %s"
 msgstr "założenie nie powiodło się : %s"
 
 #: dbfopen.c:281 dbfopen.c:283 dbfopen.c:294 dbfopen.c:318 dbfopen.c:348
-#, fuzzy
 msgid "binary write error"
 msgstr "nastąpił błąd zapisu danych binarnych"
 
 #: dbfopen.c:339 dbfopen.c:1048 dbfopen.c:1216 dbfopen.c:1363 dbfopen.c:1408
-#, fuzzy
 msgid "binary read error"
 msgstr "wystąpił błąd odczytu binarnego"
 
 #: dbfopen.c:743
 #, c-format
 msgid "fseek(%d) failed on DBF file"
-msgstr ""
+msgstr "fseek(%d) nie powiodło się dla pliku DBF"
 
 #: dbfopen.c:750
 #, c-format
 msgid "fread(%d) failed on DBF file"
-msgstr ""
+msgstr "fread(%d) nie powiodło się dla pliku DBF"
 
 #: file-handle.c:116
 #, c-format
@@ -291,9 +289,8 @@ msgid "first record for entry %d is corrupt"
 msgstr "pierwszy rekord wpisu %d jest uszkodzony"
 
 #: pfm-read.c:102
-#, fuzzy
 msgid "reading as a portable file"
-msgstr "problem podczas czytania pliku transportowego SAS"
+msgstr "odczytywanie jako plik przenośny"
 
 #: pfm-read.c:118
 #, c-format
@@ -464,7 +461,7 @@ msgid "Duplicate label for value %g for variable %s"
 msgstr "Powtórzone etykiety dla wartości %g zmiennej %s"
 
 #: pfm-read.c:985
-#, fuzzy, c-format
+#, c-format
 msgid "Duplicate label for value '%.*s' for variable %s"
 msgstr "Powtórzona etykieta dla wartości '%.*s' zmiennej %s"
 
@@ -473,9 +470,8 @@ msgid "End of file midway through case"
 msgstr "Nieoczekiwany koniec pliku podczas odczytu przypadku"
 
 #: sfm-read.c:138 sfm-read.c:1678
-#, fuzzy
 msgid "reading as a system file"
-msgstr "%s: Czytanie pliku systemowego: %s"
+msgstr "odczytywanie jako plik systemowy"
 
 #: sfm-read.c:168
 #, c-format
@@ -534,7 +530,7 @@ msgstr "%s: Nierozpoznany typ %d rekordu"
 
 #: sfm-read.c:518
 msgid "Read system-file dictionary successfully"
-msgstr ""
+msgstr "Poprawnie odczytano słownik pliku systemowego"
 
 #: sfm-read.c:534
 msgid "error reading system-file header"
@@ -542,7 +538,7 @@ msgstr "błąd podczas odczytywania nagłówka pliku systemowego"
 
 #: sfm-read.c:549
 #, c-format
-msgid "%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected size %ld, count 8"
+msgid "%s: Bad size (%d) or count (%u) field on record type 7, subtype 3.\tExpected size %ld, count 8"
 msgstr "%s: Niepoprawne pole rozmiaru (%d) lub zliczenia (%u) na rekordzie typu 7, podtyp 3. Oczekiwano rozmiaru %ld oraz 8 zliczeń"
 
 #: sfm-read.c:562
@@ -578,17 +574,17 @@ msgstr "%s: Wskazana przez plik wartość jest różna od wartości wewnętrznej
 #: sfm-read.c:654
 #, c-format
 msgid "%s: strange record info seen, size=%lu, count=%u, ignoring long variable names"
-msgstr ""
+msgstr "%s: dziwny wpis informacyjny, rozmiar=%lu, zliczenia=%u, ignorowanie długich nazw zmiennych"
 
 #: sfm-read.c:681
 #, c-format
 msgid "%s: long variable name mapping '%s' to '%s' for variable which does not exist"
-msgstr ""
+msgstr "%s: mapowanie długiej nazwy zmiennej '%s' na '%s' dla zmiennej która nie istnieje"
 
 #: sfm-read.c:735
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Bad magic. Proper system files begin with the four characters `$FL2'. This file will not be read"
-msgstr "%s: Niepoprawna liczba magiczna.  Poprawne pliki systemowe rozpoczynają się czterema znakami'$FL2'. Ten plik nie będzie odczytywany"
+msgstr "%s: Niepoprawna liczba magiczna. Poprawne pliki systemowe rozpoczynają się czterema znakami'$FL2'. Ten plik nie będzie odczytywany"
 
 #: sfm-read.c:777
 #, c-format
@@ -798,7 +794,7 @@ msgstr ""
 
 #: stataread.c:467 stataread.c:499
 msgid "invalid character string length -- truncating to 244 bytes"
-msgstr ""
+msgstr "niepoprawna długość ciągu znaków -- obcinanie do 244 bajtów"
 
 #: stataread.c:585
 msgid "can not yet read Stata .dta on this platform"
@@ -828,7 +824,7 @@ msgstr "ciągi znaków większe niż 244 bajty w kolumnie %d zostaną przycięte
 
 #: stataread.c:978
 msgid "empty string is not valid in Stata's documented format"
-msgstr ""
+msgstr "pusty ciąg znaków nie jest poprawny w udokumentowanym formacie Stata"
 
 #: stataread.c:984
 msgid "this should not happen."

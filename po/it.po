@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreign 0.8-70\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 17:39+0200\n"
+"POT-Creation-Date: 2025-06-19 14:24+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
 "Language-Team: Italian https://github.com/dmedri/R-italian-lang\n"
@@ -546,7 +546,7 @@ msgstr "errore di lettura intestazione file di sistema"
 
 #: sfm-read.c:549
 #, fuzzy, c-format
-msgid "%s: Bad size (%d or count (%u) field on record type 7, subtype 3.\tExpected size %ld, count 8"
+msgid "%s: Bad size (%d) or count (%u) field on record type 7, subtype 3.\tExpected size %ld, count 8"
 msgstr "%s: Dimensione errata (%d) o conta (%d) campo sul record tipo 7, sottotipo 3.\tDimensione attesa %d, conta 8"
 
 #: sfm-read.c:562
