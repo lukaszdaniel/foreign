@@ -732,7 +732,7 @@ static int read_header(struct file_handle * h, struct sfm_read_info * inf)
   assertive_bufread(h, &hdr.file_label, 64, 0);
   assertive_bufread(h, &hdr.padding, 3, 0);
   if (0 != strncmp("$FL2", hdr.rec_type, 4))
-    lose ((_("%s: Bad magic. Proper system files begin with the four characters `$FL2'. This file will not be read"),
+    lose ((_("%s: Bad magic. Proper system files begin with the four characters '$FL2'. This file will not be read"),
 	   h->fn));
 
   /* Check eye-catcher string. */
@@ -980,7 +980,7 @@ static int read_variables(struct file_handle * h, struct variable *** var_by_ind
 		   || c == '#' || c == '$' || c == '_' || c > 127)
 	      vv->name[j] = (char) c;
 	  else
-	    lose ((_("%s: position %d: character `\\%03o' (%c) is not valid in a variable name"),
+	    lose ((_("%s: position %d: character '\\%03o' (%c) is not valid in a variable name"),
 		   h->fn, j, c, c)); /* changed from 'i', PR#14465 */
 	}
       vv->name[j] = 0;
@@ -1116,7 +1116,7 @@ static int read_variables(struct file_handle * h, struct variable *** var_by_ind
   dict->var_by_name = R_avl_create (cmp_variable, NULL);
   for (i = 0; i < dict->nvar; i++)
     if (NULL != R_avl_insert (dict->var_by_name, dict->var[i]))
-      lose ((_("%s: Duplicate variable name `%s' within system file"),
+      lose ((_("%s: Duplicate variable name '%s' within system file"),
 	     h->fn, dict->var[i]->name));
 
   return 1;
@@ -1322,7 +1322,7 @@ int read_value_labels(struct file_handle * h, struct variable ** var_by_index)
 	    warning(_("%s: File contains duplicate label for value %g for variable %s"),
 		    h->fn, cooked_label[j]->v.f, v->name);
 	  else
-	    warning(_("%s: File contains duplicate label for value `%.*s' for variable %s"),
+	    warning(_("%s: File contains duplicate label for value '%.*s' for variable %s"),
 		      h->fn, v->width,
 		 cooked_label[j]->v.s, v->name);
 

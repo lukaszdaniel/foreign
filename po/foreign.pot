@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreign 0.8-90\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-19 14:24+0200\n"
+"POT-Creation-Date: 2025-06-22 15:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: R_systat.c:133
 #, c-format
@@ -220,64 +221,64 @@ msgstr ""
 
 #: file-handle.c:116
 #, c-format
-msgid "file handle `%s' has not been previously declared on FILE HANDLE"
+msgid "file handle '%s' has not been previously declared on FILE HANDLE"
 msgstr ""
 
-#: format.c:109
+#: format.c:106
 #, c-format
 msgid "format %s may not be used as an input format"
 msgstr ""
 
-#: format.c:114
+#: format.c:111
 #, c-format
 msgid ""
 "input format %s specifies a bad width %d.  Format %s requires a width "
 "between %d and %d"
 msgstr ""
 
-#: format.c:120
+#: format.c:117
 #, c-format
 msgid ""
 "input format %s specifies an odd width %d, but format %s requires an even "
 "width between %d and %d"
 msgstr ""
 
-#: format.c:126
+#: format.c:123
 #, c-format
 msgid ""
 "Input format %s specifies a bad number of implied decimal places %d.  Input "
 "format %s allows up to 16 implied decimal places"
 msgstr ""
 
-#: format.c:145
+#: format.c:141
 #, c-format
 msgid ""
 "output format %s specifies a bad width %d.  Format %s requires a width "
 "between %d and %d"
 msgstr ""
 
-#: format.c:154
+#: format.c:150
 #, c-format
 msgid ""
 "output format %s requires minimum width %d to allow %d decimal places.  Try "
 "%s%d.%d instead of %s"
 msgstr ""
 
-#: format.c:161
+#: format.c:157
 #, c-format
 msgid ""
 "output format %s specifies an odd width %d, but output format %s requires an "
 "even width between %d and %d"
 msgstr ""
 
-#: format.c:167
+#: format.c:163
 #, c-format
 msgid ""
 "Output format %s specifies a bad number of implied decimal places %d.  "
 "Output format %s allows a number of implied decimal places between 1 and 16"
 msgstr ""
 
-#: format.c:182
+#: format.c:177
 #, c-format
 msgid "cannot display a string variable of width %d with format specifier %s"
 msgstr ""
@@ -358,134 +359,136 @@ msgstr ""
 msgid "Bad string length %d"
 msgstr ""
 
-#: pfm-read.c:524
+#: pfm-read.c:521
 msgid "Missing SPSSPORT signature"
 msgstr ""
 
-#: pfm-read.c:542
+#: pfm-read.c:538
 #, c-format
 msgid "Unrecognized version code %d"
 msgstr ""
 
-#: pfm-read.c:553
+#: pfm-read.c:549
 #, c-format
 msgid "Bad date string length %lu"
 msgstr ""
 
-#: pfm-read.c:560
+#: pfm-read.c:556
 msgid "Bad character in date"
 msgstr ""
 
-#: pfm-read.c:580
+#: pfm-read.c:576
 #, c-format
 msgid "Bad time string length %lu"
 msgstr ""
 
-#: pfm-read.c:587
+#: pfm-read.c:583
 msgid "Bad character in time"
 msgstr ""
 
-#: pfm-read.c:641
+#: pfm-read.c:636
 #, c-format
 msgid "%s: Bad format specifier byte %d"
 msgstr ""
 
-#: pfm-read.c:650 sfm-read.c:1145 sfm-read.c:1155
+#: pfm-read.c:645 sfm-read.c:1145 sfm-read.c:1155
 #, c-format
 msgid "%s: Bad format specifier byte (%d)"
 msgstr ""
 
-#: pfm-read.c:652
+#: pfm-read.c:647
 #, c-format
 msgid "%s variable %s has %s format specifier %s"
 msgstr ""
 
-#: pfm-read.c:691
+#: pfm-read.c:684
 msgid "Expected variable count record"
 msgstr ""
 
-#: pfm-read.c:695
+#: pfm-read.c:688
 #, c-format
 msgid "Invalid number of variables %d"
 msgstr ""
 
-#: pfm-read.c:731
+#: pfm-read.c:724
 msgid "Expected variable record"
 msgstr ""
 
-#: pfm-read.c:737
+#: pfm-read.c:730
 #, c-format
 msgid "Invalid variable width %d"
 msgstr ""
 
-#: pfm-read.c:755
+#: pfm-read.c:748
 #, c-format
-msgid "position %d: Variable name has %lu characters"
-msgstr ""
+msgid "position %d: Variable name has %lu character"
+msgid_plural "position %d: Variable name has %lu characters"
+msgstr[0] ""
+msgstr[1] ""
 
-#: pfm-read.c:759
+#: pfm-read.c:754
 #, c-format
 msgid "position %d: Variable name begins with invalid character"
 msgstr ""
 
-#: pfm-read.c:763
+#: pfm-read.c:758
 #, c-format
 msgid "position %d: Variable name begins with lowercase letter %c"
 msgstr ""
 
-#: pfm-read.c:775
+#: pfm-read.c:770
 #, c-format
 msgid "position %d: Variable name character %d is lowercase letter %c"
 msgstr ""
 
-#: pfm-read.c:784
+#: pfm-read.c:779
 #, c-format
-msgid "position %d: character `\\%03o' is not valid in a variable name"
+msgid "position %d: character '\\%03o' is not valid in a variable name"
 msgstr ""
 
-#: pfm-read.c:790
+#: pfm-read.c:785
 #, c-format
 msgid "Bad width %d for variable %s"
 msgstr ""
 
-#: pfm-read.c:796
+#: pfm-read.c:791
 #, c-format
 msgid "Duplicate variable name %s"
 msgstr ""
 
-#: pfm-read.c:840
+#: pfm-read.c:835
 #, c-format
 msgid "Bad missing values for %s"
 msgstr ""
 
-#: pfm-read.c:863
+#: pfm-read.c:858
 #, c-format
 msgid "Weighting variable %s not present in dictionary"
 msgstr ""
 
-#: pfm-read.c:933
+#: pfm-read.c:926
 #, c-format
 msgid "Unknown variable %s while parsing value labels"
 msgstr ""
 
-#: pfm-read.c:936
+#: pfm-read.c:929
 #, c-format
 msgid ""
 "Cannot assign value labels to %s and %s, which have different variable types "
 "or widths"
 msgstr ""
 
-#: pfm-read.c:982
+#: pfm-read.c:975
 #, c-format
 msgid "Duplicate label for value %g for variable %s"
 msgstr ""
 
-#: pfm-read.c:985
+#: pfm-read.c:978
 #, c-format
 msgid "Duplicate label for value '%.*s' for variable %s"
 msgstr ""
 
-#: pfm-read.c:1073
+#: pfm-read.c:1065
 msgid "End of file midway through case"
 msgstr ""
 
@@ -627,7 +630,7 @@ msgstr ""
 #: sfm-read.c:735
 #, c-format
 msgid ""
-"%s: Bad magic. Proper system files begin with the four characters `$FL2'. "
+"%s: Bad magic. Proper system files begin with the four characters '$FL2'. "
 "This file will not be read"
 msgstr ""
 
@@ -703,7 +706,7 @@ msgstr ""
 #: sfm-read.c:983
 #, c-format
 msgid ""
-"%s: position %d: character `\\%03o' (%c) is not valid in a variable name"
+"%s: position %d: character '\\%03o' (%c) is not valid in a variable name"
 msgstr ""
 
 #: sfm-read.c:1025
@@ -735,7 +738,7 @@ msgstr ""
 
 #: sfm-read.c:1119
 #, c-format
-msgid "%s: Duplicate variable name `%s' within system file"
+msgid "%s: Duplicate variable name '%s' within system file"
 msgstr ""
 
 #: sfm-read.c:1158
@@ -790,7 +793,7 @@ msgstr ""
 
 #: sfm-read.c:1325
 #, c-format
-msgid "%s: File contains duplicate label for value `%.*s' for variable %s"
+msgid "%s: File contains duplicate label for value '%.*s' for variable %s"
 msgstr ""
 
 #: sfm-read.c:1364 sfm-read.c:1637

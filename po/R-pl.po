@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreign 0.8-60\n"
 "Report-Msgid-Bugs-To: bugs@r-project.org\n"
-"POT-Creation-Date: 2025-06-05 16:21\n"
+"POT-Creation-Date: 2025-06-22 15:59\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language-Team: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
@@ -13,48 +13,37 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "na-Revision-Date: 2012-05-29 07:55+0100\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #. R/R_systat.R: stop("'file' must be character")
 #: R/R_systat.R:0
 msgid "'file' must be character"
-msgstr "argument 'file' musi być łańcuchem tekstowym"
+msgstr "argument 'file' musi być tekstem"
 
 #. R/read.dta.R: warning("'missing.type' only applicable to version >= 8 files")
 #: R/read.dta.R:0
 msgid "'missing.type' only applicable to version >= 8 files"
 msgstr "'missing.type' ma zastosowanie tylko dla plików w wersji>= 8"
 
-#. R/spss.R: paste(addlevels, collapse = ", ")
-#. R/spss.R: paste(newlabels[dupnewlabels], collapse = ", ")
-#: R/spss.R:0
-msgid ","
-msgstr ","
-
-#. R/spss.R: warning("Duplicated levels in factor ", nm, ": ", paste(newlabels[dupnewlabels],     collapse = ", "))
-#: R/spss.R:0
-msgid ":"
-msgstr ":"
-
 #. R/arff.R: stop("Argument 'file' must be a character string or connection.")
 #: R/arff.R:0
 msgid "Argument 'file' must be a character string or connection."
-msgstr "Argument 'file' musi być łańcuchem tekstowym lub połączeniem."
+msgstr "Argument 'file' musi być tekstem lub połączeniem."
 
-#. R/writeForeignSAS.R: stop("Cannot uniquely abbreviate format names to conform to ",     " eight-character limit and not ending in a digit")
+#. R/writeForeignSAS.R: stop("Cannot uniquely abbreviate format names to conform to eight-character limit and not ending in a digit")
 #: R/writeForeignSAS.R:0
-msgid "Cannot uniquely abbreviate format names to conform to"
-msgstr "Nie można jednoznacznie skrócić nazw formatów do"
+msgid "Cannot uniquely abbreviate format names to conform to eight-character limit and not ending in a digit"
+msgstr "Nie można jednoznacznie skrócić nazw formatów, aby spełniały limit ośmiu znaków i nie kończyły się cyfrą"
 
 #. R/writeForeignSAS.R: gettextf("Cannot uniquely abbreviate the variable names to %d or fewer characters",     nmax)
 #: R/writeForeignSAS.R:0
 msgid "Cannot uniquely abbreviate the variable names to %d or fewer characters"
 msgstr "Nie można jednoznacznie skrócić nazw zmiennych do %d lub mniej znaków"
 
-#. R/spss.R: warning("Duplicated levels in factor ", nm, ": ", paste(newlabels[dupnewlabels],     collapse = ", "))
+#. R/spss.R: gettextf("Duplicated levels in factor %s: %s", nm, paste(newlabels[dupnewlabels],     collapse = ", "))
 #: R/spss.R:0
-msgid "Duplicated levels in factor"
-msgstr "Zduplikowane poziomy czynnika"
+msgid "Duplicated levels in factor %s: %s"
+msgstr "Powtórzone poziomy czynnika %s: %s"
 
 #. R/dbf.R: gettextf("Field name: %s changed to: %s", sQuote(onames[i]),     sQuote(inames[i]))
 #: R/dbf.R:0
@@ -121,10 +110,10 @@ msgstr "Obiekt \"dataframe\" musi posiadać klasę \"data.frame\""
 msgid "Type 'relational' currently not implemented."
 msgstr "Typ 'relational' na chwilę obecną nie jest zaimplementowany."
 
-#. R/spss.R: warning("Undeclared level(s) ", paste(addlevels, collapse = ", "),     " added in variable: ", nm)
+#. R/spss.R: gettextf("Undeclared level(s) %s added in variable: %s", paste(addlevels,     collapse = ", "), nm)
 #: R/spss.R:0
-msgid "Undeclared level(s)"
-msgstr "Niezdefiniowany(e) poziom(y) czynnika"
+msgid "Undeclared level(s) %s added in variable: %s"
+msgstr "Niezdefiniowany(e) poziom(y) czynnika %s dodano do zmiennej: %s"
 
 #. R/read.dta.R: stop("Version must be 6-12")
 #: R/read.dta.R:0
@@ -134,22 +123,17 @@ msgstr "Wersja musi wynosić 6-12"
 #. R/read.dta.R: warning("Version must be 6-12: using 7")
 #: R/read.dta.R:0
 msgid "Version must be 6-12: using 7"
-msgstr "Wersja musi wynosić 6-12: używając 7"
+msgstr "Wersja musi wynosić 6-12: używanie 7"
 
 #. R/read.dta.R: warning("abbreviating variable names")
 #: R/read.dta.R:0
 msgid "abbreviating variable names"
 msgstr "skracanie nazw zmiennych"
 
-#. R/spss.R: warning("Undeclared level(s) ", paste(addlevels, collapse = ", "),     " added in variable: ", nm)
-#: R/spss.R:0
-msgid "added in variable:"
-msgstr "dodano w zmiennej:"
-
 #. R/read.epiinfo.R: stop("argument 'file' must be a character string or connection")
 #: R/read.epiinfo.R:0
 msgid "argument 'file' must be a character string or connection"
-msgstr "argument 'file' musi być łańcuchem tekstowym lub połączeniem"
+msgstr "argument 'file' musi być tekstem lub połączeniem"
 
 #. R/dbf.R: stop("cannot handle matrix/array columns")
 #: R/dbf.R:0
@@ -180,11 +164,6 @@ msgstr "nie można skrócić nazw zmiennych w unikalny sposób"
 #: R/dbf.R:0
 msgid "character column %d will be truncated to %d bytes"
 msgstr "kolumna tekstowa %d zostanie przycięta do %d bajtów"
-
-#. R/writeForeignSAS.R: stop("Cannot uniquely abbreviate format names to conform to ",     " eight-character limit and not ending in a digit")
-#: R/writeForeignSAS.R:0
-msgid "eight-character limit and not ending in a digit"
-msgstr "ośmiu znaków nie kończących się cyfrą"
 
 #. R/read.epiinfo.R: stop("file has zero or fewer variables: probably not an EpiInfo file")
 #: R/read.epiinfo.R:0
@@ -251,8 +230,20 @@ msgstr "nieprawidłowa liczba rekordów"
 msgid "data frame contains columns of unsupported class %s"
 msgid_plural "data frame contains columns of unsupported classes %s"
 msgstr[0] "ramka zawiera kolumny niewspieranej klasy %s"
-msgstr[1] "ramka zawiera kolumny niewspieranych klasach %s"
-msgstr[2] "ramka zawiera kolumny niewspieranych klasach %s"
+msgstr[1] "ramka zawiera kolumny niewspieranych klas %s"
+msgstr[2] "ramka zawiera kolumny niewspieranych klas %s"
+
+#~ msgid "eight-character limit and not ending in a digit"
+#~ msgstr "ośmiu znaków nie kończących się cyfrą"
+
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid ":"
+#~ msgstr ":"
+
+#~ msgid "added in variable:"
+#~ msgstr "dodano w zmiennej:"
 
 #~ msgid "Cannot handle character variables longer than 255"
 #~ msgstr "Nie można obsłużyć zmiennych tekstowych dłuższych niż 255 znaków"

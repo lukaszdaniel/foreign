@@ -37,8 +37,7 @@ make.SAS.formats <- function(varnames){
   x <- abbreviate(x, minlength = 8L)
 
   if(any(nchar(x) > 8L) || any(duplicated(x)))
-    stop("Cannot uniquely abbreviate format names to conform to ",
-         " eight-character limit and not ending in a digit")
+    stop("Cannot uniquely abbreviate format names to conform to eight-character limit and not ending in a digit")
   names(x) <- varnames
   x
 }

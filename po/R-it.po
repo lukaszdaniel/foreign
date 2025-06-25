@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: R-foreign 0.8-70\n"
 "Report-Msgid-Bugs-To: bugs.r-project.org\n"
-"POT-Creation-Date: 2025-06-05 16:21\n"
+"POT-Creation-Date: 2025-06-22 15:59\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Daniele Medri <dmedri@gmail.com>\n"
 "Language-Team: Italian https://github.com/dmedri/R-italian-lang\n"
@@ -28,25 +28,15 @@ msgstr "'file' dev'essere di tipo character"
 msgid "'missing.type' only applicable to version >= 8 files"
 msgstr "'missing.type' applicabile unicamente alla versione >= 8 file"
 
-#. R/spss.R: paste(addlevels, collapse = ", ")
-#. R/spss.R: paste(newlabels[dupnewlabels], collapse = ", ")
-#: R/spss.R:0
-msgid ","
-msgstr ","
-
-#. R/spss.R: warning("Duplicated levels in factor ", nm, ": ", paste(newlabels[dupnewlabels],     collapse = ", "))
-#: R/spss.R:0
-msgid ":"
-msgstr ":"
-
 #. R/arff.R: stop("Argument 'file' must be a character string or connection.")
 #: R/arff.R:0
 msgid "Argument 'file' must be a character string or connection."
 msgstr "L'argomento 'file' dev'essere una stringa di caratteri o una connessione."
 
-#. R/writeForeignSAS.R: stop("Cannot uniquely abbreviate format names to conform to ",     " eight-character limit and not ending in a digit")
+#. R/writeForeignSAS.R: stop("Cannot uniquely abbreviate format names to conform to eight-character limit and not ending in a digit")
 #: R/writeForeignSAS.R:0
-msgid "Cannot uniquely abbreviate format names to conform to"
+#, fuzzy
+msgid "Cannot uniquely abbreviate format names to conform to eight-character limit and not ending in a digit"
 msgstr "Non è possibile abbreviare univocamente i nomi dei formati a cui conformarsi"
 
 #. R/writeForeignSAS.R: gettextf("Cannot uniquely abbreviate the variable names to %d or fewer characters",     nmax)
@@ -54,9 +44,10 @@ msgstr "Non è possibile abbreviare univocamente i nomi dei formati a cui confor
 msgid "Cannot uniquely abbreviate the variable names to %d or fewer characters"
 msgstr "Non è possibile abbreviare in maniera univoca i nomi delle variabili a %d caratteri o meno"
 
-#. R/spss.R: warning("Duplicated levels in factor ", nm, ": ", paste(newlabels[dupnewlabels],     collapse = ", "))
+#. R/spss.R: gettextf("Duplicated levels in factor %s: %s", nm, paste(newlabels[dupnewlabels],     collapse = ", "))
 #: R/spss.R:0
-msgid "Duplicated levels in factor"
+#, fuzzy
+msgid "Duplicated levels in factor %s: %s"
 msgstr "Livelli duplicati nel fattore"
 
 #. R/dbf.R: gettextf("Field name: %s changed to: %s", sQuote(onames[i]),     sQuote(inames[i]))
@@ -124,9 +115,10 @@ msgstr "L'oggetto \"dataframe\" dev'essere di classe data.frame"
 msgid "Type 'relational' currently not implemented."
 msgstr "Il tipo 'relational' non è attualmente implementato."
 
-#. R/spss.R: warning("Undeclared level(s) ", paste(addlevels, collapse = ", "),     " added in variable: ", nm)
+#. R/spss.R: gettextf("Undeclared level(s) %s added in variable: %s", paste(addlevels,     collapse = ", "), nm)
 #: R/spss.R:0
-msgid "Undeclared level(s)"
+#, fuzzy
+msgid "Undeclared level(s) %s added in variable: %s"
 msgstr "Livelli non dichiarati"
 
 #. R/read.dta.R: stop("Version must be 6-12")
@@ -143,11 +135,6 @@ msgstr "La versione dev'essere 6-12: si utilizza la 7"
 #: R/read.dta.R:0
 msgid "abbreviating variable names"
 msgstr "abbreviazione dei nomi delle variabili"
-
-#. R/spss.R: warning("Undeclared level(s) ", paste(addlevels, collapse = ", "),     " added in variable: ", nm)
-#: R/spss.R:0
-msgid "added in variable:"
-msgstr "aggiunto nella variabile:"
 
 #. R/read.epiinfo.R: stop("argument 'file' must be a character string or connection")
 #: R/read.epiinfo.R:0
@@ -183,11 +170,6 @@ msgstr "non è possibile abbreviare in maniera univoca i nomi delle variabili"
 #: R/dbf.R:0
 msgid "character column %d will be truncated to %d bytes"
 msgstr "la colonna di caratteri %d sarà troncata a %d byte"
-
-#. R/writeForeignSAS.R: stop("Cannot uniquely abbreviate format names to conform to ",     " eight-character limit and not ending in a digit")
-#: R/writeForeignSAS.R:0
-msgid "eight-character limit and not ending in a digit"
-msgstr "limite di otto caratteri e niente termine in una cifra"
 
 #. R/read.epiinfo.R: stop("file has zero or fewer variables: probably not an EpiInfo file")
 #: R/read.epiinfo.R:0
@@ -255,3 +237,15 @@ msgid "data frame contains columns of unsupported class %s"
 msgid_plural "data frame contains columns of unsupported classes %s"
 msgstr[0] "il data frame contiene colonne della classe %s non supportata"
 msgstr[1] "il data frame contiene colonne delle classi %s non supportate"
+
+#~ msgid "eight-character limit and not ending in a digit"
+#~ msgstr "limite di otto caratteri e niente termine in una cifra"
+
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid ":"
+#~ msgstr ":"
+
+#~ msgid "added in variable:"
+#~ msgstr "aggiunto nella variabile:"

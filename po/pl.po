@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: foreign 0.8-60\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-05 17:39+0200\n"
-"PO-Revision-Date: 2025-06-07 12:00+0200\n"
+"POT-Creation-Date: 2025-06-22 15:32+0200\n"
+"PO-Revision-Date: 2025-06-22 15:33+0200\n"
 "Last-Translator: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language-Team: Łukasz Daniel <lukasz.daniel@gmail.com>\n"
 "Language: pl_PL\n"
@@ -217,50 +217,50 @@ msgstr "fread(%d) nie powiodło się dla pliku DBF"
 
 #: file-handle.c:116
 #, c-format
-msgid "file handle `%s' has not been previously declared on FILE HANDLE"
+msgid "file handle '%s' has not been previously declared on FILE HANDLE"
 msgstr "obsługa pliku '%s' nie została poprzednio zadeklarowana w FILE HANDLE"
 
-#: format.c:109
+#: format.c:106
 #, c-format
 msgid "format %s may not be used as an input format"
 msgstr "format %s nie może być użyty jako format wejściowy"
 
-#: format.c:114
+#: format.c:111
 #, c-format
 msgid "input format %s specifies a bad width %d.  Format %s requires a width between %d and %d"
 msgstr "format wejściowy %s określa niepoprawną szerokość %d.  Format %s wymaga szerokości pomiędzy %d a %d"
 
-#: format.c:120
+#: format.c:117
 #, c-format
 msgid "input format %s specifies an odd width %d, but format %s requires an even width between %d and %d"
 msgstr "format wejściowy %s określa nieparzystą szerokość %d, ale format %s wymaga parzystej szerokości pomiędzy %d a %d"
 
-#: format.c:126
+#: format.c:123
 #, c-format
 msgid "Input format %s specifies a bad number of implied decimal places %d.  Input format %s allows up to 16 implied decimal places"
 msgstr "Format wejściowy %s określa błędną liczbę założonych miejsc dziesiętnych %d.  Format wejściowy %s pozwala na założenie do 16 miejsc dziesiętnych"
 
-#: format.c:145
+#: format.c:141
 #, c-format
 msgid "output format %s specifies a bad width %d.  Format %s requires a width between %d and %d"
 msgstr "format wyjściowy %s określa błędną szerokość %d.  Format %s wymaga szerokości pomiędzy %d a %d"
 
-#: format.c:154
+#: format.c:150
 #, c-format
 msgid "output format %s requires minimum width %d to allow %d decimal places.  Try %s%d.%d instead of %s"
 msgstr "format wyjściowy %s wymaga minimalnej szerokości %d aby dopuścić %d miejsc dziesiętnych.  Spróbuj %s%d.%d zamiast %s"
 
-#: format.c:161
+#: format.c:157
 #, c-format
 msgid "output format %s specifies an odd width %d, but output format %s requires an even width between %d and %d"
 msgstr "format wyjściowy %s określa nieparzystą szerokość %d, ale format wyjściowy %s wymaga parzystej szerokości pomiędzy %d and %d"
 
-#: format.c:167
+#: format.c:163
 #, c-format
 msgid "Output format %s specifies a bad number of implied decimal places %d.  Output format %s allows a number of implied decimal places between 1 and 16"
 msgstr "Format wyjściowy %s określa błędną liczbę założonych miejsc dziesiętnych %d.  Format wyjściowy %s pozwala na założenie miejsc dziesiętnych pomiędzy 1 a 16"
 
-#: format.c:182
+#: format.c:177
 #, c-format
 msgid "cannot display a string variable of width %d with format specifier %s"
 msgstr "nie można wyświetlić zmiennej tekstowej o szerokości %d ze znacznikiem formatu %s"
@@ -317,7 +317,7 @@ msgstr "nastąpił błąd podczas otwierania '%s' do odczytu jako plik przenośn
 
 #: pfm-read.c:276
 msgid "Data record expected"
-msgstr "Oczekowano rekordu danych"
+msgstr "Oczekiwano rekordu danych"
 
 #: pfm-read.c:296
 msgid "error reading portable-file dictionary"
@@ -338,134 +338,137 @@ msgstr "Niepoprawny format liczby całkowitej"
 #: pfm-read.c:454
 #, c-format
 msgid "Bad string length %d"
-msgstr "Niepoprawna długość %d łańcucha tekstowego"
+msgstr "Niepoprawna długość %d tekstu"
 
-#: pfm-read.c:524
+#: pfm-read.c:521
 msgid "Missing SPSSPORT signature"
 msgstr "Brakuje podpisu SPSSPORT"
 
-#: pfm-read.c:542
+#: pfm-read.c:538
 #, c-format
 msgid "Unrecognized version code %d"
 msgstr "Nierozpoznany kod wersji %d"
 
-#: pfm-read.c:553
+#: pfm-read.c:549
 #, c-format
 msgid "Bad date string length %lu"
 msgstr "Niepoprawna długość %lu tekstu daty"
 
-#: pfm-read.c:560
+#: pfm-read.c:556
 msgid "Bad character in date"
 msgstr "Niepoprawny znak w dacie"
 
-#: pfm-read.c:580
+#: pfm-read.c:576
 #, c-format
 msgid "Bad time string length %lu"
 msgstr "Niepoprawna długość %lu tekstu daty"
 
-#: pfm-read.c:587
+#: pfm-read.c:583
 msgid "Bad character in time"
 msgstr "Niepoprawny znak w czasie"
 
-#: pfm-read.c:641
+#: pfm-read.c:636
 #, c-format
 msgid "%s: Bad format specifier byte %d"
 msgstr "%s: Niepoprawny bajt określający format %d"
 
-#: pfm-read.c:650 sfm-read.c:1145 sfm-read.c:1155
+#: pfm-read.c:645 sfm-read.c:1145 sfm-read.c:1155
 #, c-format
 msgid "%s: Bad format specifier byte (%d)"
 msgstr "%s: Niepoprawny bajt określający format (%d)"
 
-#: pfm-read.c:652
+#: pfm-read.c:647
 #, c-format
 msgid "%s variable %s has %s format specifier %s"
 msgstr "%s: Zmienna %s %s posiada określający format %s"
 
-#: pfm-read.c:691
+#: pfm-read.c:684
 msgid "Expected variable count record"
 msgstr "Oczekiwano zmiennej zliczającej rekord"
 
-#: pfm-read.c:695
+#: pfm-read.c:688
 #, c-format
 msgid "Invalid number of variables %d"
 msgstr "Niepoprawna liczba zmiennych %d"
 
-#: pfm-read.c:731
+#: pfm-read.c:724
 msgid "Expected variable record"
 msgstr "Oczekiwano zmiennej rekordu"
 
-#: pfm-read.c:737
+#: pfm-read.c:730
 #, c-format
 msgid "Invalid variable width %d"
 msgstr "Niepoprawna szerokość %d zmiennej"
 
-#: pfm-read.c:755
+#: pfm-read.c:748
 #, c-format
-msgid "position %d: Variable name has %lu characters"
-msgstr "pozycja %d: Nazwa zmiennej ma %lu znak(i)(ów)"
+msgid "position %d: Variable name has %lu character"
+msgid_plural "position %d: Variable name has %lu characters"
+msgstr[0] "pozycja %d: Nazwa zmiennej ma %lu znak"
+msgstr[1] "pozycja %d: Nazwa zmiennej ma %lu znaki"
+msgstr[2] "pozycja %d: Nazwa zmiennej ma %lu znaków"
 
-#: pfm-read.c:759
+#: pfm-read.c:754
 #, c-format
 msgid "position %d: Variable name begins with invalid character"
 msgstr "pozycja %d: Nazwa zmiennej rozpoczyna się niepoprawnym znakiem"
 
-#: pfm-read.c:763
+#: pfm-read.c:758
 #, c-format
 msgid "position %d: Variable name begins with lowercase letter %c"
 msgstr "pozycja %d: Nazwa zmiennej rozpoczyna się małą literą %c"
 
-#: pfm-read.c:775
+#: pfm-read.c:770
 #, c-format
 msgid "position %d: Variable name character %d is lowercase letter %c"
 msgstr "pozycja %d: Znak %d nazwy zmiennej jest małą literą %c"
 
-#: pfm-read.c:784
+#: pfm-read.c:779
 #, c-format
-msgid "position %d: character `\\%03o' is not valid in a variable name"
+msgid "position %d: character '\\%03o' is not valid in a variable name"
 msgstr "pozycja %d: znak '\\%03o' nie jest poprawny w nazwie zmiennej"
 
-#: pfm-read.c:790
+#: pfm-read.c:785
 #, c-format
 msgid "Bad width %d for variable %s"
 msgstr "Niepoprawna szerokość %d dla zmiennej %s"
 
-#: pfm-read.c:796
+#: pfm-read.c:791
 #, c-format
 msgid "Duplicate variable name %s"
 msgstr "Powtórzona nazwa %s zmiennej"
 
-#: pfm-read.c:840
+#: pfm-read.c:835
 #, c-format
 msgid "Bad missing values for %s"
 msgstr "Niepoprawne wartości brakujące dla %s"
 
-#: pfm-read.c:863
+#: pfm-read.c:858
 #, c-format
 msgid "Weighting variable %s not present in dictionary"
 msgstr "Zmienna ważąca %s nie jest obecna w słowniku"
 
-#: pfm-read.c:933
+#: pfm-read.c:926
 #, c-format
 msgid "Unknown variable %s while parsing value labels"
 msgstr "Nieznana zmienna %s podczas przetwarzania etykiet wartości"
 
-#: pfm-read.c:936
+#: pfm-read.c:929
 #, c-format
 msgid "Cannot assign value labels to %s and %s, which have different variable types or widths"
 msgstr "Nie można przypisać etykiet wartości do %s oraz %s, które mają różne type lub szerokości zmiennych"
 
-#: pfm-read.c:982
+#: pfm-read.c:975
 #, c-format
 msgid "Duplicate label for value %g for variable %s"
 msgstr "Powtórzone etykiety dla wartości %g zmiennej %s"
 
-#: pfm-read.c:985
+#: pfm-read.c:978
 #, c-format
 msgid "Duplicate label for value '%.*s' for variable %s"
 msgstr "Powtórzona etykieta dla wartości '%.*s' zmiennej %s"
 
-#: pfm-read.c:1073
+#: pfm-read.c:1065
 msgid "End of file midway through case"
 msgstr "Nieoczekiwany koniec pliku podczas odczytu przypadku"
 
@@ -491,17 +494,17 @@ msgstr "Wystąpił błąd podczas otwierania '%s' do odczytu jako plik systemowy
 #: sfm-read.c:341
 #, c-format
 msgid "%s: Weighting variable may not be a continuation of a long string variable"
-msgstr "%s: Zmienna ważona nie może być kontynuacją zmiennej o długim łańcuchu tekstowym"
+msgstr "%s: Zmienna ważąca nie może być kontynuacją zmiennej o długim tekście"
 
 #: sfm-read.c:343
 #, c-format
 msgid "%s: Weighting variable may not be a string variable"
-msgstr "%s: Zmienna ważona nie może być zmienną tekstową"
+msgstr "%s: Zmienna ważąca nie może być zmienną tekstową"
 
 #: sfm-read.c:368
 #, c-format
 msgid "%s: Orphaned variable index record (type 4).  Type 4 records must always immediately follow type 3 records"
-msgstr "%s: Osierocony rekord (typ 4) indeksu zmiennej. Rekordy typu 4 muszą zawsze następować po rekordzach typu 3"
+msgstr "%s: Osierocony rekord (typ 4) indeksu zmiennej. Rekordy typu 4 muszą zawsze następować po rekordach typu 3"
 
 #: sfm-read.c:448
 #, c-format
@@ -583,7 +586,7 @@ msgstr "%s: mapowanie długiej nazwy zmiennej '%s' na '%s' dla zmiennej która n
 
 #: sfm-read.c:735
 #, c-format
-msgid "%s: Bad magic. Proper system files begin with the four characters `$FL2'. This file will not be read"
+msgid "%s: Bad magic. Proper system files begin with the four characters '$FL2'. This file will not be read"
 msgstr "%s: Niepoprawna liczba magiczna. Poprawne pliki systemowe rozpoczynają się czterema znakami'$FL2'. Ten plik nie będzie odczytywany"
 
 #: sfm-read.c:777
@@ -648,7 +651,7 @@ msgstr "%s: pozycja %d: Nazwa zmiennej rozpoczyna się znakiem hash ('#').  Usun
 
 #: sfm-read.c:983
 #, c-format
-msgid "%s: position %d: character `\\%03o' (%c) is not valid in a variable name"
+msgid "%s: position %d: character '\\%03o' (%c) is not valid in a variable name"
 msgstr "%s: pozycja %d: znak '\\%03o' (%c) nie jest poprawny w nazwie zmiennej"
 
 #: sfm-read.c:1025
@@ -678,7 +681,7 @@ msgstr "%s: Nagłówek pliku systemowego wskazuje na %d pozycje zmiennych, ale %
 
 #: sfm-read.c:1119
 #, c-format
-msgid "%s: Duplicate variable name `%s' within system file"
+msgid "%s: Duplicate variable name '%s' within system file"
 msgstr "%s: Powtórzona nazwa '%s' zmiennej wewnątrz pliku systemowego"
 
 #: sfm-read.c:1158
@@ -709,7 +712,7 @@ msgstr "%s: Indeks zmiennej powiązany z wartością etykiety (%d) odnosi się d
 #: sfm-read.c:1271
 #, c-format
 msgid "%s: Value labels are not allowed on long string variables (%s)"
-msgstr "%s: Etykiety wartości nie sa dozwolone dla długotekstowych zmiennych (%s)"
+msgstr "%s: Etykiety wartości nie są dozwolone dla długotekstowych zmiennych (%s)"
 
 #: sfm-read.c:1280
 #, c-format
@@ -719,11 +722,11 @@ msgstr "%s: Zmienne powiązane z etykietami wartości nie mają identycznego typ
 #: sfm-read.c:1322
 #, c-format
 msgid "%s: File contains duplicate label for value %g for variable %s"
-msgstr "%s: Plik zawiera powtorzone etykiety dla wartości %g zmiennej %s"
+msgstr "%s: Plik zawiera powtórzone etykiety dla wartości %g zmiennej %s"
 
 #: sfm-read.c:1325
 #, c-format
-msgid "%s: File contains duplicate label for value `%.*s' for variable %s"
+msgid "%s: File contains duplicate label for value '%.*s' for variable %s"
 msgstr "%s: Plik zawiera powtórzone etykiety dla wartości '%.*s' zmiennej %s"
 
 #: sfm-read.c:1364 sfm-read.c:1637
@@ -744,7 +747,7 @@ msgstr "%s: Plik systemowy zawiera wielokrotne rekordy typu 6 (dokument)"
 #: sfm-read.c:1392
 #, c-format
 msgid "%s: Number of document lines (%d) must be greater than 0"
-msgstr "%s: Liczba linii (%d) dokumentu musi byc większa niż 0"
+msgstr "%s: Liczba linii (%d) dokumentu musi być większa niż 0"
 
 #: sfm-read.c:1501
 #, c-format

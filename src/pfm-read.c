@@ -471,16 +471,13 @@ read_string (struct file_handle *h)
 }
 
 /* Reads the 464-byte file header. */
-static int
-read_header (struct file_handle *h)
+static int read_header(struct file_handle *h)
 {
   struct pfm_fhuser_ext *ext = h->ext;
 
   /* For now at least, just ignore the vanity splash strings. */
   {
-    int i;
-
-    for (i = 0; i < 200; i++)
+    for (int i = 0; i < 200; i++)
       advance ();
   }
 
@@ -532,8 +529,7 @@ read_header (struct file_handle *h)
 
 /* Reads the version and date info record, as well as product and
    subproduct identification records if present. */
-int
-read_version_data (struct file_handle *h, struct pfm_read_info *inf)
+int read_version_data(struct file_handle *h, struct pfm_read_info *inf)
 {
   struct pfm_fhuser_ext *ext = h->ext;
 
@@ -600,11 +596,11 @@ read_version_data (struct file_handle *h, struct pfm_read_info *inf)
     {
       char *product;
 
-      product = (char *) read_string (h);
+      product = (char *) read_string(h);
       if (product == NULL)
 	return 0;
       if (inf) { // placate gcc 8
-	strncpy (inf->product, product, 60);
+	strncpy(inf->product, product, 60);
 	inf->product[60] = '\0';
       }
     }
@@ -632,8 +628,7 @@ read_version_data (struct file_handle *h, struct pfm_read_info *inf)
   return 0;
 }
 
-static int
-convert_format (struct file_handle *h, int fmt[3], struct fmt_spec *v,
+static int convert_format(struct file_handle *h, int fmt[3], struct fmt_spec *v,
 		struct variable *vv)
 {
   if (fmt[0] < 0
@@ -671,18 +666,16 @@ static const unsigned char spss2ascii[256] =
   };
 
 /* Translate string S into ASCII. */
-static void
-asciify (char *s)
+static void asciify(char *s)
 {
   for (; *s; s++)
     *s = spss2ascii[(unsigned char) *s];
 }
 
-static int parse_value (struct file_handle *, union value *, struct variable *);
+static int parse_value(struct file_handle *, union value *, struct variable *);
 
 /* Read information on all the variables.  */
-static int
-read_variables (struct file_handle *h)
+static int read_variables(struct file_handle *h)
 {
   struct pfm_fhuser_ext *ext = h->ext;
   int i;
@@ -728,13 +721,13 @@ read_variables (struct file_handle *h)
       int j;
 
       if (!pfm_match (71 /* 7 */))
-	lose ((_("Expected variable record")));
+	lose((_("Expected variable record")));
 
       width = read_int (h);
       if (width == NA_INTEGER)
 	goto lossage;
       if (width < 0)
-	lose ((_("Invalid variable width %d"), width));
+	lose((_("Invalid variable width %d"), width));
       ext->vars[i] = width;
 
       name = read_string (h);
@@ -752,11 +745,13 @@ read_variables (struct file_handle *h)
 	 Weirdly enough, there is no # character in the SPSS portable
 	 character set, so we can't check for it. */
       if (strlen ((char *) name) > 8)
-	lose ((_("position %d: Variable name has %lu characters"),
-	       i, (unsigned long)strlen ((char *) name)));
+	lose((n_("position %d: Variable name has %lu character",
+	       "position %d: Variable name has %lu characters",
+	       (unsigned long)strlen((char *) name)),
+	       i, (unsigned long)strlen((char *) name)));
       if ((name[0] < 74 /* A */ || name[0] > 125 /* Z */)
 	  && name[0] != 152 /* @ */)
-	lose ((_("position %d: Variable name begins with invalid character"),
+	lose((_("position %d: Variable name begins with invalid character"),
 	       i));
       if (name[0] >= 100 /* a */ && name[0] <= 125 /* z */)
 	{
@@ -781,7 +776,7 @@ read_variables (struct file_handle *h)
 		   || c == 136 /* $ */ || c == 146 /* _ */)
 	      name[j] = (unsigned char) c;
 	  else
-	    lose ((_("position %d: character `\\%03o' is not valid in a variable name"),
+	    lose ((_("position %d: character '\\%03o' is not valid in a variable name"),
 		   i, c));
 	}
 
@@ -870,8 +865,7 @@ read_variables (struct file_handle *h)
 }
 
 /* Parse a value for variable VV into value V.  Returns success. */
-static int
-parse_value (struct file_handle *h, union value *v, struct variable *vv)
+static int parse_value(struct file_handle *h, union value *v, struct variable *vv)
 {
   if (vv->type == ALPHA)
     {
@@ -902,8 +896,7 @@ parse_value (struct file_handle *h, union value *v, struct variable *vv)
 }
 
 /* Parse a value label record and return success. */
-static int
-read_value_label (struct file_handle *h)
+static int read_value_label(struct file_handle *h)
 {
   struct pfm_fhuser_ext *ext = h->ext;
 
@@ -999,8 +992,7 @@ read_value_label (struct file_handle *h)
 /* Copies SRC to DEST, truncating to N characters or right-padding
    with spaces to N characters as necessary.  Does not append a null
    character.  SRC must be null-terminated. */
-static void
-st_bare_pad_copy (char *dest, const char *src, size_t n)
+static void st_bare_pad_copy(char *dest, const char *src, size_t n)
 {
   size_t len = strlen (src);
   if (len >= n)

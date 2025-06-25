@@ -45,21 +45,20 @@ const int translate_fmt[40] =
   };
 
 #if 0
-int
-parse_format_specifier_name (const char **cp, int allow_xt)
+int parse_format_specifier_name(const char **cp, int allow_xt)
 {
   struct fmt_desc *f;
   char *ep;
   int x;
 
-  ep = ds_value (&tokstr);
-  while (isalpha ((unsigned char) *ep))
+  ep = ds_value(&tokstr);
+  while (isalpha((unsigned char) *ep))
     ep++;
   x = *ep;
   *ep = 0;
 
   for (f = formats; f->name[0]; f++)
-    if (!strcmp (f->name, ds_value (&tokstr)))
+    if (!strcmp(f->name, ds_value (&tokstr)))
       {
 	int indx = f - formats;
 
@@ -82,8 +81,7 @@ parse_format_specifier_name (const char **cp, int allow_xt)
 #endif
 /* Converts F to its string representation (for instance, "F8.2") and
    returns a pointer to a static buffer containing that string. */
-char *
-fmt_to_string (const struct fmt_spec *f)
+const char *fmt_to_string(const struct fmt_spec *f)
 {
   static char buf[32];
 
@@ -94,11 +92,10 @@ fmt_to_string (const struct fmt_spec *f)
   return buf;
 }
 
-int
-check_input_specifier (const struct fmt_spec *spec)
+int check_input_specifier(const struct fmt_spec *spec)
 {
   struct fmt_desc *f;
-  char *str;
+  const char *str;
 
   f = &formats[spec->type];
   str = fmt_to_string (spec);
@@ -130,14 +127,13 @@ check_input_specifier (const struct fmt_spec *spec)
   return 1;
 }
 
-int
-check_output_specifier (const struct fmt_spec *spec)
+int check_output_specifier(const struct fmt_spec *spec)
 {
   struct fmt_desc *f;
-  char *str;
+  const char *str;
 
   f = &formats[spec->type];
-  str = fmt_to_string (spec);
+  str = fmt_to_string(spec);
   if (spec->type == FMT_X)
     return 1;
   if (spec->w < f->Omin_w || spec->w > f->Omax_w)
@@ -173,21 +169,19 @@ check_output_specifier (const struct fmt_spec *spec)
 
 /* If a string variable has width W, you can't display it with a
    format specifier with a required width MIN_LEN>W. */
-int
-check_string_specifier (const struct fmt_spec *f, int min_len)
+int check_string_specifier(const struct fmt_spec *f, int min_len)
 {
   if ((f->type == FMT_A && min_len > f->w)
       || (f->type == FMT_AHEX && min_len * 2 > f->w))
     {
       error (_("cannot display a string variable of width %d with format specifier %s"),
-	     min_len, fmt_to_string (f));
+	     min_len, fmt_to_string(f));
       return 0;
     }
   return 1;
 }
 
-void
-convert_fmt_ItoO (const struct fmt_spec *input, struct fmt_spec *output)
+void convert_fmt_ItoO(const struct fmt_spec *input, struct fmt_spec *output)
 {
   output->type = formats[input->type].output;
   output->w = input->w;
@@ -280,8 +274,7 @@ convert_fmt_ItoO (const struct fmt_spec *input, struct fmt_spec *output)
 }
 
 #if 0
-int
-parse_format_specifier (struct fmt_spec *input, int allow_xt)
+int parse_format_specifier(struct fmt_spec *input, int allow_xt)
 {
   struct fmt_spec spec;
   struct fmt_desc *f;

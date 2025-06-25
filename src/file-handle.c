@@ -113,7 +113,7 @@ fh_get_handle_by_name (const char name[9])
   fp = R_avl_find (files, &f);
 
   if (!fp)
-    error (_("file handle `%s' has not been previously declared on FILE HANDLE"), name);
+    error (_("file handle '%s' has not been previously declared on FILE HANDLE"), name);
   return fp;
 }
 
