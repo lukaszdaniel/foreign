@@ -10,7 +10,10 @@ summary(sun6)
 str(sun6)
 all.equal(summary(sun6),summary(pc5))
 df <- read.dta("datefactor.dta")
-summary(df)
+sdf <- summary(df)
+if (getRversion() < "4.6.0") # "backport" NA's -> NAs to match reference output
+    sdf <- sub("NA's", "NAs ", sdf, fixed = TRUE)
+sdf
 data(esoph)
 write.dta(esoph,esophile <- tempfile())
 esoph2 <- read.dta(esophile)

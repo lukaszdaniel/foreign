@@ -28,7 +28,10 @@ stopifnot(all.equal(d.pbc, data.frame(pbc.), tolerance = 1e-15))
 electric.s  <- read.spss(system.file("files", "electric.sav", package = "foreign"), TRUE, TRUE)
 electric.p  <- read.spss("electric.por",TRUE,TRUE)
 electric.s4 <- read.spss(system.file("files", "electric.sav", package = "foreign"), TRUE, TRUE, max.value.labels = 4)
-summary(electric.s)
+smmry <- summary(electric.s)
+if (getRversion() < "4.6.0") # "backport" NA's -> NAs to match reference output
+    smmry <- sub("NA's", "NAs ", smmry, fixed = TRUE)
+smmry
 ii <- c(2,10)
 vl <- list(FIRSTCHD = c("OTHER   CHD"= 6, "FATAL   MI"= 5, "NONFATALMI"= 3,
             "SUDDEN  DEATH" = 2, "NO CHD" = 1),

@@ -1,7 +1,7 @@
 
-R Under development (unstable) (2020-03-24 r78051) -- "Unsuffered Consequences"
-Copyright (C) 2020 The R Foundation for Statistical Computing
-Platform: x86_64-apple-darwin19.3.0 (64-bit)
+R Under development (unstable) (2026-01-18 r89306) -- "Unsuffered Consequences"
+Copyright (C) 2026 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -221,14 +221,17 @@ In 'read.dta("pc5.dta")': cannot read factor labels from Stata 5 files
 > all.equal(summary(sun6),summary(pc5))
 [1] TRUE
 > df <- read.dta("datefactor.dta")
-> summary(df)
+> sdf <- summary(df)
+> if (getRversion() < "4.6.0") # "backport" NA's -> NAs to match reference output
++     sdf <- sub("NA's", "NAs ", sdf, fixed = TRUE)
+> sdf
       hlth159         id            adate           
  EXCELLENT: 0   Min.   : 1.00   Min.   :1960-01-02  
  VERY GOOD: 6   1st Qu.: 8.25   1st Qu.:1960-01-09  
  GOOD     : 8   Median :15.50   Median :1960-01-16  
  FAIR     : 4   Mean   :15.50   Mean   :1960-01-16  
  POOR     : 1   3rd Qu.:22.75   3rd Qu.:1960-01-23  
- NA's     :11   Max.   :30.00   Max.   :1960-01-31  
+ NAs      :11   Max.   :30.00   Max.   :1960-01-31  
 > data(esoph)
 > write.dta(esoph,esophile <- tempfile())
 > esoph2 <- read.dta(esophile)
@@ -403,4 +406,4 @@ In 'read.dta("pc5.dta")': cannot read factor labels from Stata 5 files
 > q()
 > proc.time()
    user  system elapsed 
-  0.377   0.063   0.430 
+  0.167   0.042   0.201 

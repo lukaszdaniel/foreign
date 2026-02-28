@@ -1,6 +1,6 @@
 
-R Under development (unstable) (2025-03-14 r87973) -- "Unsuffered Consequences"
-Copyright (C) 2025 The R Foundation for Statistical Computing
+R Under development (unstable) (2026-01-18 r89306) -- "Unsuffered Consequences"
+Copyright (C) 2026 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
@@ -270,7 +270,10 @@ List of 20
 > electric.s  <- read.spss(system.file("files", "electric.sav", package = "foreign"), TRUE, TRUE)
 > electric.p  <- read.spss("electric.por",TRUE,TRUE)
 > electric.s4 <- read.spss(system.file("files", "electric.sav", package = "foreign"), TRUE, TRUE, max.value.labels = 4)
-> summary(electric.s)
+> smmry <- summary(electric.s)
+> if (getRversion() < "4.6.0") # "backport" NA's -> NAs to match reference output
++     smmry <- sub("NA's", "NAs ", smmry, fixed = TRUE)
+> smmry
      CASEID                 FIRSTCHD        AGE           DBP58       
  Min.   :   1.00   NO CHD       :120   Min.   :40.0   Min.   : 65.00  
  1st Qu.:  73.75   SUDDEN  DEATH: 36   1st Qu.:45.0   1st Qu.: 80.00  
@@ -278,7 +281,7 @@ List of 20
  Mean   : 572.94   FATAL   MI   :  9   Mean   :47.8   Mean   : 88.79  
  3rd Qu.:1042.25   OTHER   CHD  :  3   3rd Qu.:51.0   3rd Qu.: 96.50  
  Max.   :2098.00                       Max.   :54.0   Max.   :160.00  
-                                                      NA's   :1       
+                                                      NAs    :1       
      EDUYR           CHOL58          CGT58            HT58      
  Min.   : 6.00   Min.   :106.0   Min.   : 0.00   Min.   :60.90  
  1st Qu.: 9.75   1st Qu.:228.8   1st Qu.: 0.00   1st Qu.:66.50  
@@ -286,7 +289,7 @@ List of 20
  Mean   :11.66   Mean   :264.1   Mean   :11.58   Mean   :68.51  
  3rd Qu.:14.00   3rd Qu.:293.2   3rd Qu.:20.00   3rd Qu.:70.20  
  Max.   :18.00   Max.   :515.0   Max.   :60.00   Max.   :77.00  
- NA's   :28                      NA's   :1                      
+ NAs    :28                      NAs    :1                      
       WT58           DAYOFWK     VITAL10    FAMHXCVR       CHD     
  Min.   :123.0   SUNDAY  : 19   ALIVE:179   NO :178   Min.   :0.0  
  1st Qu.:156.0   TUESDAY : 19   DEAD : 61   YES: 62   1st Qu.:0.0  
@@ -294,7 +297,7 @@ List of 20
  Mean   :173.4   SATURDAY: 16                         Mean   :0.5  
  3rd Qu.:187.0   THURSDAY: 15                         3rd Qu.:1.0  
  Max.   :278.0   (Other) : 24                         Max.   :1.0  
-                 NA's    :130                                      
+                 NAs     :130                                      
 > ii <- c(2,10)
 > vl <- list(FIRSTCHD = c("OTHER   CHD"= 6, "FATAL   MI"= 5, "NONFATALMI"= 3,
 +             "SUDDEN  DEATH" = 2, "NO CHD" = 1),
@@ -653,4 +656,4 @@ A wonderful serenity has taken possession of my entire soul, like
 > 
 > proc.time()
    user  system elapsed 
-  0.275   0.025   0.291 
+  0.181   0.041   0.213 
